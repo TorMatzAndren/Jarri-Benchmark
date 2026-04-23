@@ -1,0 +1,718 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:24.041548+00:00",
+  "source": "/home/dretski/jarri-benchmark-release/benchmarks/_db/benchmark.duckdb",
+  "source_relations": {
+    "model_task_token_efficiency": true
+  },
+  "joined_json_path": "/home/dretski/jarri-benchmark-release/benchmark_ui/data/joined/joined_failure_energy_by_model_task_tdp.json",
+  "row_count": 16,
+  "rows": [
+    {
+      "model": "llama3.1:8b",
+      "task_id": "coding_fs_strict_v3",
+      "task_family": "coding",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "avg_score_percent": 0.0,
+      "avg_output_tokens": 1054.0,
+      "total_output_tokens": 1054.0,
+      "weighted_score_per_100_output_tokens": 0.0,
+      "weighted_score_per_output_token": 0.0,
+      "weighted_joules_per_output_token": 1.788482,
+      "weighted_output_tokens_per_joule": 0.559133,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 76.42,
+      "avg_score_per_wh_strict": 0.0,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 1.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "execute": 1
+      },
+      "failure_type_distribution": {
+        "runtime_error": 1
+      },
+      "failure_subtype_distribution": {
+        "runtime_error": 1
+      },
+      "artifact_usability_distribution": {
+        "unusable": 1
+      },
+      "quality_class_distribution": {
+        "failed": 1
+      },
+      "confidence_classification_distribution": {
+        "unknown": 1
+      }
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "constrained_rewrite_v2",
+      "task_family": "language",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "avg_score_percent": 50.0,
+      "avg_output_tokens": 78.0,
+      "total_output_tokens": 78.0,
+      "weighted_score_per_100_output_tokens": 64.102564,
+      "weighted_score_per_output_token": 0.641026,
+      "weighted_joules_per_output_token": 0.920256,
+      "weighted_output_tokens_per_joule": 1.086654,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 79.21,
+      "avg_score_per_wh_strict": 2507.7741,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 0.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "semantic": 1
+      },
+      "failure_type_distribution": {
+        "semantic_error": 1
+      },
+      "failure_subtype_distribution": {
+        "missing_required_phrase": 1,
+        "missing_required_token": 1,
+        "partial_semantic_match": 1,
+        "word_count_violation": 1
+      },
+      "artifact_usability_distribution": {
+        "partial": 1
+      },
+      "quality_class_distribution": {
+        "partial": 1
+      },
+      "confidence_classification_distribution": {
+        "unknown": 1
+      }
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "fact_task_1",
+      "task_family": "fact",
+      "tdp_level": 80,
+      "benchmark_count": 3,
+      "avg_score_percent": 77.18,
+      "avg_output_tokens": 294.333333,
+      "total_output_tokens": 883.0,
+      "weighted_score_per_100_output_tokens": 26.221971,
+      "weighted_score_per_output_token": 0.26222,
+      "weighted_joules_per_output_token": 1.590747,
+      "weighted_output_tokens_per_joule": 0.628635,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 77.883333,
+      "avg_score_per_wh_strict": 592.440095,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 0.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "semantic": 3
+      },
+      "failure_type_distribution": {
+        "semantic_error": 3
+      },
+      "failure_subtype_distribution": {
+        "field_value_mismatch": 3,
+        "parse_recovered": 3,
+        "schema_coerced": 3
+      },
+      "artifact_usability_distribution": {
+        "unknown": 3
+      },
+      "quality_class_distribution": {
+        "unknown": 3
+      },
+      "confidence_classification_distribution": {
+        "partial": 3
+      }
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "fact_task_2",
+      "task_family": "fact",
+      "tdp_level": 80,
+      "benchmark_count": 3,
+      "avg_score_percent": 18.666667,
+      "avg_output_tokens": 247.333333,
+      "total_output_tokens": 742.0,
+      "weighted_score_per_100_output_tokens": 7.54717,
+      "weighted_score_per_output_token": 0.075472,
+      "weighted_joules_per_output_token": 1.855377,
+      "weighted_output_tokens_per_joule": 0.538974,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 77.923333,
+      "avg_score_per_wh_strict": 146.582757,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 0.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "semantic": 3
+      },
+      "failure_type_distribution": {
+        "semantic_error": 3
+      },
+      "failure_subtype_distribution": {
+        "final_answer_mismatch": 3,
+        "incomplete_reasoning_chain": 3
+      },
+      "artifact_usability_distribution": {
+        "unknown": 3
+      },
+      "quality_class_distribution": {
+        "unknown": 3
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 3
+      }
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "fact_task_3",
+      "task_family": "fact",
+      "tdp_level": 80,
+      "benchmark_count": 3,
+      "avg_score_percent": 25.666667,
+      "avg_output_tokens": 287.0,
+      "total_output_tokens": 861.0,
+      "weighted_score_per_100_output_tokens": 8.943089,
+      "weighted_score_per_output_token": 0.089431,
+      "weighted_joules_per_output_token": 1.846434,
+      "weighted_output_tokens_per_joule": 0.541584,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 77.876667,
+      "avg_score_per_wh_strict": 175.082088,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 0.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "semantic": 3
+      },
+      "failure_type_distribution": {
+        "semantic_error": 3
+      },
+      "failure_subtype_distribution": {
+        "accepted_false_premise": 3,
+        "classification_mismatch": 3,
+        "weak_or_invented_note": 3
+      },
+      "artifact_usability_distribution": {
+        "unknown": 3
+      },
+      "quality_class_distribution": {
+        "unknown": 3
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 3
+      }
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "logic_consistency_v2",
+      "task_family": "knowledge",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "avg_score_percent": 62.5,
+      "avg_output_tokens": 34.0,
+      "total_output_tokens": 34.0,
+      "weighted_score_per_100_output_tokens": 183.823529,
+      "weighted_score_per_output_token": 1.838235,
+      "weighted_joules_per_output_token": 0.376471,
+      "weighted_output_tokens_per_joule": 2.65625,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 80.3,
+      "avg_score_per_wh_strict": 17585.818796,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 0.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "semantic": 1
+      },
+      "failure_type_distribution": {
+        "logic_error": 1
+      },
+      "failure_subtype_distribution": {
+        "exact_pair_set_mismatch": 1,
+        "extra_pair_detected": 1,
+        "missing_required_pair": 1
+      },
+      "artifact_usability_distribution": {
+        "partial": 1
+      },
+      "quality_class_distribution": {
+        "partial": 1
+      },
+      "confidence_classification_distribution": {
+        "unknown": 1
+      }
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "math_dependency_v1",
+      "task_family": "math",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "avg_score_percent": 5.56,
+      "avg_output_tokens": 779.0,
+      "total_output_tokens": 779.0,
+      "weighted_score_per_100_output_tokens": 0.713736,
+      "weighted_score_per_output_token": 0.007137,
+      "weighted_joules_per_output_token": 1.710398,
+      "weighted_output_tokens_per_joule": 0.584659,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 77.14,
+      "avg_score_per_wh_strict": 15.022561,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 1.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "format": 1
+      },
+      "failure_type_distribution": {
+        "format_violation": 1
+      },
+      "failure_subtype_distribution": {
+        "missing_filtered_section": 1,
+        "missing_final_section": 1,
+        "missing_initial_section": 1
+      },
+      "artifact_usability_distribution": {
+        "unusable": 1
+      },
+      "quality_class_distribution": {
+        "failed": 1
+      },
+      "confidence_classification_distribution": {
+        "unknown": 1
+      }
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "prose_task_1",
+      "task_family": "prose",
+      "tdp_level": 80,
+      "benchmark_count": 3,
+      "avg_score_percent": 0.0,
+      "avg_output_tokens": 69.666667,
+      "total_output_tokens": 209.0,
+      "weighted_score_per_100_output_tokens": 0.0,
+      "weighted_score_per_output_token": 0.0,
+      "weighted_joules_per_output_token": 1.971483,
+      "weighted_output_tokens_per_joule": 0.507232,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 79.046667,
+      "avg_score_per_wh_strict": 0.0,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 1.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "format": 3
+      },
+      "failure_type_distribution": {
+        "format_violation": 3
+      },
+      "failure_subtype_distribution": {
+        "hard_failure_result": 3,
+        "invalid_json": 3
+      },
+      "artifact_usability_distribution": {
+        "unknown": 3
+      },
+      "quality_class_distribution": {
+        "unknown": 3
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 3
+      }
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "prose_task_2",
+      "task_family": "prose",
+      "tdp_level": 80,
+      "benchmark_count": 3,
+      "avg_score_percent": 0.0,
+      "avg_output_tokens": 176.333333,
+      "total_output_tokens": 529.0,
+      "weighted_score_per_100_output_tokens": 0.0,
+      "weighted_score_per_output_token": 0.0,
+      "weighted_joules_per_output_token": 1.8838,
+      "weighted_output_tokens_per_joule": 0.530842,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 77.916667,
+      "avg_score_per_wh_strict": 0.0,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 1.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "format": 3
+      },
+      "failure_type_distribution": {
+        "format_violation": 3
+      },
+      "failure_subtype_distribution": {
+        "hard_failure_result": 3,
+        "invalid_json": 3,
+        "structure_invalid": 3
+      },
+      "artifact_usability_distribution": {
+        "unknown": 3
+      },
+      "quality_class_distribution": {
+        "unknown": 3
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 3
+      }
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "prose_task_3",
+      "task_family": "prose",
+      "tdp_level": 80,
+      "benchmark_count": 3,
+      "avg_score_percent": 41.666667,
+      "avg_output_tokens": 113.666667,
+      "total_output_tokens": 341.0,
+      "weighted_score_per_100_output_tokens": 36.656891,
+      "weighted_score_per_output_token": 0.366569,
+      "weighted_joules_per_output_token": 1.867595,
+      "weighted_output_tokens_per_joule": 0.535448,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 78.966667,
+      "avg_score_per_wh_strict": 752.824738,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 0.333333,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "constraint": 3
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 3
+      },
+      "failure_subtype_distribution": {
+        "declared_word_count_mismatch": 3,
+        "missing_required_analogy": 3
+      },
+      "artifact_usability_distribution": {
+        "unknown": 3
+      },
+      "quality_class_distribution": {
+        "unknown": 3
+      },
+      "confidence_classification_distribution": {
+        "partial": 3
+      }
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "fact_task_1",
+      "task_family": "fact",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "avg_score_percent": 94.89,
+      "avg_output_tokens": 304.0,
+      "total_output_tokens": 304.0,
+      "weighted_score_per_100_output_tokens": 31.213816,
+      "weighted_score_per_output_token": 0.312138,
+      "weighted_joules_per_output_token": 1.70523,
+      "weighted_output_tokens_per_joule": 0.586431,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 71.49,
+      "avg_score_per_wh_strict": 658.972062,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 0.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "semantic": 1
+      },
+      "failure_type_distribution": {
+        "semantic_error": 1
+      },
+      "failure_subtype_distribution": {
+        "field_value_mismatch": 1,
+        "schema_coerced": 1
+      },
+      "artifact_usability_distribution": {
+        "unknown": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 1
+      },
+      "confidence_classification_distribution": {
+        "partial": 1
+      }
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "fact_task_2",
+      "task_family": "fact",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "avg_score_percent": 37.0,
+      "avg_output_tokens": 284.0,
+      "total_output_tokens": 284.0,
+      "weighted_score_per_100_output_tokens": 13.028169,
+      "weighted_score_per_output_token": 0.130282,
+      "weighted_joules_per_output_token": 1.970739,
+      "weighted_output_tokens_per_joule": 0.507424,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 71.4,
+      "avg_score_per_wh_strict": 237.988036,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 0.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "semantic": 1
+      },
+      "failure_type_distribution": {
+        "semantic_error": 1
+      },
+      "failure_subtype_distribution": {
+        "incomplete_reasoning_chain": 1
+      },
+      "artifact_usability_distribution": {
+        "unknown": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 1
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 1
+      }
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "fact_task_3",
+      "task_family": "fact",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "avg_score_percent": 32.5,
+      "avg_output_tokens": 53.0,
+      "total_output_tokens": 53.0,
+      "weighted_score_per_100_output_tokens": 61.320755,
+      "weighted_score_per_output_token": 0.613208,
+      "weighted_joules_per_output_token": 2.192453,
+      "weighted_output_tokens_per_joule": 0.45611,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 72.85,
+      "avg_score_per_wh_strict": 1006.908944,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 0.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "semantic": 1
+      },
+      "failure_type_distribution": {
+        "semantic_error": 1
+      },
+      "failure_subtype_distribution": {
+        "none": 1
+      },
+      "artifact_usability_distribution": {
+        "unknown": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 1
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 1
+      }
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "prose_task_1",
+      "task_family": "prose",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "avg_score_percent": 46.0,
+      "avg_output_tokens": 88.0,
+      "total_output_tokens": 88.0,
+      "weighted_score_per_100_output_tokens": 52.272727,
+      "weighted_score_per_output_token": 0.522727,
+      "weighted_joules_per_output_token": 2.059886,
+      "weighted_output_tokens_per_joule": 0.485464,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 72.37,
+      "avg_score_per_wh_strict": 913.532192,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 0.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "constraint": 1
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 1
+      },
+      "failure_subtype_distribution": {
+        "declared_word_count_mismatch": 1,
+        "low_semantic_retention": 1
+      },
+      "artifact_usability_distribution": {
+        "unknown": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 1
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 1
+      }
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "prose_task_2",
+      "task_family": "prose",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "avg_score_percent": 50.0,
+      "avg_output_tokens": 187.0,
+      "total_output_tokens": 187.0,
+      "weighted_score_per_100_output_tokens": 26.737968,
+      "weighted_score_per_output_token": 0.26738,
+      "weighted_joules_per_output_token": 1.99139,
+      "weighted_output_tokens_per_joule": 0.502162,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 71.56,
+      "avg_score_per_wh_strict": 483.357985,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 0.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "constraint": 1
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 1
+      },
+      "failure_subtype_distribution": {
+        "missing_required_content_unit": 1
+      },
+      "artifact_usability_distribution": {
+        "unknown": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 1
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 1
+      }
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "prose_task_3",
+      "task_family": "prose",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "avg_score_percent": 60.0,
+      "avg_output_tokens": 100.0,
+      "total_output_tokens": 100.0,
+      "weighted_score_per_100_output_tokens": 60.0,
+      "weighted_score_per_output_token": 0.6,
+      "weighted_joules_per_output_token": 2.0096,
+      "weighted_output_tokens_per_joule": 0.497611,
+      "avg_energy_j": null,
+      "avg_tokens_per_second": 72.6,
+      "avg_score_per_wh_strict": 1074.845043,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": null,
+      "fully_correct_rate": null,
+      "hard_failure_rate": 0.0,
+      "gpu_name": null,
+      "joined_group_found": true,
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "failure_stage_distribution": {
+        "constraint": 1
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 1
+      },
+      "failure_subtype_distribution": {
+        "declared_word_count_mismatch": 1,
+        "missing_required_analogy": 1
+      },
+      "artifact_usability_distribution": {
+        "unknown": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 1
+      },
+      "confidence_classification_distribution": {
+        "partial": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "model": "llama3.1:8b",
+  "started_utc": "2026-04-23T23:01:58.217483+00:00",
+  "completed_utc": "2026-04-23T23:02:01.085382+00:00",
+  "duration_seconds": 2.853,
+  "final_answer": "1. \"Goal\"\nReturn ONLY valid JSON.\n\n2. \"Inputs\"\n- Log files from the last run\n- Current run log files\n- Archived broken log file (optional, if there is missing data)\n\n3. \"Steps\"\n1. Compare the current run log files with the last run log files.\n2. Ignore the archived broken log file unless there is missing data in the current or previous run log files.\n3. Ensure the summary is concise and suitable for email communication.\n4. Include reasons for any failed operations in the summary.\n5. Verify that the parser used the new config, taking into account recent changes to the configuration.\n6. If timing changes significantly between runs, mention this in the summary.\n7. Identify and report invalid rows and malformed JSON.\n\n4. \"Output\"\nA detailed report on the comparison of log files, including reasons for any failed operations, a concise summary suitable for email communication, and information about the parser's use of the new config.",
+  "thinking_trace": "",
+  "metrics": {
+    "prompt_tokens": 241,
+    "response_tokens": 199,
+    "tokens_per_second": 77.83,
+    "cold_start": false,
+    "prompt_eval_seconds": 0.086,
+    "eval_seconds": 2.557,
+    "load_seconds": 0.11,
+    "total_duration_ns": 2844747166,
+    "load_duration_ns": 110349462,
+    "prompt_eval_duration_ns": 85711293,
+    "eval_duration_ns": 2556787788
+  },
+  "probes": {
+    "ollama_ps_before": {
+      "returncode": 0,
+      "stdout": "NAME           ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nllama3.1:8b    46e0c10c039e    5.5 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    },
+    "ollama_ps_after": {
+      "returncode": 0,
+      "stdout": "NAME           ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nllama3.1:8b    46e0c10c039e    5.5 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    }
+  },
+  "debug_artifact_path": null,
+  "error": ""
+}

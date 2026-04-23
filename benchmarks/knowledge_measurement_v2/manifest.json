@@ -1,0 +1,12 @@
+{
+  "experiment_id": "knowledge_measurement_v2",
+  "revision": 1,
+  "tasks": [
+    {
+      "task_id": "logic_consistency_v2",
+      "task_family": "knowledge",
+      "task_name": "logic_consistency_v2",
+      "prompt_file": "prompt_logic_consistency_v2.txt"
+    }
+  ]
+}

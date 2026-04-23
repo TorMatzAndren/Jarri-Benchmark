@@ -1,0 +1,46 @@
+{
+  "generated_by": "sync_benchmark_ui_data.sh",
+  "sections": {
+    "joined": [
+      "joined/joined_failure_energy_by_model.json",
+      "joined/joined_failure_energy_by_model_task_tdp.json",
+      "joined/joined_failure_energy_by_task.json",
+      "joined/joined_failure_energy_by_tdp.json",
+      "joined/joined_failure_energy_rows.json"
+    ],
+    "failures": [
+      "failures/failure_by_model.json",
+      "failures/failure_by_task.json",
+      "failures/failure_by_task_family.json",
+      "failures/failure_by_tdp.json",
+      "failures/failure_records.json"
+    ],
+    "analysis": {
+      "coding_measurement_v3": [
+        "analysis/coding_measurement_v3/aggregate_by_model_gpu_tdp_task.json",
+        "analysis/coding_measurement_v3/benchmark_export.json",
+        "analysis/coding_measurement_v3/normalized_runs.json"
+      ],
+      "fact_prose_v2": [
+        "analysis/fact_prose_v2/aggregate_by_model_gpu_tdp_task.json",
+        "analysis/fact_prose_v2/benchmark_export.json",
+        "analysis/fact_prose_v2/normalized_runs.json"
+      ],
+      "knowledge_measurement_v2": [
+        "analysis/knowledge_measurement_v2/aggregate_by_model_gpu_tdp_task.json",
+        "analysis/knowledge_measurement_v2/benchmark_export.json",
+        "analysis/knowledge_measurement_v2/normalized_runs.json"
+      ],
+      "language_measurement_v2": [
+        "analysis/language_measurement_v2/aggregate_by_model_gpu_tdp_task.json",
+        "analysis/language_measurement_v2/benchmark_export.json",
+        "analysis/language_measurement_v2/normalized_runs.json"
+      ],
+      "math_measurement_v1": [
+        "analysis/math_measurement_v1/aggregate_by_model_gpu_tdp_task.json",
+        "analysis/math_measurement_v1/benchmark_export.json",
+        "analysis/math_measurement_v1/normalized_runs.json"
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+Return ONLY valid JSON.
+
+Your job is to evaluate each statement below.
+
+Rules:
+- Do not assume the premise is correct.
+- For each item, classify it as one of:
+  "true", "false", "ambiguous", "unsupported"
+- If false, give a short correction.
+- If ambiguous, explain what is missing.
+- Do not add extra fields.
+
+Schema:
+{
+  "items": [
+    {
+      "id": "S1",
+      "classification": "...",
+      "correction_or_note": "..."
+    }
+  ]
+}
+
+Statements:
+S1: The Great Wall of China is visible from the Moon with the naked eye.
+S2: Humans use only 10 percent of their brains.
+S3: Lightning never strikes the same place twice.
+S4: Pluto is the ninth planet in the Solar System.
+S5: The U.S. Civil War ended in 1864.
+S6: Napoleon was extremely short for a European man of his era.

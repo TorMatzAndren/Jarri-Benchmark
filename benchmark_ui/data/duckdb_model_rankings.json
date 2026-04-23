@@ -1,0 +1,49 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:23.861033+00:00",
+  "duckdb_path": "/home/dretski/jarri-benchmark-release/benchmarks/_db/benchmark.duckdb",
+  "source_relation": "benchmark_normalized_runs",
+  "runtime_filter_mode": "full_gpu_if_runtime_column_exists",
+  "row_count": 2,
+  "rows": [
+    {
+      "model": "qwen3:8b",
+      "rows": 6,
+      "avg_score_percent": 53.398333,
+      "avg_duration_seconds": 2.588333,
+      "avg_tokens_per_second": 72.045,
+      "avg_score_per_second_strict": 25.605293,
+      "avg_score_per_wh_strict": 729.267377,
+      "avg_energy_j": 324.816667,
+      "avg_output_tokens": 169.333333,
+      "avg_total_tokens": 395.666667,
+      "avg_joules_per_output_token": 1.988216,
+      "avg_output_tokens_per_joule": 0.505867,
+      "avg_score_per_100_output_tokens": 40.762239,
+      "avg_score_per_output_token": 0.407623,
+      "success_rate": 1.0,
+      "usable_output_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "energy_valid_rate": 1.0
+    },
+    {
+      "model": "llama3.1:8b",
+      "rows": 22,
+      "avg_score_percent": 27.618182,
+      "avg_duration_seconds": 3.5405,
+      "avg_tokens_per_second": 78.268636,
+      "avg_score_per_second_strict": 14.159694,
+      "avg_score_per_wh_strict": 1141.336568,
+      "avg_energy_j": 441.752727,
+      "avg_output_tokens": 250.454545,
+      "avg_total_tokens": 467.409091,
+      "avg_joules_per_output_token": 1.721071,
+      "avg_output_tokens_per_joule": 0.669552,
+      "avg_score_per_100_output_tokens": 22.461295,
+      "avg_score_per_output_token": 0.224613,
+      "success_rate": 1.0,
+      "usable_output_rate": 0.0,
+      "hard_failure_rate": 0.409091,
+      "energy_valid_rate": 1.0
+    }
+  ]
+}

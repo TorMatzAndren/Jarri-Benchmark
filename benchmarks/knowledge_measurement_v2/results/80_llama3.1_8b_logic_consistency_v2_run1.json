@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "model": "llama3.1:8b",
+  "started_utc": "2026-04-23T23:01:27.782529+00:00",
+  "completed_utc": "2026-04-23T23:01:28.422767+00:00",
+  "duration_seconds": 0.628,
+  "final_answer": "=== ANALYSIS ===\nConsistent: NO\n\n=== CONTRADICTIONS ===\nStatement 4 conflicts with Statement 2\nStatement 5 conflicts with Statement 3",
+  "thinking_trace": "",
+  "metrics": {
+    "prompt_tokens": 165,
+    "response_tokens": 34,
+    "tokens_per_second": 80.3,
+    "cold_start": false,
+    "prompt_eval_seconds": 0.06,
+    "eval_seconds": 0.423,
+    "load_seconds": 0.119,
+    "total_duration_ns": 618720560,
+    "load_duration_ns": 118557605,
+    "prompt_eval_duration_ns": 60415691,
+    "eval_duration_ns": 423397631
+  },
+  "probes": {
+    "ollama_ps_before": {
+      "returncode": 0,
+      "stdout": "NAME           ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nllama3.1:8b    46e0c10c039e    5.5 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    },
+    "ollama_ps_after": {
+      "returncode": 0,
+      "stdout": "NAME           ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nllama3.1:8b    46e0c10c039e    5.5 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    }
+  },
+  "debug_artifact_path": null,
+  "error": ""
+}

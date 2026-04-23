@@ -1,0 +1,633 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:23.215986+00:00",
+  "exporter_version": "jarri_benchmark_failure_aggregate_v2",
+  "groups": {
+    "coding_fs_strict_v3": {
+      "total_runs": 1,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "experiments": [
+        "coding_measurement_v3"
+      ],
+      "task_ids": [
+        "coding_fs_strict_v3"
+      ],
+      "task_families": [
+        "coding"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "execute": 1
+      },
+      "failure_type_distribution": {
+        "runtime_error": 1
+      },
+      "failure_subtype_distribution": {
+        "runtime_error": 1
+      },
+      "quality_class_distribution": {
+        "failed": 1
+      },
+      "artifact_usability_distribution": {
+        "unusable": 1
+      },
+      "confidence_classification_distribution": {
+        "unknown": 1
+      },
+      "task_failure_key_distribution": {
+        "runtime_error": 1
+      },
+      "success_ladder": {
+        "total_runs": 1,
+        "returned_output": 1,
+        "parse_valid": 1,
+        "runtime_valid": 0,
+        "usable_output": 0,
+        "pipeline_usable": 0,
+        "fully_correct": 0,
+        "hard_failures": 1
+      },
+      "rates": {
+        "parse_failure_rate": 0.0,
+        "runtime_failure_rate": 0.0,
+        "constraint_failure_rate": 0.0,
+        "semantic_failure_rate": 0.0,
+        "usable_output_rate": 0.0,
+        "pipeline_usable_rate": 0.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 1.0
+      }
+    },
+    "constrained_rewrite_v2": {
+      "total_runs": 1,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "experiments": [
+        "language_measurement_v2"
+      ],
+      "task_ids": [
+        "constrained_rewrite_v2"
+      ],
+      "task_families": [
+        "language"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 1
+      },
+      "failure_type_distribution": {
+        "semantic_error": 1
+      },
+      "failure_subtype_distribution": {
+        "missing_required_phrase": 1,
+        "missing_required_token": 1,
+        "partial_semantic_match": 1,
+        "word_count_violation": 1
+      },
+      "quality_class_distribution": {
+        "partial": 1
+      },
+      "artifact_usability_distribution": {
+        "partial": 1
+      },
+      "confidence_classification_distribution": {
+        "unknown": 1
+      },
+      "task_failure_key_distribution": {
+        "missing_required_phrase": 1,
+        "missing_required_token": 1,
+        "partial_semantic_match": 1,
+        "word_count_violation": 1
+      },
+      "success_ladder": {
+        "total_runs": 1,
+        "returned_output": 1,
+        "parse_valid": 1,
+        "runtime_valid": 1,
+        "usable_output": 1,
+        "pipeline_usable": 0,
+        "fully_correct": 0,
+        "hard_failures": 0
+      },
+      "rates": {
+        "parse_failure_rate": 0.0,
+        "runtime_failure_rate": 0.0,
+        "constraint_failure_rate": 0.0,
+        "semantic_failure_rate": 1.0,
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 0.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0
+      }
+    },
+    "fact_task_1": {
+      "total_runs": 2,
+      "models": [
+        "llama3.1:8b",
+        "qwen3:8b"
+      ],
+      "experiments": [
+        "fact_prose_v2"
+      ],
+      "task_ids": [
+        "fact_task_1"
+      ],
+      "task_families": [
+        "fact"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 2
+      },
+      "failure_type_distribution": {
+        "semantic_error": 2
+      },
+      "failure_subtype_distribution": {
+        "field_value_mismatch": 2,
+        "parse_recovered": 1,
+        "schema_coerced": 2
+      },
+      "quality_class_distribution": {
+        "unknown": 2
+      },
+      "artifact_usability_distribution": {
+        "unknown": 2
+      },
+      "confidence_classification_distribution": {
+        "partial": 2
+      },
+      "task_failure_key_distribution": {
+        "none": 2
+      },
+      "success_ladder": {
+        "total_runs": 2,
+        "returned_output": 2,
+        "parse_valid": 2,
+        "runtime_valid": 2,
+        "usable_output": 2,
+        "pipeline_usable": 2,
+        "fully_correct": 0,
+        "hard_failures": 0
+      },
+      "rates": {
+        "parse_failure_rate": 0.0,
+        "runtime_failure_rate": 0.0,
+        "constraint_failure_rate": 0.0,
+        "semantic_failure_rate": 1.0,
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0
+      }
+    },
+    "fact_task_2": {
+      "total_runs": 2,
+      "models": [
+        "llama3.1:8b",
+        "qwen3:8b"
+      ],
+      "experiments": [
+        "fact_prose_v2"
+      ],
+      "task_ids": [
+        "fact_task_2"
+      ],
+      "task_families": [
+        "fact"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 2
+      },
+      "failure_type_distribution": {
+        "semantic_error": 2
+      },
+      "failure_subtype_distribution": {
+        "final_answer_mismatch": 1,
+        "incomplete_reasoning_chain": 2
+      },
+      "quality_class_distribution": {
+        "unknown": 2
+      },
+      "artifact_usability_distribution": {
+        "unknown": 2
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 2
+      },
+      "task_failure_key_distribution": {
+        "none": 2
+      },
+      "success_ladder": {
+        "total_runs": 2,
+        "returned_output": 2,
+        "parse_valid": 2,
+        "runtime_valid": 2,
+        "usable_output": 2,
+        "pipeline_usable": 2,
+        "fully_correct": 0,
+        "hard_failures": 0
+      },
+      "rates": {
+        "parse_failure_rate": 0.0,
+        "runtime_failure_rate": 0.0,
+        "constraint_failure_rate": 0.0,
+        "semantic_failure_rate": 1.0,
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0
+      }
+    },
+    "fact_task_3": {
+      "total_runs": 2,
+      "models": [
+        "llama3.1:8b",
+        "qwen3:8b"
+      ],
+      "experiments": [
+        "fact_prose_v2"
+      ],
+      "task_ids": [
+        "fact_task_3"
+      ],
+      "task_families": [
+        "fact"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 2
+      },
+      "failure_type_distribution": {
+        "semantic_error": 2
+      },
+      "failure_subtype_distribution": {
+        "accepted_false_premise": 1,
+        "classification_mismatch": 1,
+        "none": 1,
+        "weak_or_invented_note": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 2
+      },
+      "artifact_usability_distribution": {
+        "unknown": 2
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 2
+      },
+      "task_failure_key_distribution": {
+        "none": 2
+      },
+      "success_ladder": {
+        "total_runs": 2,
+        "returned_output": 2,
+        "parse_valid": 2,
+        "runtime_valid": 2,
+        "usable_output": 1,
+        "pipeline_usable": 2,
+        "fully_correct": 0,
+        "hard_failures": 0
+      },
+      "rates": {
+        "parse_failure_rate": 0.0,
+        "runtime_failure_rate": 0.0,
+        "constraint_failure_rate": 0.0,
+        "semantic_failure_rate": 1.0,
+        "usable_output_rate": 0.5,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0
+      }
+    },
+    "logic_consistency_v2": {
+      "total_runs": 1,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "experiments": [
+        "knowledge_measurement_v2"
+      ],
+      "task_ids": [
+        "logic_consistency_v2"
+      ],
+      "task_families": [
+        "knowledge"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 1
+      },
+      "failure_type_distribution": {
+        "logic_error": 1
+      },
+      "failure_subtype_distribution": {
+        "exact_pair_set_mismatch": 1,
+        "extra_pair_detected": 1,
+        "missing_required_pair": 1
+      },
+      "quality_class_distribution": {
+        "partial": 1
+      },
+      "artifact_usability_distribution": {
+        "partial": 1
+      },
+      "confidence_classification_distribution": {
+        "unknown": 1
+      },
+      "task_failure_key_distribution": {
+        "exact_pair_set_mismatch": 1,
+        "extra_pair_detected": 1,
+        "missing_required_pair": 1
+      },
+      "success_ladder": {
+        "total_runs": 1,
+        "returned_output": 1,
+        "parse_valid": 1,
+        "runtime_valid": 1,
+        "usable_output": 1,
+        "pipeline_usable": 0,
+        "fully_correct": 0,
+        "hard_failures": 0
+      },
+      "rates": {
+        "parse_failure_rate": 0.0,
+        "runtime_failure_rate": 0.0,
+        "constraint_failure_rate": 0.0,
+        "semantic_failure_rate": 1.0,
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 0.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0
+      }
+    },
+    "math_dependency_v1": {
+      "total_runs": 1,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "experiments": [
+        "math_measurement_v1"
+      ],
+      "task_ids": [
+        "math_dependency_v1"
+      ],
+      "task_families": [
+        "math"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "format": 1
+      },
+      "failure_type_distribution": {
+        "format_violation": 1
+      },
+      "failure_subtype_distribution": {
+        "missing_filtered_section": 1,
+        "missing_final_section": 1,
+        "missing_initial_section": 1
+      },
+      "quality_class_distribution": {
+        "failed": 1
+      },
+      "artifact_usability_distribution": {
+        "unusable": 1
+      },
+      "confidence_classification_distribution": {
+        "unknown": 1
+      },
+      "task_failure_key_distribution": {
+        "missing_filtered_section": 1,
+        "missing_final_section": 1,
+        "missing_initial_section": 1
+      },
+      "success_ladder": {
+        "total_runs": 1,
+        "returned_output": 1,
+        "parse_valid": 1,
+        "runtime_valid": 0,
+        "usable_output": 0,
+        "pipeline_usable": 0,
+        "fully_correct": 0,
+        "hard_failures": 1
+      },
+      "rates": {
+        "parse_failure_rate": 0.0,
+        "runtime_failure_rate": 0.0,
+        "constraint_failure_rate": 0.0,
+        "semantic_failure_rate": 0.0,
+        "usable_output_rate": 0.0,
+        "pipeline_usable_rate": 0.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 1.0
+      }
+    },
+    "prose_task_1": {
+      "total_runs": 2,
+      "models": [
+        "llama3.1:8b",
+        "qwen3:8b"
+      ],
+      "experiments": [
+        "fact_prose_v2"
+      ],
+      "task_ids": [
+        "prose_task_1"
+      ],
+      "task_families": [
+        "prose"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "constraint": 1,
+        "format": 1
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 1,
+        "format_violation": 1
+      },
+      "failure_subtype_distribution": {
+        "declared_word_count_mismatch": 1,
+        "hard_failure_result": 1,
+        "invalid_json": 1,
+        "low_semantic_retention": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 2
+      },
+      "artifact_usability_distribution": {
+        "unknown": 2
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 2
+      },
+      "task_failure_key_distribution": {
+        "none": 2
+      },
+      "success_ladder": {
+        "total_runs": 2,
+        "returned_output": 2,
+        "parse_valid": 2,
+        "runtime_valid": 2,
+        "usable_output": 1,
+        "pipeline_usable": 1,
+        "fully_correct": 0,
+        "hard_failures": 1
+      },
+      "rates": {
+        "parse_failure_rate": 0.0,
+        "runtime_failure_rate": 0.0,
+        "constraint_failure_rate": 0.5,
+        "semantic_failure_rate": 0.0,
+        "usable_output_rate": 0.5,
+        "pipeline_usable_rate": 0.5,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.5
+      }
+    },
+    "prose_task_2": {
+      "total_runs": 2,
+      "models": [
+        "llama3.1:8b",
+        "qwen3:8b"
+      ],
+      "experiments": [
+        "fact_prose_v2"
+      ],
+      "task_ids": [
+        "prose_task_2"
+      ],
+      "task_families": [
+        "prose"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "constraint": 1,
+        "format": 1
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 1,
+        "format_violation": 1
+      },
+      "failure_subtype_distribution": {
+        "hard_failure_result": 1,
+        "invalid_json": 1,
+        "missing_required_content_unit": 1,
+        "structure_invalid": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 2
+      },
+      "artifact_usability_distribution": {
+        "unknown": 2
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 2
+      },
+      "task_failure_key_distribution": {
+        "none": 2
+      },
+      "success_ladder": {
+        "total_runs": 2,
+        "returned_output": 2,
+        "parse_valid": 2,
+        "runtime_valid": 2,
+        "usable_output": 1,
+        "pipeline_usable": 1,
+        "fully_correct": 0,
+        "hard_failures": 1
+      },
+      "rates": {
+        "parse_failure_rate": 0.0,
+        "runtime_failure_rate": 0.0,
+        "constraint_failure_rate": 0.5,
+        "semantic_failure_rate": 0.0,
+        "usable_output_rate": 0.5,
+        "pipeline_usable_rate": 0.5,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.5
+      }
+    },
+    "prose_task_3": {
+      "total_runs": 2,
+      "models": [
+        "llama3.1:8b",
+        "qwen3:8b"
+      ],
+      "experiments": [
+        "fact_prose_v2"
+      ],
+      "task_ids": [
+        "prose_task_3"
+      ],
+      "task_families": [
+        "prose"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "constraint": 2
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 2
+      },
+      "failure_subtype_distribution": {
+        "declared_word_count_mismatch": 2,
+        "missing_required_analogy": 2
+      },
+      "quality_class_distribution": {
+        "unknown": 2
+      },
+      "artifact_usability_distribution": {
+        "unknown": 2
+      },
+      "confidence_classification_distribution": {
+        "partial": 2
+      },
+      "task_failure_key_distribution": {
+        "none": 2
+      },
+      "success_ladder": {
+        "total_runs": 2,
+        "returned_output": 2,
+        "parse_valid": 2,
+        "runtime_valid": 2,
+        "usable_output": 2,
+        "pipeline_usable": 2,
+        "fully_correct": 0,
+        "hard_failures": 0
+      },
+      "rates": {
+        "parse_failure_rate": 0.0,
+        "runtime_failure_rate": 0.0,
+        "constraint_failure_rate": 1.0,
+        "semantic_failure_rate": 0.0,
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0
+      }
+    }
+  }
+}

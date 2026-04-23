@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Jarri Benchmark - Deterministic LLM efficiency analysis surface</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #0b0f16;
+      --panel: #141a24;
+      --panel-2: #1a2230;
+      --panel-3: #111722;
+      --border: #2c3547;
+      --text: #e9eef7;
+      --muted: #aab4c4;
+      --accent: #7fc8ff;
+      --good: #72da95;
+      --warn: #ffd166;
+      --bad: #ff7f7f;
+      --mono: Consolas, Menlo, Monaco, monospace;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+    }
+
+    header {
+      padding: 18px 24px 20px 24px;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, #131a27 0%, #0d121b 100%);
+    }
+
+    .header-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      min-width: 0;
+      flex: 1 1 auto;
+    }
+
+    .brand-logo-link {
+      display: inline-flex;
+      align-items: center;
+      flex: 0 0 auto;
+    }
+
+    .brand-logo {
+      height: 56px;
+      width: auto;
+      display: block;
+      object-fit: contain;
+    }
+
+    .brand-copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-width: 0;
+    }
+
+    .brand-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.05;
+      letter-spacing: 0.2px;
+      margin: 0;
+    }
+
+    .brand-subtitle {
+      font-size: 13px;
+      color: var(--accent);
+      margin-top: 4px;
+      line-height: 1.2;
+    }
+
+    .header-links {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex: 0 0 auto;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .header-links a {
+      color: var(--muted);
+      text-decoration: none;
+      border: 1px solid var(--border);
+      border-radius: 9px;
+      padding: 7px 11px;
+      background: var(--panel-3);
+      font-size: 13px;
+      line-height: 1;
+      transition: border-color 120ms ease, color 120ms ease, background 120ms ease;
+    }
+
+    .header-links a:hover {
+      border-color: var(--accent);
+      color: var(--text);
+      background: #172131;
+    }
+
+    h1, h2, h3 { margin: 0 0 10px 0; }
+    p { margin: 0; color: var(--muted); }
+
+    main {
+      padding: 18px;
+      display: grid;
+      gap: 18px;
+    }
+
+    .panel {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 16px;
+    }
+
+    .card {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 16px;
+    }
+
+    .grid-2 {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-auto {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    @media (max-width: 1100px) {
+      .grid-2, .grid-3 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 900px) {
+      .header-row {
+        align-items: flex-start;
+      }
+
+      .header-links {
+        justify-content: flex-start;
+      }
+
+      .brand-title {
+        font-size: 22px;
+      }
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+      margin-bottom: 16px;
+    }
+
+    @media (max-width: 1200px) {
+      .stats {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+
+    .stat {
+      background: var(--panel-3);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 10px 12px;
+    }
+
+    .stat-label {
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .stat-value {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .small { font-size: 12px; color: var(--muted); }
+    .good { color: var(--good); }
+    .warn { color: var(--warn); }
+    .bad { color: var(--bad); }
+
+    .loading, .error {
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      background: var(--panel);
+    }
+
+    .controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 12px;
+      margin-bottom: 14px;
+      align-items: end;
+    }
+
+    .control {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      min-width: 180px;
+    }
+
+    .control label {
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .control select,
+    .control input,
+    button {
+      background: var(--panel-3);
+      color: var(--text);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 8px 10px;
+    }
+
+    button {
+      cursor: pointer;
+    }
+
+    .tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .tab-btn {
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      padding: 8px 12px;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    .tab-btn.active {
+      border-color: var(--accent);
+      background: #1b2940;
+    }
+
+    .browser-list {
+      display: grid;
+      gap: 8px;
+      max-height: 460px;
+      overflow: auto;
+      padding-right: 4px;
+    }
+
+    .browser-item {
+      width: 100%;
+      text-align: left;
+      background: var(--panel-2);
+      border: 1px solid var(--border);
+      color: var(--text);
+      border-radius: 12px;
+      padding: 10px 12px;
+      cursor: pointer;
+    }
+
+    .browser-item:hover { border-color: var(--accent); }
+    .browser-item.active {
+      border-color: var(--accent);
+      background: #1b2940;
+    }
+
+    .browser-item-title {
+      font-weight: bold;
+      margin-bottom: 4px;
+      word-break: break-word;
+    }
+
+    .browser-item-meta {
+      font-size: 12px;
+      color: var(--muted);
+      word-break: break-word;
+    }
+
+    .json-preview {
+      background: var(--panel-3);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px;
+      min-height: 460px;
+      overflow: auto;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.5;
+      white-space: pre-wrap;
+      word-break: break-word;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 10px 8px;
+      text-align: left;
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+      white-space: nowrap;
+    }
+
+    th {
+      color: var(--muted);
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .scroll-x {
+      overflow-x: auto;
+    }
+
+    .model-row,
+    .task-row,
+    .pair-row {
+      cursor: pointer;
+    }
+
+    .model-row:hover,
+    .task-row:hover,
+    .pair-row:hover {
+      background: rgba(127, 200, 255, 0.08);
+    }
+
+    .model-row.selected,
+    .task-row.selected,
+    .pair-row.selected {
+      background: rgba(127, 200, 255, 0.14);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      font-size: 12px;
+      color: var(--muted);
+      background: #10151d;
+      margin-right: 6px;
+      margin-bottom: 6px;
+    }
+
+    .topline {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .subtle {
+      color: var(--muted);
+      font-size: 13px;
+    }
+
+    .info-dot {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #10151d;
+      color: var(--accent);
+      font-size: 10px;
+      line-height: 1;
+      cursor: help;
+      user-select: none;
+    }
+
+    .chart-tooltip,
+    .help-tooltip {
+      position: fixed;
+      z-index: 9999;
+      pointer-events: none;
+      min-width: 220px;
+      max-width: 360px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid var(--border);
+      background: rgba(12, 17, 26, 0.97);
+      color: var(--text);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      font-size: 12px;
+      line-height: 1.45;
+      display: none;
+      white-space: normal;
+    }
+
+    .chart-tooltip .tt-title,
+    .help-tooltip .tt-title {
+      font-weight: bold;
+      margin-bottom: 6px;
+      color: var(--text);
+    }
+
+    .chart-tooltip .tt-line,
+    .help-tooltip .tt-line {
+      color: var(--muted);
+    }
+
+    .chart-label {
+      font-size: 11px;
+      fill: #dbe7ff;
+      paint-order: stroke;
+      stroke: rgba(11, 15, 22, 0.92);
+      stroke-width: 3px;
+      stroke-linejoin: round;
+    }
+
+    .task-description {
+      white-space: normal;
+      line-height: 1.5;
+    }
+
+    .failure-chip {
+      display: inline-block;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: #0f1520;
+      border: 1px solid var(--border);
+      margin-right: 8px;
+      margin-bottom: 8px;
+      font-size: 12px;
+      color: var(--text);
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-row">
+      <div class="brand-lockup">
+        <a class="brand-logo-link" href="https://jarri.systems" target="_blank" rel="noopener">
+          <img class="brand-logo" src="./logo.png" alt="Jarri logo" />
+        </a>
+        <div class="brand-copy">
+          <div class="brand-title">Benchmark</div>
+          <div class="brand-subtitle">Deterministic LLM efficiency analysis surface</div>
+        </div>
+      </div>
+
+      <div class="header-links">
+        <a href="https://github.com/TorMatzAndren/Jarri-Benchmark" target="_blank" rel="noopener">GitHub</a>
+        <a href="mailto:info@gbsproductions.se">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="panel">
+      <div class="topline">
+        <div>
+          <h2>Overview</h2>
+          <p id="generated-at" class="small">Loading…</p>
+        </div>
+        <div class="subtle" id="dataset-shape">Loading dataset shape…</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Controls</h2>
+      <div class="controls">
+        <div class="control">
+          <label>Selected model <span class="info-dot help-anchor" data-help-title="Selected model" data-help-body="This picks the model shown in the detailed sections below.">i</span></label>
+          <select id="model-selector"></select>
+        </div>
+        <div class="control">
+          <label>Selected task <span class="info-dot help-anchor" data-help-title="Selected task" data-help-body="This picks the task used for the task ranking, task registry panel, failure surface, and per-task frontier chart.">i</span></label>
+          <select id="task-selector"></select>
+        </div>
+        <div class="control">
+          <label>Family filter <span class="info-dot help-anchor" data-help-title="Family filter" data-help-body="This narrows the visible benchmark family, such as coding, language, or fact/prose.">i</span></label>
+          <select id="family-selector"></select>
+        </div>
+        <div class="control">
+          <label>Model search</label>
+          <input id="model-search" type="text" placeholder="Search models" />
+        </div>
+        <div class="control">
+          <label>Task search</label>
+          <input id="task-search" type="text" placeholder="Search tasks" />
+        </div>
+        <div class="control">
+          <label>&nbsp;</label>
+          <button id="focus-pair-btn">Focus selected model × task</button>
+        </div>
+        <div class="control">
+          <label>&nbsp;</label>
+          <button id="clear-focus-btn">Clear focus</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Model Comparison</h2>
+      <p class="small">Scalable table-first comparison for many models. Click a model to inspect details.</p>
+      <div id="model-table" class="scroll-x">
+        <div class="loading">Loading model comparison…</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Selected Model Detail</h2>
+      <div id="selected-model-detail">
+        <div class="loading">Select a model from the table above.</div>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Task Registry</h2>
+      <p class="small">Visible task descriptions so users can verify exactly what the models are trying to solve.</p>
+      <div id="task-registry-surface"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Task Ranking</h2>
+      <p class="small">Rank all model × TDP slices for the selected task.</p>
+      <div id="task-ranking-surface"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Model × Task Surface</h2>
+      <p class="small">Per-task behavior for the currently selected model.</p>
+      <div id="model-task-surface" class="scroll-x"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Model × TDP Surface</h2>
+      <p class="small">Selected model aggregated by TDP across visible tasks.</p>
+      <div id="tdp-surface" class="scroll-x"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Task Drilldown</h2>
+      <p class="small">Detailed selected model × task surface with TDP and GPU/runtime slices.</p>
+      <div id="task-detail-surface"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Failure Surface</h2>
+      <p class="small">Dominant failure stages, types, and subtypes for the selected model × task.</p>
+      <div id="failure-surface"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Pareto Frontier</h2>
+      <p class="small">Non-dominated tradeoffs between correctness and energy. Higher fully-correct is better, lower energy is better.</p>
+      <div id="pareto-frontier-surface"></div>
+    </section>
+
+    <section class="panel">
+      <h2>System Summary</h2>
+      <div id="system-summary" class="grid grid-auto"></div>
+    </section>
+
+    <section class="panel">
+      <h2>Data Browser</h2>
+      <p class="small">Raw JSON browser for verification and deep inspection.</p>
+      <div class="tabs" id="browser-tabs"></div>
+      <div class="grid grid-2">
+        <div>
+          <div id="browser-list" class="browser-list"></div>
+        </div>
+        <div>
+          <div id="json-preview" class="json-preview">Select a file to preview.</div>
+        </div>
+      </div>
+    </section>
+
+    <div id="chart-tooltip" class="chart-tooltip"></div>
+    <div id="help-tooltip" class="help-tooltip"></div>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

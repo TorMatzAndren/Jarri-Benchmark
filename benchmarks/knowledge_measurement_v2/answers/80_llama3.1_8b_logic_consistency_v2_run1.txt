@@ -1,0 +1,6 @@
+=== ANALYSIS ===
+Consistent: NO
+
+=== CONTRADICTIONS ===
+Statement 4 conflicts with Statement 2
+Statement 5 conflicts with Statement 3

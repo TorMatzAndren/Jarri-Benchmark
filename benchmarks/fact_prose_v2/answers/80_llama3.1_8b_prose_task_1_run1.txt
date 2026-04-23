@@ -1,0 +1,6 @@
+```
+{
+  "summary": "The Peregrine project began as a university robotics collaboration in 2018, switching from stereo-camera-heavy design to lidar-assisted hybrid approach in 2021, reducing navigation errors by 37 percent.",
+  "word_count": 46
+}
+```

@@ -1,0 +1,12 @@
+{
+  "experiment_id": "language_measurement_v2",
+  "revision": 1,
+  "tasks": [
+    {
+      "task_id": "constrained_rewrite_v2",
+      "task_family": "language",
+      "task_name": "constrained_rewrite_v2",
+      "prompt_file": "prompt_constrained_rewrite_v2.txt"
+    }
+  ]
+}

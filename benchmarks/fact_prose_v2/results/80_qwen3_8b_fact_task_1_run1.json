@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "model": "qwen3:8b",
+  "started_utc": "2026-04-23T23:16:38.671114+00:00",
+  "completed_utc": "2026-04-23T23:16:43.226302+00:00",
+  "duration_seconds": 4.541,
+  "final_answer": "[\n  {\n    \"entity\": \"Speed of light in vacuum\",\n    \"category\": \"physical_constant\",\n    \"fields\": {\n      \"value_m_per_s\": 299792458,\n      \"unit\": \"m/s\",\n      \"symbol\": \"c\"\n    }\n  },\n  {\n    \"entity\": \"Water freezing point at 1 atm\",\n    \"category\": \"thermodynamic_reference\",\n    \"fields\": {\n      \"value_celsius\": 0,\n      \"value_kelvin\": 273.15,\n      \"unit\": \"°C\"\n    }\n  },\n  {\n    \"entity\": \"Battle of Hastings\",\n    \"category\": \"historical_event\",\n    \"fields\": {\n      \"year\": 1066,\n      \"location_country_modern\": \"United Kingdom\",\n      \"winner\": \"Normans\"\n    }\n  },\n  {\n    \"entity\": \"Avogadro constant\",\n    \"category\": \"physical_constant\",\n    \"fields\": {\n      \"value\": 6.02214076e23,\n      \"unit\": \"mol⁻¹\",\n      \"symbol\": \"Nₐ\"\n    }\n  },\n  {\n    \"entity\": \"DNA\",\n    \"category\": \"biology\",\n    \"fields\": {\n      \"expanded_form\": \"Deoxyribonucleic acid\",\n      \"primary_role\": \"Stores genetic information\"\n    }\n  }\n]",
+  "thinking_trace": "",
+  "metrics": {
+    "prompt_tokens": 267,
+    "response_tokens": 304,
+    "tokens_per_second": 71.49,
+    "cold_start": false,
+    "prompt_eval_seconds": 0.107,
+    "eval_seconds": 4.252,
+    "load_seconds": 0.085,
+    "total_duration_ns": 4532696040,
+    "load_duration_ns": 85312562,
+    "prompt_eval_duration_ns": 107067363,
+    "eval_duration_ns": 4252336531
+  },
+  "probes": {
+    "ollama_ps_before": {
+      "returncode": 0,
+      "stdout": "NAME        ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nqwen3:8b    500a1f067a9f    6.0 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    },
+    "ollama_ps_after": {
+      "returncode": 0,
+      "stdout": "NAME        ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nqwen3:8b    500a1f067a9f    6.0 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    }
+  },
+  "debug_artifact_path": null,
+  "error": ""
+}

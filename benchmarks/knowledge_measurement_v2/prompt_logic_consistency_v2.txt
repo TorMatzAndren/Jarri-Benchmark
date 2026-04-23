@@ -1,0 +1,26 @@
+You are given the following statements:
+
+1. All Zorans are Krel.
+2. Some Krel are Vex.
+3. No Vex are Tulan.
+4. Some Tulan are Zorans.
+5. All Tulan are Mir.
+
+Tasks:
+1. Determine if the full system is consistent or inconsistent.
+2. List only the minimal contradiction pair or pairs that are required to make the system inconsistent.
+3. Do not list redundant or indirect category tensions.
+
+Output EXACTLY:
+
+=== ANALYSIS ===
+Consistent: YES/NO
+
+=== CONTRADICTIONS ===
+Statement X conflicts with Statement Y
+...
+
+Rules:
+- Use statement numbers only
+- Only output contradiction pairs that are strictly necessary
+- Do not list speculative or indirect conflicts

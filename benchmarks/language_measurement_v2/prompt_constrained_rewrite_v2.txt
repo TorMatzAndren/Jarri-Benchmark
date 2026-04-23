@@ -1,0 +1,28 @@
+Rewrite the text below into EXACTLY 3 bullet points.
+
+Each bullet must:
+- contain exactly 12 words
+- preserve ALL numerical values
+- preserve ALL named entities
+- not introduce new information
+- end with a period
+
+Across the 3 bullets together, you must preserve these exact phrases:
+- "Arcturus Systems"
+- "Lina Verne"
+- "three new European markets"
+
+Text:
+
+"On March 3rd, 2021, the company Arcturus Systems reported a revenue increase from 4.2 million to 5.6 million dollars, while simultaneously reducing operational costs by 12 percent. CEO Lina Verne stated that the growth was driven primarily by expansion into three new European markets."
+
+Output format:
+
+- <12 words>.
+- <12 words>.
+- <12 words>.
+
+Rules:
+- Exactly 3 bullets
+- Exactly 12 words each
+- No punctuation except commas and periods

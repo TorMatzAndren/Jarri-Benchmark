@@ -1,0 +1,35 @@
+Return ONLY valid JSON.
+
+Solve the problem below using the exact schema provided.
+
+Rules:
+- Show all reasoning steps explicitly in the "steps" array.
+- Each step must be atomic.
+- Do not add extra top-level fields.
+- If a claim cannot be supported from the given facts, say so explicitly.
+
+Schema:
+{
+  "steps": [
+    {
+      "id": 1,
+      "claim": "...",
+      "supported_by_fact_ids": ["F1"]
+    }
+  ],
+  "final_answer": {
+    "answer": "...",
+    "justification_step_ids": [1]
+  }
+}
+
+Facts:
+F1: World War I began in 1914.
+F2: World War I ended in 1918.
+F3: The Treaty of Versailles was signed in 1919.
+F4: The Russian Revolution occurred in 1917.
+F5: The U.S. entered World War I in 1917.
+F6: The Battle of Hastings occurred in 1066.
+
+Question:
+Did the U.S. enter World War I before or after the Russian Revolution, and was that before or after the Treaty of Versailles?

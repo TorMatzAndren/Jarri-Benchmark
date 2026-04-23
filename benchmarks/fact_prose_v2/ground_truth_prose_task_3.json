@@ -1,0 +1,16 @@
+{
+  "max_words": 120,
+  "analogy_patterns": [
+    "like an index in a book",
+    "like a table of contents",
+    "like labeled drawers",
+    "like a filing cabinet"
+  ],
+  "banned_terms": [
+    "b-tree",
+    "cardinality",
+    "optimizer",
+    "query planner",
+    "hash index"
+  ]
+}

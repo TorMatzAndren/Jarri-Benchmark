@@ -1,0 +1,629 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:24.132145+00:00",
+  "source": "/home/dretski/jarri-benchmark-release/benchmarks/_db/benchmark.duckdb",
+  "project_root": "/home/dretski/jarri-benchmark-release",
+  "frontier_definition": {
+    "maximize": [
+      "fully_correct_rate",
+      "avg_score_per_100_output_tokens"
+    ],
+    "minimize": [
+      "avg_energy_j",
+      "avg_output_tokens"
+    ]
+  },
+  "global_model_frontier": {
+    "frontier": [
+      {
+        "model": "qwen3:8b",
+        "benchmark_count": 6,
+        "rows": 6,
+        "avg_score_percent": 53.39833333333333,
+        "fully_correct_rate": 0.0,
+        "avg_energy_j": 324.81666666666666,
+        "avg_output_tokens": 169.33333333333334,
+        "avg_tokens_per_second": 72.045,
+        "avg_score_per_100_output_tokens": 40.76223916666667,
+        "avg_joules_per_output_token": 1.9882163333333331,
+        "avg_output_tokens_per_joule": 0.505867
+      }
+    ],
+    "dominated": [
+      {
+        "model": "llama3.1:8b",
+        "benchmark_count": 22,
+        "rows": 22,
+        "avg_score_percent": 27.618181818181814,
+        "fully_correct_rate": 0.0,
+        "avg_energy_j": 441.75272727272727,
+        "avg_output_tokens": 250.45454545454547,
+        "avg_tokens_per_second": 78.26863636363636,
+        "avg_score_per_100_output_tokens": 22.461295136363635,
+        "avg_joules_per_output_token": 1.721071227272727,
+        "avg_output_tokens_per_joule": 0.669552318181818
+      }
+    ]
+  },
+  "per_task_frontier": {
+    "coding_fs_strict_v3": {
+      "frontier": [
+        {
+          "model": "llama3.1:8b",
+          "task_id": "coding_fs_strict_v3",
+          "task_family": "coding",
+          "tdp_level": 80,
+          "benchmark_count": 1,
+          "rows": 1,
+          "avg_score_percent": 0.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 1885.06,
+          "avg_output_tokens": 1054.0,
+          "avg_tokens_per_second": 76.42,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_joules_per_output_token": 1.788482,
+          "avg_output_tokens_per_joule": 0.559133
+        }
+      ],
+      "dominated": []
+    },
+    "constrained_rewrite_v2": {
+      "frontier": [
+        {
+          "model": "llama3.1:8b",
+          "task_id": "constrained_rewrite_v2",
+          "task_family": "language",
+          "tdp_level": 80,
+          "benchmark_count": 1,
+          "rows": 1,
+          "avg_score_percent": 50.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 71.78,
+          "avg_output_tokens": 78.0,
+          "avg_tokens_per_second": 79.21,
+          "avg_score_per_100_output_tokens": 64.102564,
+          "avg_joules_per_output_token": 0.920256,
+          "avg_output_tokens_per_joule": 1.086654
+        }
+      ],
+      "dominated": []
+    },
+    "fact_task_1": {
+      "frontier": [
+        {
+          "model": "llama3.1:8b",
+          "task_id": "fact_task_1",
+          "task_family": "fact",
+          "tdp_level": 80,
+          "benchmark_count": 3,
+          "rows": 3,
+          "avg_score_percent": 77.17999999999999,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 468.21,
+          "avg_output_tokens": 294.3333333333333,
+          "avg_tokens_per_second": 77.88333333333334,
+          "avg_score_per_100_output_tokens": 26.18427266666667,
+          "avg_joules_per_output_token": 1.5904703333333332,
+          "avg_output_tokens_per_joule": 0.628816
+        },
+        {
+          "model": "qwen3:8b",
+          "task_id": "fact_task_1",
+          "task_family": "fact",
+          "tdp_level": 80,
+          "benchmark_count": 1,
+          "rows": 1,
+          "avg_score_percent": 94.89,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 518.39,
+          "avg_output_tokens": 304.0,
+          "avg_tokens_per_second": 71.49,
+          "avg_score_per_100_output_tokens": 31.213816,
+          "avg_joules_per_output_token": 1.70523,
+          "avg_output_tokens_per_joule": 0.586431
+        }
+      ],
+      "dominated": []
+    },
+    "fact_task_2": {
+      "frontier": [
+        {
+          "model": "llama3.1:8b",
+          "task_id": "fact_task_2",
+          "task_family": "fact",
+          "tdp_level": 80,
+          "benchmark_count": 3,
+          "rows": 3,
+          "avg_score_percent": 18.666666666666668,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 458.8966666666667,
+          "avg_output_tokens": 247.33333333333334,
+          "avg_tokens_per_second": 77.92333333333335,
+          "avg_score_per_100_output_tokens": 7.552377333333332,
+          "avg_joules_per_output_token": 1.8552366666666666,
+          "avg_output_tokens_per_joule": 0.539028
+        },
+        {
+          "model": "qwen3:8b",
+          "task_id": "fact_task_2",
+          "task_family": "fact",
+          "tdp_level": 80,
+          "benchmark_count": 1,
+          "rows": 1,
+          "avg_score_percent": 37.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 559.69,
+          "avg_output_tokens": 284.0,
+          "avg_tokens_per_second": 71.4,
+          "avg_score_per_100_output_tokens": 13.028169,
+          "avg_joules_per_output_token": 1.970739,
+          "avg_output_tokens_per_joule": 0.507424
+        }
+      ],
+      "dominated": []
+    },
+    "fact_task_3": {
+      "frontier": [
+        {
+          "model": "qwen3:8b",
+          "task_id": "fact_task_3",
+          "task_family": "fact",
+          "tdp_level": 80,
+          "benchmark_count": 1,
+          "rows": 1,
+          "avg_score_percent": 32.5,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 116.2,
+          "avg_output_tokens": 53.0,
+          "avg_tokens_per_second": 72.85,
+          "avg_score_per_100_output_tokens": 61.320755,
+          "avg_joules_per_output_token": 2.192453,
+          "avg_output_tokens_per_joule": 0.45611
+        }
+      ],
+      "dominated": [
+        {
+          "model": "llama3.1:8b",
+          "task_id": "fact_task_3",
+          "task_family": "fact",
+          "tdp_level": 80,
+          "benchmark_count": 3,
+          "rows": 3,
+          "avg_score_percent": 25.666666666666668,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 529.9266666666666,
+          "avg_output_tokens": 287.0,
+          "avg_tokens_per_second": 77.87666666666667,
+          "avg_score_per_100_output_tokens": 8.991126,
+          "avg_joules_per_output_token": 1.8477923333333333,
+          "avg_output_tokens_per_joule": 0.541214
+        }
+      ]
+    },
+    "logic_consistency_v2": {
+      "frontier": [
+        {
+          "model": "llama3.1:8b",
+          "task_id": "logic_consistency_v2",
+          "task_family": "knowledge",
+          "tdp_level": 80,
+          "benchmark_count": 1,
+          "rows": 1,
+          "avg_score_percent": 62.5,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 12.8,
+          "avg_output_tokens": 34.0,
+          "avg_tokens_per_second": 80.3,
+          "avg_score_per_100_output_tokens": 183.823529,
+          "avg_joules_per_output_token": 0.376471,
+          "avg_output_tokens_per_joule": 2.65625
+        }
+      ],
+      "dominated": []
+    },
+    "math_dependency_v1": {
+      "frontier": [
+        {
+          "model": "llama3.1:8b",
+          "task_id": "math_dependency_v1",
+          "task_family": "math",
+          "tdp_level": 80,
+          "benchmark_count": 1,
+          "rows": 1,
+          "avg_score_percent": 5.56,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 1332.4,
+          "avg_output_tokens": 779.0,
+          "avg_tokens_per_second": 77.14,
+          "avg_score_per_100_output_tokens": 0.713736,
+          "avg_joules_per_output_token": 1.710398,
+          "avg_output_tokens_per_joule": 0.584659
+        }
+      ],
+      "dominated": []
+    },
+    "prose_task_1": {
+      "frontier": [
+        {
+          "model": "llama3.1:8b",
+          "task_id": "prose_task_1",
+          "task_family": "prose",
+          "tdp_level": 80,
+          "benchmark_count": 3,
+          "rows": 3,
+          "avg_score_percent": 0.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 137.34666666666666,
+          "avg_output_tokens": 69.66666666666667,
+          "avg_tokens_per_second": 79.04666666666667,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_joules_per_output_token": 1.9748946666666667,
+          "avg_output_tokens_per_joule": 0.5064799999999999
+        },
+        {
+          "model": "qwen3:8b",
+          "task_id": "prose_task_1",
+          "task_family": "prose",
+          "tdp_level": 80,
+          "benchmark_count": 1,
+          "rows": 1,
+          "avg_score_percent": 46.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 181.27,
+          "avg_output_tokens": 88.0,
+          "avg_tokens_per_second": 72.37,
+          "avg_score_per_100_output_tokens": 52.272727,
+          "avg_joules_per_output_token": 2.059886,
+          "avg_output_tokens_per_joule": 0.485464
+        }
+      ],
+      "dominated": []
+    },
+    "prose_task_2": {
+      "frontier": [
+        {
+          "model": "llama3.1:8b",
+          "task_id": "prose_task_2",
+          "task_family": "prose",
+          "tdp_level": 80,
+          "benchmark_count": 3,
+          "rows": 3,
+          "avg_score_percent": 0.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 332.1766666666667,
+          "avg_output_tokens": 176.33333333333334,
+          "avg_tokens_per_second": 77.91666666666667,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_joules_per_output_token": 1.8862503333333336,
+          "avg_output_tokens_per_joule": 0.5302760000000001
+        },
+        {
+          "model": "qwen3:8b",
+          "task_id": "prose_task_2",
+          "task_family": "prose",
+          "tdp_level": 80,
+          "benchmark_count": 1,
+          "rows": 1,
+          "avg_score_percent": 50.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 372.39,
+          "avg_output_tokens": 187.0,
+          "avg_tokens_per_second": 71.56,
+          "avg_score_per_100_output_tokens": 26.737968,
+          "avg_joules_per_output_token": 1.99139,
+          "avg_output_tokens_per_joule": 0.502162
+        }
+      ],
+      "dominated": []
+    },
+    "prose_task_3": {
+      "frontier": [
+        {
+          "model": "qwen3:8b",
+          "task_id": "prose_task_3",
+          "task_family": "prose",
+          "tdp_level": 80,
+          "benchmark_count": 1,
+          "rows": 1,
+          "avg_score_percent": 60.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 200.96,
+          "avg_output_tokens": 100.0,
+          "avg_tokens_per_second": 72.6,
+          "avg_score_per_100_output_tokens": 60.0,
+          "avg_joules_per_output_token": 2.0096,
+          "avg_output_tokens_per_joule": 0.497611
+        }
+      ],
+      "dominated": [
+        {
+          "model": "llama3.1:8b",
+          "task_id": "prose_task_3",
+          "task_family": "prose",
+          "tdp_level": 80,
+          "benchmark_count": 3,
+          "rows": 3,
+          "avg_score_percent": 41.666666666666664,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 212.28333333333333,
+          "avg_output_tokens": 113.66666666666667,
+          "avg_tokens_per_second": 78.96666666666668,
+          "avg_score_per_100_output_tokens": 39.10844533333333,
+          "avg_joules_per_output_token": 1.868009,
+          "avg_output_tokens_per_joule": 0.5353376666666666
+        }
+      ]
+    }
+  },
+  "model_frontier_row_count": 1,
+  "task_frontier_row_count": 14,
+  "model_frontier": [
+    {
+      "model": "qwen3:8b",
+      "benchmark_count": 6,
+      "rows": 6,
+      "avg_score_percent": 53.39833333333333,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 324.81666666666666,
+      "avg_output_tokens": 169.33333333333334,
+      "avg_tokens_per_second": 72.045,
+      "avg_score_per_100_output_tokens": 40.76223916666667,
+      "avg_joules_per_output_token": 1.9882163333333331,
+      "avg_output_tokens_per_joule": 0.505867
+    }
+  ],
+  "model_dominated": [
+    {
+      "model": "llama3.1:8b",
+      "benchmark_count": 22,
+      "rows": 22,
+      "avg_score_percent": 27.618181818181814,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 441.75272727272727,
+      "avg_output_tokens": 250.45454545454547,
+      "avg_tokens_per_second": 78.26863636363636,
+      "avg_score_per_100_output_tokens": 22.461295136363635,
+      "avg_joules_per_output_token": 1.721071227272727,
+      "avg_output_tokens_per_joule": 0.669552318181818
+    }
+  ],
+  "task_frontier": [
+    {
+      "model": "llama3.1:8b",
+      "task_id": "coding_fs_strict_v3",
+      "task_family": "coding",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "rows": 1,
+      "avg_score_percent": 0.0,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 1885.06,
+      "avg_output_tokens": 1054.0,
+      "avg_tokens_per_second": 76.42,
+      "avg_score_per_100_output_tokens": 0.0,
+      "avg_joules_per_output_token": 1.788482,
+      "avg_output_tokens_per_joule": 0.559133,
+      "frontier_task_id": "coding_fs_strict_v3"
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "constrained_rewrite_v2",
+      "task_family": "language",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "rows": 1,
+      "avg_score_percent": 50.0,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 71.78,
+      "avg_output_tokens": 78.0,
+      "avg_tokens_per_second": 79.21,
+      "avg_score_per_100_output_tokens": 64.102564,
+      "avg_joules_per_output_token": 0.920256,
+      "avg_output_tokens_per_joule": 1.086654,
+      "frontier_task_id": "constrained_rewrite_v2"
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "fact_task_1",
+      "task_family": "fact",
+      "tdp_level": 80,
+      "benchmark_count": 3,
+      "rows": 3,
+      "avg_score_percent": 77.17999999999999,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 468.21,
+      "avg_output_tokens": 294.3333333333333,
+      "avg_tokens_per_second": 77.88333333333334,
+      "avg_score_per_100_output_tokens": 26.18427266666667,
+      "avg_joules_per_output_token": 1.5904703333333332,
+      "avg_output_tokens_per_joule": 0.628816,
+      "frontier_task_id": "fact_task_1"
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "fact_task_1",
+      "task_family": "fact",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "rows": 1,
+      "avg_score_percent": 94.89,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 518.39,
+      "avg_output_tokens": 304.0,
+      "avg_tokens_per_second": 71.49,
+      "avg_score_per_100_output_tokens": 31.213816,
+      "avg_joules_per_output_token": 1.70523,
+      "avg_output_tokens_per_joule": 0.586431,
+      "frontier_task_id": "fact_task_1"
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "fact_task_2",
+      "task_family": "fact",
+      "tdp_level": 80,
+      "benchmark_count": 3,
+      "rows": 3,
+      "avg_score_percent": 18.666666666666668,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 458.8966666666667,
+      "avg_output_tokens": 247.33333333333334,
+      "avg_tokens_per_second": 77.92333333333335,
+      "avg_score_per_100_output_tokens": 7.552377333333332,
+      "avg_joules_per_output_token": 1.8552366666666666,
+      "avg_output_tokens_per_joule": 0.539028,
+      "frontier_task_id": "fact_task_2"
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "fact_task_2",
+      "task_family": "fact",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "rows": 1,
+      "avg_score_percent": 37.0,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 559.69,
+      "avg_output_tokens": 284.0,
+      "avg_tokens_per_second": 71.4,
+      "avg_score_per_100_output_tokens": 13.028169,
+      "avg_joules_per_output_token": 1.970739,
+      "avg_output_tokens_per_joule": 0.507424,
+      "frontier_task_id": "fact_task_2"
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "fact_task_3",
+      "task_family": "fact",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "rows": 1,
+      "avg_score_percent": 32.5,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 116.2,
+      "avg_output_tokens": 53.0,
+      "avg_tokens_per_second": 72.85,
+      "avg_score_per_100_output_tokens": 61.320755,
+      "avg_joules_per_output_token": 2.192453,
+      "avg_output_tokens_per_joule": 0.45611,
+      "frontier_task_id": "fact_task_3"
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "logic_consistency_v2",
+      "task_family": "knowledge",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "rows": 1,
+      "avg_score_percent": 62.5,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 12.8,
+      "avg_output_tokens": 34.0,
+      "avg_tokens_per_second": 80.3,
+      "avg_score_per_100_output_tokens": 183.823529,
+      "avg_joules_per_output_token": 0.376471,
+      "avg_output_tokens_per_joule": 2.65625,
+      "frontier_task_id": "logic_consistency_v2"
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "math_dependency_v1",
+      "task_family": "math",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "rows": 1,
+      "avg_score_percent": 5.56,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 1332.4,
+      "avg_output_tokens": 779.0,
+      "avg_tokens_per_second": 77.14,
+      "avg_score_per_100_output_tokens": 0.713736,
+      "avg_joules_per_output_token": 1.710398,
+      "avg_output_tokens_per_joule": 0.584659,
+      "frontier_task_id": "math_dependency_v1"
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "prose_task_1",
+      "task_family": "prose",
+      "tdp_level": 80,
+      "benchmark_count": 3,
+      "rows": 3,
+      "avg_score_percent": 0.0,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 137.34666666666666,
+      "avg_output_tokens": 69.66666666666667,
+      "avg_tokens_per_second": 79.04666666666667,
+      "avg_score_per_100_output_tokens": 0.0,
+      "avg_joules_per_output_token": 1.9748946666666667,
+      "avg_output_tokens_per_joule": 0.5064799999999999,
+      "frontier_task_id": "prose_task_1"
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "prose_task_1",
+      "task_family": "prose",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "rows": 1,
+      "avg_score_percent": 46.0,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 181.27,
+      "avg_output_tokens": 88.0,
+      "avg_tokens_per_second": 72.37,
+      "avg_score_per_100_output_tokens": 52.272727,
+      "avg_joules_per_output_token": 2.059886,
+      "avg_output_tokens_per_joule": 0.485464,
+      "frontier_task_id": "prose_task_1"
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "prose_task_2",
+      "task_family": "prose",
+      "tdp_level": 80,
+      "benchmark_count": 3,
+      "rows": 3,
+      "avg_score_percent": 0.0,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 332.1766666666667,
+      "avg_output_tokens": 176.33333333333334,
+      "avg_tokens_per_second": 77.91666666666667,
+      "avg_score_per_100_output_tokens": 0.0,
+      "avg_joules_per_output_token": 1.8862503333333336,
+      "avg_output_tokens_per_joule": 0.5302760000000001,
+      "frontier_task_id": "prose_task_2"
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "prose_task_2",
+      "task_family": "prose",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "rows": 1,
+      "avg_score_percent": 50.0,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 372.39,
+      "avg_output_tokens": 187.0,
+      "avg_tokens_per_second": 71.56,
+      "avg_score_per_100_output_tokens": 26.737968,
+      "avg_joules_per_output_token": 1.99139,
+      "avg_output_tokens_per_joule": 0.502162,
+      "frontier_task_id": "prose_task_2"
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "prose_task_3",
+      "task_family": "prose",
+      "tdp_level": 80,
+      "benchmark_count": 1,
+      "rows": 1,
+      "avg_score_percent": 60.0,
+      "fully_correct_rate": 0.0,
+      "avg_energy_j": 200.96,
+      "avg_output_tokens": 100.0,
+      "avg_tokens_per_second": 72.6,
+      "avg_score_per_100_output_tokens": 60.0,
+      "avg_joules_per_output_token": 2.0096,
+      "avg_output_tokens_per_joule": 0.497611,
+      "frontier_task_id": "prose_task_3"
+    }
+  ]
+}

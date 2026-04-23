@@ -1,0 +1,4 @@
+{
+  "summary": "The Peregrine project, started in 2018 as a university robotics initiative, developed autonomous navigation prototypes. Sensor issues delayed deployment, but a lidar-assisted design improved accuracy. It later received funding for snow-clearing analysis, though it wasn't commercialized. Its datasets are now used in academic research on winter navigation and terrain uncertainty.",
+  "word_count": 70
+}

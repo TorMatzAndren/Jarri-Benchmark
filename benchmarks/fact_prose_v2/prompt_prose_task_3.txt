@@ -1,0 +1,19 @@
+Return ONLY valid JSON.
+
+Explain what a database index does.
+
+Rules:
+- Exactly 120 words maximum.
+- No jargon from this banned list:
+  ["B-tree", "cardinality", "optimizer", "query planner", "hash index"]
+- Must contain exactly 3 bullet points in the "bullets" array.
+- Tone must be beginner-friendly.
+- Must include one real-world analogy.
+- Do not add extra fields.
+
+Schema:
+{
+  "intro": "...",
+  "bullets": ["...", "...", "..."],
+  "word_count": 0
+}

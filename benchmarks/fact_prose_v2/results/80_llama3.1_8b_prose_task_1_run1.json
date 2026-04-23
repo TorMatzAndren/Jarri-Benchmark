@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "model": "llama3.1:8b",
+  "started_utc": "2026-04-23T23:01:57.104524+00:00",
+  "completed_utc": "2026-04-23T23:01:58.112266+00:00",
+  "duration_seconds": 0.995,
+  "final_answer": "```\n{\n  \"summary\": \"The Peregrine project began as a university robotics collaboration in 2018, switching from stereo-camera-heavy design to lidar-assisted hybrid approach in 2021, reducing navigation errors by 37 percent.\",\n  \"word_count\": 46\n}\n```",
+  "thinking_trace": "",
+  "metrics": {
+    "prompt_tokens": 198,
+    "response_tokens": 61,
+    "tokens_per_second": 79.22,
+    "cold_start": false,
+    "prompt_eval_seconds": 0.07,
+    "eval_seconds": 0.77,
+    "load_seconds": 0.119,
+    "total_duration_ns": 985431963,
+    "load_duration_ns": 119454529,
+    "prompt_eval_duration_ns": 69507866,
+    "eval_duration_ns": 769985823
+  },
+  "probes": {
+    "ollama_ps_before": {
+      "returncode": 0,
+      "stdout": "NAME           ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nllama3.1:8b    46e0c10c039e    5.5 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    },
+    "ollama_ps_after": {
+      "returncode": 0,
+      "stdout": "NAME           ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nllama3.1:8b    46e0c10c039e    5.5 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    }
+  },
+  "debug_artifact_path": null,
+  "error": ""
+}

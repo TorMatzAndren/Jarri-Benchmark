@@ -1,0 +1,9 @@
+{
+  "intro": "A database index helps find data faster, like a book's table of contents. It lets the database skip pages instead of reading every one.",
+  "bullets": [
+    "It speeds up searches by pointing directly to where data is stored.",
+    "It keeps data organized so the database can locate items without scanning all records.",
+    "It improves performance for common queries but uses extra storage space."
+  ],
+  "word_count": 120
+}

@@ -1,0 +1,115 @@
+{
+  "success": false,
+  "evaluator_version": "constrained_rewrite_eval_v3",
+  "task_id": "constrained_rewrite_v2",
+  "task_family": "language",
+  "execution_status": "ok",
+  "failure_type": "semantic_error",
+  "failure_stage": "semantic",
+  "failure_subtype": [
+    "missing_required_phrase",
+    "missing_required_token",
+    "partial_semantic_match",
+    "word_count_violation"
+  ],
+  "quality_class": "partial",
+  "artifact_usability": "partial",
+  "usable_output": true,
+  "pipeline_usable": false,
+  "hard_failure": false,
+  "score": {
+    "checks": {
+      "exactly_three_bullets": true,
+      "bullet_1_has_12_words": false,
+      "bullet_2_has_12_words": false,
+      "bullet_3_has_12_words": true,
+      "all_bullets_end_with_period": true,
+      "contains_all_required_tokens": false,
+      "contains_all_required_phrases": false,
+      "no_forbidden_punctuation": true
+    },
+    "passed_checks": 4,
+    "total_checks": 8,
+    "score_percent": 50.0,
+    "hard_failure": false
+  },
+  "required_tokens": [
+    "March",
+    "3rd",
+    "2021",
+    "Arcturus",
+    "Systems",
+    "4.2",
+    "5.6",
+    "12",
+    "Lina",
+    "Verne",
+    "three",
+    "new",
+    "European",
+    "markets"
+  ],
+  "required_phrases": [
+    "Arcturus Systems",
+    "Lina Verne",
+    "three new European markets"
+  ],
+  "task_metrics": {
+    "expected_bullet_count": 3,
+    "actual_bullet_count": 3,
+    "bullet_word_counts": [
+      11,
+      11,
+      12
+    ],
+    "required_token_count": 14,
+    "present_token_count": 11,
+    "missing_token_count": 3,
+    "required_phrase_count": 3,
+    "present_phrase_count": 2,
+    "missing_phrase_count": 1,
+    "forbidden_punctuation_count": 0,
+    "bullets_missing_period_count": 0
+  },
+  "task_failures": {
+    "word_count_violation": {
+      "violations": [
+        {
+          "bullet_index": 1,
+          "expected_words": 12,
+          "actual_words": 11
+        },
+        {
+          "bullet_index": 2,
+          "expected_words": 12,
+          "actual_words": 11
+        }
+      ]
+    },
+    "missing_required_token": {
+      "missing_tokens": [
+        "12",
+        "European",
+        "new"
+      ],
+      "present_token_count": 11,
+      "required_token_count": 14
+    },
+    "missing_required_phrase": {
+      "missing_phrases": [
+        "three new European markets"
+      ],
+      "present_phrase_count": 2,
+      "required_phrase_count": 3
+    },
+    "partial_semantic_match": {
+      "present_phrases": [
+        "Arcturus Systems",
+        "Lina Verne"
+      ],
+      "missing_phrases": [
+        "three new European markets"
+      ]
+    }
+  }
+}

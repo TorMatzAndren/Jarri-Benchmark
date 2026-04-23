@@ -1,0 +1,60 @@
+MASTER BENCHMARK REPORT
+
+BEST FACTUAL MODEL
+  model: mistral:7b
+  task_id: fact_task_1
+  score_avg: 39.6959
+  joules_per_process_avg: 427.4187
+  score_per_wh_avg: 334.3448
+
+BEST FACTUAL EFFICIENCY MODEL
+  model: mistral:7b
+  task_id: fact_task_3
+  score_per_wh_avg: 361.5526
+  score_avg: 25.9563
+  joules_per_process_avg: 258.4484
+
+BEST FACTUAL PIPELINE MODEL
+  model: mistral:7b
+  task_id: fact_task_1
+  score_avg: 39.6959
+  pipeline_usable_rate: 0.975
+
+BEST PROSE MODEL
+  model: mistral:7b
+  task_id: prose_task_1
+  score_avg: 53.15
+  joules_per_process_avg: 62.4769
+  score_per_wh_avg: 3062.5719
+
+BEST PROSE EFFICIENCY MODEL
+  model: mistral:7b
+  task_id: prose_task_1
+  score_per_wh_avg: 3062.5719
+  score_avg: 53.15
+
+LOWEST JOULES_PER_PROCESS
+  model: mistral:7b
+  task_family: prose
+  task_id: prose_task_1
+  joules_per_process_avg: 62.4769
+
+BEST SCORE_PER_WH
+  model: mistral:7b
+  task_family: prose
+  task_id: prose_task_1
+  score_per_wh_avg: 3062.5719
+
+BEST SCORE_PER_PROCESS
+  model: mistral:7b
+  task_family: prose
+  task_id: prose_task_1
+  score_per_process_avg: 53.15
+
+AGGREGATES
+mistral:7b | factual | fact_task_1 | score_avg=39.6959 | semantic_score_avg=30.1236 | jpp_avg=427.4187 | score_per_wh_avg=334.3448 | usable_rate=0.1375 | pipeline_usable_rate=0.975 | hard_failure_rate=0.025 | fair_rate=1.0 | runtime={'full_gpu': 80} | artifact_usability={'unknown': 80} | execution_status={'unknown': 80} | eval_versions={'fact_prose_eval_v4': 80}
+mistral:7b | factual | fact_task_2 | score_avg=15.165 | semantic_score_avg=8.6 | jpp_avg=481.856 | score_per_wh_avg=113.2994 | usable_rate=0.825 | pipeline_usable_rate=0.0 | hard_failure_rate=0.175 | fair_rate=1.0 | runtime={'full_gpu': 80} | artifact_usability={'unknown': 80} | execution_status={'unknown': 80} | eval_versions={'fact_prose_eval_v4': 80}
+mistral:7b | factual | fact_task_3 | score_avg=25.9563 | semantic_score_avg=41.3125 | jpp_avg=258.4484 | score_per_wh_avg=361.5526 | usable_rate=0.0 | pipeline_usable_rate=0.4625 | hard_failure_rate=0.025 | fair_rate=1.0 | runtime={'full_gpu': 80} | artifact_usability={'unknown': 80} | execution_status={'unknown': 80} | eval_versions={'fact_prose_eval_v4': 80}
+mistral:7b | prose | prose_task_1 | score_avg=53.15 | semantic_score_avg=53.15 | jpp_avg=62.4769 | score_per_wh_avg=3062.5719 | usable_rate=1.0 | pipeline_usable_rate=1.0 | hard_failure_rate=0.0 | fair_rate=1.0 | runtime={'full_gpu': 80} | artifact_usability={'unknown': 80} | execution_status={'unknown': 80} | eval_versions={'fact_prose_eval_v4': 80}
+mistral:7b | prose | prose_task_2 | score_avg=41.4864 | semantic_score_avg=41.4864 | jpp_avg=205.8803 | score_per_wh_avg=725.4266 | usable_rate=1.0 | pipeline_usable_rate=1.0 | hard_failure_rate=0.0 | fair_rate=1.0 | runtime={'full_gpu': 80} | artifact_usability={'unknown': 80} | execution_status={'unknown': 80} | eval_versions={'fact_prose_eval_v4': 80}
+mistral:7b | prose | prose_task_3 | score_avg=53.0625 | semantic_score_avg=53.0625 | jpp_avg=118.5701 | score_per_wh_avg=1611.0723 | usable_rate=0.75 | pipeline_usable_rate=0.9875 | hard_failure_rate=0.0125 | fair_rate=1.0 | runtime={'full_gpu': 80} | artifact_usability={'unknown': 80} | execution_status={'unknown': 80} | eval_versions={'fact_prose_eval_v4': 80}

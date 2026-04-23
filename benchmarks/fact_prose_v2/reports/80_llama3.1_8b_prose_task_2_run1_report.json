@@ -1,0 +1,37 @@
+{
+  "evaluator_version": "fact_prose_eval_v7",
+  "format_valid": false,
+  "usable_output": false,
+  "pipeline_usable": false,
+  "schema_coerced": false,
+  "hard_failure": true,
+  "hard_failure_reason": "invalid_json",
+  "confidence_classification": "incorrect",
+  "hallucination_flags": [
+    {
+      "type": "invalid_json"
+    }
+  ],
+  "score": {
+    "score_percent": 0.0,
+    "score_per_process": 0.0,
+    "factual_accuracy_score": 0.0,
+    "hallucination_penalty": 0.0,
+    "reasoning_consistency_score": 0.0,
+    "compression_efficiency_score": 0.0,
+    "constraint_adherence_score": 0.0,
+    "schema_adherence_score": 0.0,
+    "semantic_shadow_score": 0.0
+  },
+  "task_id": "prose_task_2",
+  "answer_file": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/answers/80_llama3.1_8b_prose_task_2_run1.txt",
+  "ground_truth_file": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/ground_truth_prose_task_2.json",
+  "success": false,
+  "failure_stage": "format",
+  "failure_type": "format_violation",
+  "failure_subtype": [
+    "hard_failure_result",
+    "invalid_json",
+    "structure_invalid"
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "intro": "A database index is like a catalog in a library. It helps find specific books quickly by organizing them alphabetically.",
+  "bullets": [
+    "It's an extra list of information about the data that makes it easier to search and retrieve",
+    "Think of it as a map that shows where the important parts are, so you can jump straight there instead of searching through everything",
+    "This means faster access times when looking for specific data"
+  ],
+  "word_count": 120
+}

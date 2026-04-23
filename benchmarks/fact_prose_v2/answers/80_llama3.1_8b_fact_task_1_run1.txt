@@ -1,0 +1,50 @@
+```json
+{
+  "items": [
+    {
+      "entity": "Speed of light in vacuum",
+      "category": "physical_constant",
+      "fields": {
+        "value_m_per_s": 299792458,
+        "unit": "m/s",
+        "symbol": null
+      }
+    },
+    {
+      "entity": "Water freezing point at 1 atm",
+      "category": "thermodynamic_reference",
+      "fields": {
+        "value_celsius": 0,
+        "value_kelvin": 273.15,
+        "unit": "°C"
+      }
+    },
+    {
+      "entity": "Battle of Hastings",
+      "category": "historical_event",
+      "fields": {
+        "year": null,
+        "location_country_modern": null,
+        "winner": "House of Normandy"
+      }
+    },
+    {
+      "entity": "Avogadro constant",
+      "category": "physical_constant",
+      "fields": {
+        "value": 6.02214076e+23,
+        "unit": "mol⁻¹",
+        "symbol": null
+      }
+    },
+    {
+      "entity": "DNA",
+      "category": "biology",
+      "fields": {
+        "expanded_form": "deoxyribonucleic acid",
+        "primary_role": null
+      }
+    }
+  ]
+}
+```

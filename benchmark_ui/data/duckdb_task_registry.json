@@ -1,0 +1,194 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:24.159846+00:00",
+  "source": "benchmark prompt roots",
+  "rows": [
+    {
+      "task_id": "coding_fs_strict_v3",
+      "task_title": "Strict filesystem coding task",
+      "task_family": "coding",
+      "task_description": "The model must produce code that solves a structured filesystem-style programming task under exact output constraints.",
+      "success_definition": "Success requires syntactically valid code, successful execution, and correct structured output according to the evaluator.",
+      "common_failure_modes": [
+        "syntax_error",
+        "parse_failure",
+        "execution_failure",
+        "wrong_summary_block",
+        "structural_noncompliance"
+      ],
+      "primary_axis": "execution_reliability",
+      "benchmark_root": "/home/dretski/jarri-benchmark-release/benchmarks/coding_measurement_v3",
+      "prompt_path": "/home/dretski/jarri-benchmark-release/benchmarks/coding_measurement_v3/prompt_coding_fs_strict_v3.txt",
+      "manifest_path": "/home/dretski/jarri-benchmark-release/benchmarks/coding_measurement_v3/manifest.json",
+      "prompt_first_line": "Write a Python script that:",
+      "prompt_preview": "Write a Python script that: 1. Recursively scans a given directory path (provided as argv[1]). 2. Computes: - total number of files - total number of directories (including root) - total size in bytes 3. Builds an extension distribution: - Include file exte..."
+    },
+    {
+      "task_id": "math_dependency_v1",
+      "task_title": "Math dependency reasoning task",
+      "task_family": "math",
+      "task_description": "The model must follow a dependency chain correctly and produce exact numeric reasoning without dropping intermediate logic.",
+      "success_definition": "Success requires exact arithmetic and correct dependency resolution under evaluator checks.",
+      "common_failure_modes": [
+        "arithmetic_error",
+        "dependency_break",
+        "reasoning_omission",
+        "semantic_mismatch"
+      ],
+      "primary_axis": "arithmetic_exactness",
+      "benchmark_root": "/home/dretski/jarri-benchmark-release/benchmarks/math_measurement_v1",
+      "prompt_path": "/home/dretski/jarri-benchmark-release/benchmarks/math_measurement_v1/prompt_math_dependency_v1.txt",
+      "manifest_path": "/home/dretski/jarri-benchmark-release/benchmarks/math_measurement_v1/manifest.json",
+      "prompt_first_line": "You are given a dataset of transactions:",
+      "prompt_preview": "You are given a dataset of transactions: A: 120 B: 80 C: 150 D: 50 Rules: 1. Compute total sum 2. Compute percentage share of each (rounded to 2 decimals) 3. Remove the smallest value 4. Recompute total and percentages 5. Compute a final score: final_score ..."
+    },
+    {
+      "task_id": "logic_consistency_v2",
+      "task_title": "Closed-world logic consistency task",
+      "task_family": "knowledge",
+      "task_description": "The model must maintain internal consistency across a constrained logic scenario without inventing unsupported facts.",
+      "success_definition": "Success requires consistent reasoning and exact evaluator-compliant answers.",
+      "common_failure_modes": [
+        "consistency_break",
+        "semantic_mismatch",
+        "coverage_failure",
+        "constraint_failure"
+      ],
+      "primary_axis": "formal_reasoning_consistency",
+      "benchmark_root": "/home/dretski/jarri-benchmark-release/benchmarks/knowledge_measurement_v2",
+      "prompt_path": "/home/dretski/jarri-benchmark-release/benchmarks/knowledge_measurement_v2/prompt_logic_consistency_v2.txt",
+      "manifest_path": "/home/dretski/jarri-benchmark-release/benchmarks/knowledge_measurement_v2/manifest.json",
+      "prompt_first_line": "You are given the following statements:",
+      "prompt_preview": "You are given the following statements: 1. All Zorans are Krel. 2. Some Krel are Vex. 3. No Vex are Tulan. 4. Some Tulan are Zorans. 5. All Tulan are Mir. Tasks: 1. Determine if the full system is consistent or inconsistent. 2. List only the minimal contrad..."
+    },
+    {
+      "task_id": "constrained_rewrite_v2",
+      "task_title": "Constrained rewrite task",
+      "task_family": "language",
+      "task_description": "The model must rewrite text while obeying explicit structural and semantic constraints.",
+      "success_definition": "Success requires constraint compliance, preserved meaning, and evaluator-approved structure.",
+      "common_failure_modes": [
+        "constraint_failure",
+        "semantic_drift",
+        "format_deviation",
+        "coverage_failure"
+      ],
+      "primary_axis": "constraint_precision",
+      "benchmark_root": "/home/dretski/jarri-benchmark-release/benchmarks/language_measurement_v2",
+      "prompt_path": "/home/dretski/jarri-benchmark-release/benchmarks/language_measurement_v2/prompt_constrained_rewrite_v2.txt",
+      "manifest_path": "/home/dretski/jarri-benchmark-release/benchmarks/language_measurement_v2/manifest.json",
+      "prompt_first_line": "Rewrite the text below into EXACTLY 3 bullet points.",
+      "prompt_preview": "Rewrite the text below into EXACTLY 3 bullet points. Each bullet must: - contain exactly 12 words - preserve ALL numerical values - preserve ALL named entities - not introduce new information - end with a period Across the 3 bullets together, you must prese..."
+    },
+    {
+      "task_id": "fact_task_1",
+      "task_title": "Structured fact task 1",
+      "task_family": "fact_prose",
+      "task_description": "The model must retrieve or reproduce structured factual information in the expected form.",
+      "success_definition": "Success requires correct factual fields and compliant structure.",
+      "common_failure_modes": [
+        "field_mismatch",
+        "factual_error",
+        "semantic_mismatch",
+        "format_deviation"
+      ],
+      "primary_axis": "semantic_fidelity",
+      "benchmark_root": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2",
+      "prompt_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/prompt_fact_task_1.txt",
+      "manifest_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/manifest.json",
+      "prompt_first_line": "Return ONLY valid JSON.",
+      "prompt_preview": "Return ONLY valid JSON. Task: Fill in the requested fields for each item below. Rules: - Do not add extra fields. - If unknown, use null. - Numeric values must be numbers, not strings. - Preserve the exact schema. Schema: { \"items\": [ { \"entity\": \"...\", \"ca..."
+    },
+    {
+      "task_id": "fact_task_2",
+      "task_title": "Structured fact task 2",
+      "task_family": "fact_prose",
+      "task_description": "The model must follow a multi-step factual chain without dropping dependencies or inventing unsupported answers.",
+      "success_definition": "Success requires correct chain resolution and evaluator-compliant structured output.",
+      "common_failure_modes": [
+        "dependency_break",
+        "semantic_mismatch",
+        "factual_error",
+        "constraint_failure"
+      ],
+      "primary_axis": "dependency_chain_integrity",
+      "benchmark_root": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2",
+      "prompt_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/prompt_fact_task_2.txt",
+      "manifest_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/manifest.json",
+      "prompt_first_line": "Return ONLY valid JSON.",
+      "prompt_preview": "Return ONLY valid JSON. Solve the problem below using the exact schema provided. Rules: - Show all reasoning steps explicitly in the \"steps\" array. - Each step must be atomic. - Do not add extra top-level fields. - If a claim cannot be supported from the gi..."
+    },
+    {
+      "task_id": "fact_task_3",
+      "task_title": "Structured fact task 3",
+      "task_family": "fact_prose",
+      "task_description": "The model must resolve a factual extraction or reasoning problem with strict output expectations.",
+      "success_definition": "Success requires correct factual extraction and structure.",
+      "common_failure_modes": [
+        "semantic_mismatch",
+        "field_mismatch",
+        "coverage_failure",
+        "constraint_failure"
+      ],
+      "primary_axis": "semantic_fidelity",
+      "benchmark_root": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2",
+      "prompt_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/prompt_fact_task_3.txt",
+      "manifest_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/manifest.json",
+      "prompt_first_line": "Return ONLY valid JSON.",
+      "prompt_preview": "Return ONLY valid JSON. Your job is to evaluate each statement below. Rules: - Do not assume the premise is correct. - For each item, classify it as one of: \"true\", \"false\", \"ambiguous\", \"unsupported\" - If false, give a short correction. - If ambiguous, exp..."
+    },
+    {
+      "task_id": "prose_task_1",
+      "task_title": "Prose task 1",
+      "task_family": "fact_prose",
+      "task_description": "The model must produce prose output that satisfies evaluator criteria while preserving intent and structure.",
+      "success_definition": "Success requires semantic fidelity and structural compliance.",
+      "common_failure_modes": [
+        "semantic_drift",
+        "constraint_failure",
+        "coverage_failure"
+      ],
+      "primary_axis": "semantic_fidelity",
+      "benchmark_root": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2",
+      "prompt_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/prompt_prose_task_1.txt",
+      "manifest_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/manifest.json",
+      "prompt_first_line": "Return ONLY valid JSON.",
+      "prompt_preview": "Return ONLY valid JSON. Summarize the source text below in no more than 70 words. Rules: - Preserve the most important facts. - No repetition. - No extra commentary. - Output must follow the exact schema. Schema: { \"summary\": \"...\", \"word_count\": 0 } Source..."
+    },
+    {
+      "task_id": "prose_task_2",
+      "task_title": "Prose task 2",
+      "task_family": "fact_prose",
+      "task_description": "The model must produce evaluator-compliant prose under explicit content constraints.",
+      "success_definition": "Success requires semantic compliance and structural correctness.",
+      "common_failure_modes": [
+        "constraint_failure",
+        "semantic_drift",
+        "coverage_failure"
+      ],
+      "primary_axis": "constraint_precision",
+      "benchmark_root": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2",
+      "prompt_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/prompt_prose_task_2.txt",
+      "manifest_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/manifest.json",
+      "prompt_first_line": "Return ONLY valid JSON.",
+      "prompt_preview": "Return ONLY valid JSON. Rewrite the instructions below so they are clear and structured. Rules: - Use exactly these sections in this order: 1. \"Goal\" 2. \"Inputs\" 3. \"Steps\" 4. \"Output\" - \"Steps\" must contain a numbered list in plain text form, one action pe..."
+    },
+    {
+      "task_id": "prose_task_3",
+      "task_title": "Prose task 3",
+      "task_family": "fact_prose",
+      "task_description": "The model must solve a prose-oriented evaluator task with exactness and controlled output behavior.",
+      "success_definition": "Success requires evaluator-compliant prose with preserved required content.",
+      "common_failure_modes": [
+        "semantic_drift",
+        "constraint_failure",
+        "format_deviation"
+      ],
+      "primary_axis": "semantic_fidelity",
+      "benchmark_root": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2",
+      "prompt_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/prompt_prose_task_3.txt",
+      "manifest_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/manifest.json",
+      "prompt_first_line": "Return ONLY valid JSON.",
+      "prompt_preview": "Return ONLY valid JSON. Explain what a database index does. Rules: - Exactly 120 words maximum. - No jargon from this banned list: [\"B-tree\", \"cardinality\", \"optimizer\", \"query planner\", \"hash index\"] - Must contain exactly 3 bullet points in the \"bullets\" ..."
+    }
+  ]
+}

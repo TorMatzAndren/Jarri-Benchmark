@@ -1,0 +1,166 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:23.243002+00:00",
+  "exporter_version": "jarri_benchmark_failure_join_v1",
+  "groups": {
+    "llama3.1:8b": {
+      "rows": 22,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "task_ids": [
+        "coding_fs_strict_v3",
+        "constrained_rewrite_v2",
+        "fact_task_1",
+        "fact_task_2",
+        "fact_task_3",
+        "logic_consistency_v2",
+        "math_dependency_v1",
+        "prose_task_1",
+        "prose_task_2",
+        "prose_task_3"
+      ],
+      "task_families": [
+        "coding",
+        "fact",
+        "knowledge",
+        "language",
+        "math",
+        "prose"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "constraint": 3,
+        "execute": 1,
+        "format": 7,
+        "semantic": 11
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 3,
+        "format_violation": 7,
+        "logic_error": 1,
+        "runtime_error": 1,
+        "semantic_error": 10
+      },
+      "failure_subtype_distribution": {
+        "accepted_false_premise": 3,
+        "classification_mismatch": 3,
+        "declared_word_count_mismatch": 3,
+        "exact_pair_set_mismatch": 1,
+        "extra_pair_detected": 1,
+        "field_value_mismatch": 3,
+        "final_answer_mismatch": 3,
+        "hard_failure_result": 6,
+        "incomplete_reasoning_chain": 3,
+        "invalid_json": 6,
+        "missing_filtered_section": 1,
+        "missing_final_section": 1,
+        "missing_initial_section": 1,
+        "missing_required_analogy": 3,
+        "missing_required_pair": 1,
+        "missing_required_phrase": 1,
+        "missing_required_token": 1,
+        "parse_recovered": 3,
+        "partial_semantic_match": 1,
+        "runtime_error": 1,
+        "schema_coerced": 3,
+        "structure_invalid": 3,
+        "weak_or_invented_note": 3,
+        "word_count_violation": 1
+      },
+      "quality_class_distribution": {
+        "failed": 2,
+        "partial": 2,
+        "unknown": 18
+      },
+      "artifact_usability_distribution": {
+        "partial": 2,
+        "unknown": 18,
+        "unusable": 2
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 12,
+        "partial": 6,
+        "unknown": 4
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 0.5,
+      "pipeline_usable_rate": 0.545455,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.363636,
+      "avg_score_percent": 27.618182,
+      "min_score_percent": 0.0,
+      "max_score_percent": 86.34,
+      "avg_energy_j": 441.752727,
+      "min_energy_j": 12.8,
+      "max_energy_j": 1885.06,
+      "avg_score_per_wh_strict": 1141.336568,
+      "avg_tokens_per_second": 78.268636
+    },
+    "qwen3:8b": {
+      "rows": 6,
+      "models": [
+        "qwen3:8b"
+      ],
+      "task_ids": [
+        "fact_task_1",
+        "fact_task_2",
+        "fact_task_3",
+        "prose_task_1",
+        "prose_task_2",
+        "prose_task_3"
+      ],
+      "task_families": [
+        "fact",
+        "prose"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "constraint": 3,
+        "semantic": 3
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 3,
+        "semantic_error": 3
+      },
+      "failure_subtype_distribution": {
+        "declared_word_count_mismatch": 2,
+        "field_value_mismatch": 1,
+        "incomplete_reasoning_chain": 1,
+        "low_semantic_retention": 1,
+        "missing_required_analogy": 1,
+        "missing_required_content_unit": 1,
+        "none": 1,
+        "schema_coerced": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 6
+      },
+      "artifact_usability_distribution": {
+        "unknown": 6
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 4,
+        "partial": 2
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 1.0,
+      "pipeline_usable_rate": 1.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 53.398333,
+      "min_score_percent": 32.5,
+      "max_score_percent": 94.89,
+      "avg_energy_j": 324.816667,
+      "min_energy_j": 116.2,
+      "max_energy_j": 559.69,
+      "avg_score_per_wh_strict": 729.267377,
+      "avg_tokens_per_second": 72.045
+    }
+  }
+}

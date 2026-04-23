@@ -1,0 +1,37 @@
+You are given a dataset of transactions:
+
+A: 120
+B: 80
+C: 150
+D: 50
+
+Rules:
+1. Compute total sum
+2. Compute percentage share of each (rounded to 2 decimals)
+3. Remove the smallest value
+4. Recompute total and percentages
+5. Compute a final score:
+   final_score = (new_total * number_of_remaining_items) % 97
+
+Output EXACTLY:
+
+=== INITIAL ===
+Total: <int>
+A: <percent>%
+B: <percent>%
+C: <percent>%
+D: <percent>%
+
+=== FILTERED ===
+Total: <int>
+A: <percent>%
+B: <percent>%
+C: <percent>%
+
+=== FINAL ===
+Score: <int>
+
+Rules:
+- Percentages must sum to 100% (after rounding)
+- Use standard rounding (0.005 rounds up)
+- Do not reorder labels

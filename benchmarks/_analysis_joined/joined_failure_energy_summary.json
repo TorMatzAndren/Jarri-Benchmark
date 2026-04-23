@@ -1,0 +1,111 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:23.242880+00:00",
+  "exporter_version": "jarri_benchmark_failure_join_v1",
+  "analysis_root": "/home/dretski/jarri-benchmark-release/benchmarks/_analysis",
+  "failure_records_path": "/home/dretski/jarri-benchmark-release/benchmarks/_analysis_failures/failure_records.json",
+  "failure_exporter_version": "jarri_benchmark_failure_aggregate_v2",
+  "normalized_rows_total": 28,
+  "joined_rows_total": 28,
+  "unmatched_rows_total": 0,
+  "summary": {
+    "rows": 28,
+    "models": [
+      "llama3.1:8b",
+      "qwen3:8b"
+    ],
+    "task_ids": [
+      "coding_fs_strict_v3",
+      "constrained_rewrite_v2",
+      "fact_task_1",
+      "fact_task_2",
+      "fact_task_3",
+      "logic_consistency_v2",
+      "math_dependency_v1",
+      "prose_task_1",
+      "prose_task_2",
+      "prose_task_3"
+    ],
+    "task_families": [
+      "coding",
+      "fact",
+      "knowledge",
+      "language",
+      "math",
+      "prose"
+    ],
+    "tdp_levels": [
+      80
+    ],
+    "failure_stage_distribution": {
+      "constraint": 6,
+      "execute": 1,
+      "format": 7,
+      "semantic": 14
+    },
+    "failure_type_distribution": {
+      "constraint_violation": 6,
+      "format_violation": 7,
+      "logic_error": 1,
+      "runtime_error": 1,
+      "semantic_error": 13
+    },
+    "failure_subtype_distribution": {
+      "accepted_false_premise": 3,
+      "classification_mismatch": 3,
+      "declared_word_count_mismatch": 5,
+      "exact_pair_set_mismatch": 1,
+      "extra_pair_detected": 1,
+      "field_value_mismatch": 4,
+      "final_answer_mismatch": 3,
+      "hard_failure_result": 6,
+      "incomplete_reasoning_chain": 4,
+      "invalid_json": 6,
+      "low_semantic_retention": 1,
+      "missing_filtered_section": 1,
+      "missing_final_section": 1,
+      "missing_initial_section": 1,
+      "missing_required_analogy": 4,
+      "missing_required_content_unit": 1,
+      "missing_required_pair": 1,
+      "missing_required_phrase": 1,
+      "missing_required_token": 1,
+      "none": 1,
+      "parse_recovered": 3,
+      "partial_semantic_match": 1,
+      "runtime_error": 1,
+      "schema_coerced": 4,
+      "structure_invalid": 3,
+      "weak_or_invented_note": 3,
+      "word_count_violation": 1
+    },
+    "quality_class_distribution": {
+      "failed": 2,
+      "partial": 2,
+      "unknown": 24
+    },
+    "artifact_usability_distribution": {
+      "partial": 2,
+      "unknown": 24,
+      "unusable": 2
+    },
+    "confidence_classification_distribution": {
+      "incorrect": 16,
+      "partial": 8,
+      "unknown": 4
+    },
+    "success_rate": 1.0,
+    "energy_valid_rate": 1.0,
+    "usable_output_rate": 0.607143,
+    "pipeline_usable_rate": 0.642857,
+    "fully_correct_rate": 0.0,
+    "hard_failure_rate": 0.285714,
+    "avg_score_percent": 33.1425,
+    "min_score_percent": 0.0,
+    "max_score_percent": 94.89,
+    "avg_energy_j": 416.695,
+    "min_energy_j": 12.8,
+    "max_energy_j": 1885.06,
+    "avg_score_per_wh_strict": 1053.036027,
+    "avg_tokens_per_second": 76.935
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:23.017785+00:00",
+  "policy_path": "/home/dretski/jarri-benchmark-release/benchmark_runtime_policy.json",
+  "ledgers": [
+    {
+      "ledger_path": "/home/dretski/jarri-benchmark-release/benchmarks/coding_measurement_v3/llm_benchmark_runs.jsonl",
+      "backup_path": "/home/dretski/jarri-benchmark-release/benchmarks/coding_measurement_v3/llm_benchmark_runs.pre_runtime_policy_backup.jsonl",
+      "quarantine_path": "/home/dretski/jarri-benchmark-release/benchmarks/coding_measurement_v3/llm_benchmark_runs.runtime_rejected.jsonl",
+      "rows_seen": 1,
+      "rows_retained": 1,
+      "rows_rejected": 0,
+      "rejected_models": {}
+    },
+    {
+      "ledger_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/llm_benchmark_runs.jsonl",
+      "backup_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/llm_benchmark_runs.pre_runtime_policy_backup.jsonl",
+      "quarantine_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/llm_benchmark_runs.runtime_rejected.jsonl",
+      "rows_seen": 24,
+      "rows_retained": 24,
+      "rows_rejected": 0,
+      "rejected_models": {}
+    },
+    {
+      "ledger_path": "/home/dretski/jarri-benchmark-release/benchmarks/knowledge_measurement_v2/llm_benchmark_runs.jsonl",
+      "backup_path": "/home/dretski/jarri-benchmark-release/benchmarks/knowledge_measurement_v2/llm_benchmark_runs.pre_runtime_policy_backup.jsonl",
+      "quarantine_path": "/home/dretski/jarri-benchmark-release/benchmarks/knowledge_measurement_v2/llm_benchmark_runs.runtime_rejected.jsonl",
+      "rows_seen": 1,
+      "rows_retained": 1,
+      "rows_rejected": 0,
+      "rejected_models": {}
+    },
+    {
+      "ledger_path": "/home/dretski/jarri-benchmark-release/benchmarks/language_measurement_v2/llm_benchmark_runs.jsonl",
+      "backup_path": "/home/dretski/jarri-benchmark-release/benchmarks/language_measurement_v2/llm_benchmark_runs.pre_runtime_policy_backup.jsonl",
+      "quarantine_path": "/home/dretski/jarri-benchmark-release/benchmarks/language_measurement_v2/llm_benchmark_runs.runtime_rejected.jsonl",
+      "rows_seen": 1,
+      "rows_retained": 1,
+      "rows_rejected": 0,
+      "rejected_models": {}
+    },
+    {
+      "ledger_path": "/home/dretski/jarri-benchmark-release/benchmarks/math_measurement_v1/llm_benchmark_runs.jsonl",
+      "backup_path": "/home/dretski/jarri-benchmark-release/benchmarks/math_measurement_v1/llm_benchmark_runs.pre_runtime_policy_backup.jsonl",
+      "quarantine_path": "/home/dretski/jarri-benchmark-release/benchmarks/math_measurement_v1/llm_benchmark_runs.runtime_rejected.jsonl",
+      "rows_seen": 1,
+      "rows_retained": 1,
+      "rows_rejected": 0,
+      "rejected_models": {}
+    }
+  ],
+  "totals": {
+    "rows_seen": 28,
+    "rows_retained": 28,
+    "rows_rejected": 0
+  },
+  "status": "ok"
+}

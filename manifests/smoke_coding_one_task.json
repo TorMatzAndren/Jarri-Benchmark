@@ -1,0 +1,11 @@
+{
+  "models": ["qwen3:8b"],
+  "tasks": [
+    {
+      "id": "coding_folder_scan_smoke",
+      "family": "coding",
+      "prompt": "llm_pl_sweep_v4/prompt_coding_folder_scan_v2.txt",
+      "candidate_path": "/tmp/jarri_benchmark_candidate_smoke.py"
+    }
+  ]
+}

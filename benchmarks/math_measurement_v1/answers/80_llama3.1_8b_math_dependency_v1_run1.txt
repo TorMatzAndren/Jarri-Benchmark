@@ -1,0 +1,93 @@
+I'll perform the required steps on the given dataset.
+
+**INITIAL**
+
+Total: 400
+A: 30.00%
+B: 20.00%
+C: 37.50%
+D: 12.50%
+
+First, I compute the total sum of all values:
+
+120 + 80 + 150 + 50 = 400
+
+Then, I calculate the percentage share for each item and round to two decimals:
+
+A: (120 / 400) × 100% ≈ 30.00%
+B: (80 / 400) × 100% ≈ 20.00%
+C: (150 / 400) × 100% ≈ 37.50%
+D: (50 / 400) × 100% ≈ 12.50%
+
+**FILTERED**
+
+Total: 350
+A: 34.29%
+B: 22.86%
+C: 46.57%
+
+Next, I remove the smallest value, which is D (50). I recompute the total and percentages:
+
+Total: 120 + 80 + 150 = 350
+
+Now, I recalculate the percentage shares for A, B, and C:
+
+A: (120 / 350) × 100% ≈ 34.29%
+B: (80 / 350) × 100% ≈ 22.86%
+C: (150 / 350) × 100% ≈ 42.86%
+
+However, I notice that the percentages don't sum to 100%. To fix this, I'll round C's percentage to ensure it sums to 100%:
+
+C: (150 / 350) × 100% ≈ 42.86% → 43% (rounding up)
+
+Now, I recompute the total and percentages again:
+
+Total: 120 + 80 + 150 = 350
+A: (120 / 350) × 100% ≈ 34.29%
+B: (80 / 350) × 100% ≈ 22.86%
+C: (150 / 350) × 100% ≈ 42.86%
+
+However, since the percentages still don't sum exactly to 100%, I'll round C's percentage again:
+
+C: (150 / 350) × 100% ≈ 42.86% → 43% (rounding up)
+
+To make it sum to 100%, I should adjust A and B instead.
+
+A: (120 / 350) × 100% ≈ 34.29% → 34.28%
+B: (80 / 350) × 100% ≈ 22.86% → 22.85%
+
+Now, the percentages sum to 100%:
+
+Total: 120 + 80 + 150 = 350
+A: (120 / 350) × 100% ≈ 34.28%
+B: (80 / 350) × 100% ≈ 22.86%
+C: (150 / 350) × 100% ≈ 42.86%
+
+**FINAL**
+
+Score: (350 * 2) % 97
+
+I recompute the total and percentages:
+
+Total: 120 + 80 = 200
+A: 34.28%
+B: 22.86%
+
+Now, I can compute the final score using the formula:
+
+final_score = (new_total * number_of_remaining_items) % 97
+= (200 * 2) % 97
+
+Performing the calculation, we get the final score.
+
+Let's calculate this.
+
+(200 × 2) = 400
+
+400 mod 97 is the remainder of dividing 400 by 97:
+
+400 ÷ 97 = 4 remainder 16
+
+Therefore, the final score is:
+
+Score: 16

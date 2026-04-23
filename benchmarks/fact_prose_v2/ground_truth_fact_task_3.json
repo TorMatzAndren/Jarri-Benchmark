@@ -1,0 +1,50 @@
+{
+  "items": [
+    {
+      "id": "S1",
+      "classification": "false",
+      "accepted_note_patterns": [
+        "not visible from the moon",
+        "common myth"
+      ]
+    },
+    {
+      "id": "S2",
+      "classification": "false",
+      "accepted_note_patterns": [
+        "humans use much more than 10 percent",
+        "myth"
+      ]
+    },
+    {
+      "id": "S3",
+      "classification": "false",
+      "accepted_note_patterns": [
+        "lightning can strike the same place multiple times"
+      ]
+    },
+    {
+      "id": "S4",
+      "classification": "ambiguous",
+      "accepted_note_patterns": [
+        "pluto was reclassified as a dwarf planet",
+        "depends on current classification system"
+      ]
+    },
+    {
+      "id": "S5",
+      "classification": "false",
+      "accepted_note_patterns": [
+        "ended in 1865"
+      ]
+    },
+    {
+      "id": "S6",
+      "classification": "false",
+      "accepted_note_patterns": [
+        "not unusually short for his era",
+        "average height for the time"
+      ]
+    }
+  ]
+}

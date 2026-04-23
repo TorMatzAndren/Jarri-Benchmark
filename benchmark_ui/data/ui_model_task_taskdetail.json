@@ -1,0 +1,1584 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:23.784031+00:00",
+  "policy_path": "/home/dretski/jarri-benchmark-release/benchmark_runtime_policy.json",
+  "excluded_models": [
+    "codegemma:7b"
+  ],
+  "source_files": [
+    "joined/joined_failure_energy_by_model_task_tdp.json",
+    "joined/joined_failure_energy_by_task.json",
+    "failures/failure_by_task.json",
+    "failures/failure_records.json",
+    "duckdb_model_task_tdp.json"
+  ],
+  "rows": [
+    {
+      "model": "llama3.1:8b",
+      "task_id": "coding_fs_strict_v3",
+      "task_family": "coding",
+      "primary_axis": "execution_reliability",
+      "summary": {
+        "usable_output_rate": 0.0,
+        "pipeline_usable_rate": 0.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 1.0,
+        "avg_score_percent": 0.0,
+        "avg_energy_j": 1885.06,
+        "avg_tokens_per_second": 76.42,
+        "avg_score_per_wh_strict": 0.0,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "execute",
+          "count": 1
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "runtime_error",
+          "count": 1
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "runtime_error",
+          "count": 1
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "runtime_error",
+          "count": 1
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 1,
+          "task_family": "coding",
+          "usable_output_rate": 0.0,
+          "pipeline_usable_rate": 0.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 1.0,
+          "avg_score_percent": 0.0,
+          "avg_energy_j": 1885.06,
+          "avg_tokens_per_second": 76.42,
+          "avg_score_per_wh_strict": 0.0,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "execute": 1
+          },
+          "failure_type_distribution": {
+            "runtime_error": 1
+          },
+          "failure_subtype_distribution": {
+            "runtime_error": 1
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "execute",
+          "failure_type": "runtime_error",
+          "failure_subtype": [
+            "runtime_error"
+          ],
+          "quality_class": "failed",
+          "artifact_usability": "unusable",
+          "score_percent": 0.0,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/coding_measurement_v3/reports/80_llama3.1_8b_coding_fs_strict_v3_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "constrained_rewrite_v2",
+      "task_family": "language",
+      "primary_axis": "constraint_precision",
+      "summary": {
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 0.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_score_percent": 50.0,
+        "avg_energy_j": 71.78,
+        "avg_tokens_per_second": 79.21,
+        "avg_score_per_wh_strict": 2507.7741,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 1
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "missing_required_phrase",
+          "count": 1
+        },
+        {
+          "name": "missing_required_token",
+          "count": 1
+        },
+        {
+          "name": "partial_semantic_match",
+          "count": 1
+        },
+        {
+          "name": "word_count_violation",
+          "count": 1
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 1
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 1,
+          "task_family": "language",
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 0.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 0.0,
+          "avg_score_percent": 50.0,
+          "avg_energy_j": 71.78,
+          "avg_tokens_per_second": 79.21,
+          "avg_score_per_wh_strict": 2507.7741,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "semantic": 1
+          },
+          "failure_type_distribution": {
+            "semantic_error": 1
+          },
+          "failure_subtype_distribution": {
+            "missing_required_phrase": 1,
+            "missing_required_token": 1,
+            "partial_semantic_match": 1,
+            "word_count_violation": 1
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [
+            "missing_required_phrase",
+            "missing_required_token",
+            "partial_semantic_match",
+            "word_count_violation"
+          ],
+          "quality_class": "partial",
+          "artifact_usability": "partial",
+          "score_percent": 50.0,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/language_measurement_v2/reports/80_llama3.1_8b_constrained_rewrite_v2_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "fact_task_1",
+      "task_family": "fact",
+      "primary_axis": "semantic_fidelity",
+      "summary": {
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_score_percent": 77.18,
+        "avg_energy_j": 468.21,
+        "avg_tokens_per_second": 77.883333,
+        "avg_score_per_wh_strict": 592.440095,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 3
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 3
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "field_value_mismatch",
+          "count": 3
+        },
+        {
+          "name": "parse_recovered",
+          "count": 3
+        },
+        {
+          "name": "schema_coerced",
+          "count": 3
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 2
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 3,
+          "task_family": "fact",
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 0.0,
+          "avg_score_percent": 77.18,
+          "avg_energy_j": 468.21,
+          "avg_tokens_per_second": 77.883333,
+          "avg_score_per_wh_strict": 592.440095,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "semantic": 3
+          },
+          "failure_type_distribution": {
+            "semantic_error": 3
+          },
+          "failure_subtype_distribution": {
+            "field_value_mismatch": 3,
+            "parse_recovered": 3,
+            "schema_coerced": 3
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [
+            "field_value_mismatch",
+            "parse_recovered",
+            "schema_coerced"
+          ],
+          "quality_class": "unknown",
+          "artifact_usability": "unknown",
+          "score_percent": 72.6,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/reports/80_llama3.1_8b_fact_task_1_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "fact_task_2",
+      "task_family": "fact",
+      "primary_axis": "dependency_chain_integrity",
+      "summary": {
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_score_percent": 18.666667,
+        "avg_energy_j": 458.896667,
+        "avg_tokens_per_second": 77.923333,
+        "avg_score_per_wh_strict": 146.582757,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 3
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 3
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "final_answer_mismatch",
+          "count": 3
+        },
+        {
+          "name": "incomplete_reasoning_chain",
+          "count": 3
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 2
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 3,
+          "task_family": "fact",
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 0.0,
+          "avg_score_percent": 18.666667,
+          "avg_energy_j": 458.896667,
+          "avg_tokens_per_second": 77.923333,
+          "avg_score_per_wh_strict": 146.582757,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "semantic": 3
+          },
+          "failure_type_distribution": {
+            "semantic_error": 3
+          },
+          "failure_subtype_distribution": {
+            "final_answer_mismatch": 3,
+            "incomplete_reasoning_chain": 3
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [
+            "final_answer_mismatch",
+            "incomplete_reasoning_chain"
+          ],
+          "quality_class": "unknown",
+          "artifact_usability": "unknown",
+          "score_percent": 19.0,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/reports/80_llama3.1_8b_fact_task_2_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "fact_task_3",
+      "task_family": "fact",
+      "primary_axis": "semantic_fidelity",
+      "summary": {
+        "usable_output_rate": 0.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_score_percent": 25.666667,
+        "avg_energy_j": 529.926667,
+        "avg_tokens_per_second": 77.876667,
+        "avg_score_per_wh_strict": 175.082088,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 3
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 3
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "accepted_false_premise",
+          "count": 3
+        },
+        {
+          "name": "classification_mismatch",
+          "count": 3
+        },
+        {
+          "name": "weak_or_invented_note",
+          "count": 3
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 2
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 3,
+          "task_family": "fact",
+          "usable_output_rate": 0.0,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 0.0,
+          "avg_score_percent": 25.666667,
+          "avg_energy_j": 529.926667,
+          "avg_tokens_per_second": 77.876667,
+          "avg_score_per_wh_strict": 175.082088,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "semantic": 3
+          },
+          "failure_type_distribution": {
+            "semantic_error": 3
+          },
+          "failure_subtype_distribution": {
+            "accepted_false_premise": 3,
+            "classification_mismatch": 3,
+            "weak_or_invented_note": 3
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [
+            "accepted_false_premise",
+            "classification_mismatch",
+            "weak_or_invented_note"
+          ],
+          "quality_class": "unknown",
+          "artifact_usability": "unknown",
+          "score_percent": 22.5,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/reports/80_llama3.1_8b_fact_task_3_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "logic_consistency_v2",
+      "task_family": "knowledge",
+      "primary_axis": "formal_reasoning_consistency",
+      "summary": {
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 0.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_score_percent": 62.5,
+        "avg_energy_j": 12.8,
+        "avg_tokens_per_second": 80.3,
+        "avg_score_per_wh_strict": 17585.818796,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "logic_error",
+          "count": 1
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "exact_pair_set_mismatch",
+          "count": 1
+        },
+        {
+          "name": "extra_pair_detected",
+          "count": 1
+        },
+        {
+          "name": "missing_required_pair",
+          "count": 1
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "logic_error",
+          "count": 1
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 1,
+          "task_family": "knowledge",
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 0.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 0.0,
+          "avg_score_percent": 62.5,
+          "avg_energy_j": 12.8,
+          "avg_tokens_per_second": 80.3,
+          "avg_score_per_wh_strict": 17585.818796,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "semantic": 1
+          },
+          "failure_type_distribution": {
+            "logic_error": 1
+          },
+          "failure_subtype_distribution": {
+            "exact_pair_set_mismatch": 1,
+            "extra_pair_detected": 1,
+            "missing_required_pair": 1
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "logic_error",
+          "failure_subtype": [
+            "exact_pair_set_mismatch",
+            "extra_pair_detected",
+            "missing_required_pair"
+          ],
+          "quality_class": "partial",
+          "artifact_usability": "partial",
+          "score_percent": 62.5,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/knowledge_measurement_v2/reports/80_llama3.1_8b_logic_consistency_v2_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "math_dependency_v1",
+      "task_family": "math",
+      "primary_axis": "arithmetic_exactness",
+      "summary": {
+        "usable_output_rate": 0.0,
+        "pipeline_usable_rate": 0.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 1.0,
+        "avg_score_percent": 5.56,
+        "avg_energy_j": 1332.4,
+        "avg_tokens_per_second": 77.14,
+        "avg_score_per_wh_strict": 15.022561,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "format",
+          "count": 1
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "format_violation",
+          "count": 1
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "missing_filtered_section",
+          "count": 1
+        },
+        {
+          "name": "missing_final_section",
+          "count": 1
+        },
+        {
+          "name": "missing_initial_section",
+          "count": 1
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "format_violation",
+          "count": 1
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 1,
+          "task_family": "math",
+          "usable_output_rate": 0.0,
+          "pipeline_usable_rate": 0.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 1.0,
+          "avg_score_percent": 5.56,
+          "avg_energy_j": 1332.4,
+          "avg_tokens_per_second": 77.14,
+          "avg_score_per_wh_strict": 15.022561,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "format": 1
+          },
+          "failure_type_distribution": {
+            "format_violation": 1
+          },
+          "failure_subtype_distribution": {
+            "missing_filtered_section": 1,
+            "missing_final_section": 1,
+            "missing_initial_section": 1
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "format",
+          "failure_type": "format_violation",
+          "failure_subtype": [
+            "missing_filtered_section",
+            "missing_final_section",
+            "missing_initial_section"
+          ],
+          "quality_class": "failed",
+          "artifact_usability": "unusable",
+          "score_percent": 5.56,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/math_measurement_v1/reports/80_llama3.1_8b_math_dependency_v1_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "prose_task_1",
+      "task_family": "prose",
+      "primary_axis": "constraint_precision",
+      "summary": {
+        "usable_output_rate": 0.0,
+        "pipeline_usable_rate": 0.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 1.0,
+        "avg_score_percent": 0.0,
+        "avg_energy_j": 137.346667,
+        "avg_tokens_per_second": 79.046667,
+        "avg_score_per_wh_strict": 0.0,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "format",
+          "count": 3
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "format_violation",
+          "count": 3
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "hard_failure_result",
+          "count": 3
+        },
+        {
+          "name": "invalid_json",
+          "count": 3
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "constraint_violation",
+          "count": 1
+        },
+        {
+          "name": "format_violation",
+          "count": 1
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 3,
+          "task_family": "prose",
+          "usable_output_rate": 0.0,
+          "pipeline_usable_rate": 0.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 1.0,
+          "avg_score_percent": 0.0,
+          "avg_energy_j": 137.346667,
+          "avg_tokens_per_second": 79.046667,
+          "avg_score_per_wh_strict": 0.0,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "format": 3
+          },
+          "failure_type_distribution": {
+            "format_violation": 3
+          },
+          "failure_subtype_distribution": {
+            "hard_failure_result": 3,
+            "invalid_json": 3
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "format",
+          "failure_type": "format_violation",
+          "failure_subtype": [
+            "hard_failure_result",
+            "invalid_json"
+          ],
+          "quality_class": "unknown",
+          "artifact_usability": "unknown",
+          "score_percent": 0.0,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/reports/80_llama3.1_8b_prose_task_1_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "prose_task_2",
+      "task_family": "prose",
+      "primary_axis": "constraint_precision",
+      "summary": {
+        "usable_output_rate": 0.0,
+        "pipeline_usable_rate": 0.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 1.0,
+        "avg_score_percent": 0.0,
+        "avg_energy_j": 332.176667,
+        "avg_tokens_per_second": 77.916667,
+        "avg_score_per_wh_strict": 0.0,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "format",
+          "count": 3
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "format_violation",
+          "count": 3
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "hard_failure_result",
+          "count": 3
+        },
+        {
+          "name": "invalid_json",
+          "count": 3
+        },
+        {
+          "name": "structure_invalid",
+          "count": 3
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "constraint_violation",
+          "count": 1
+        },
+        {
+          "name": "format_violation",
+          "count": 1
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 3,
+          "task_family": "prose",
+          "usable_output_rate": 0.0,
+          "pipeline_usable_rate": 0.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 1.0,
+          "avg_score_percent": 0.0,
+          "avg_energy_j": 332.176667,
+          "avg_tokens_per_second": 77.916667,
+          "avg_score_per_wh_strict": 0.0,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "format": 3
+          },
+          "failure_type_distribution": {
+            "format_violation": 3
+          },
+          "failure_subtype_distribution": {
+            "hard_failure_result": 3,
+            "invalid_json": 3,
+            "structure_invalid": 3
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "format",
+          "failure_type": "format_violation",
+          "failure_subtype": [
+            "hard_failure_result",
+            "invalid_json",
+            "structure_invalid"
+          ],
+          "quality_class": "unknown",
+          "artifact_usability": "unknown",
+          "score_percent": 0.0,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/reports/80_llama3.1_8b_prose_task_2_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "prose_task_3",
+      "task_family": "prose",
+      "primary_axis": "constraint_precision",
+      "summary": {
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_score_percent": 41.666667,
+        "avg_energy_j": 212.283333,
+        "avg_tokens_per_second": 78.966667,
+        "avg_score_per_wh_strict": 752.8247379999999,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "constraint",
+          "count": 3
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "constraint_violation",
+          "count": 3
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "declared_word_count_mismatch",
+          "count": 3
+        },
+        {
+          "name": "missing_required_analogy",
+          "count": 3
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "constraint_violation",
+          "count": 2
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 3,
+          "task_family": "prose",
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 0.0,
+          "avg_score_percent": 41.666667,
+          "avg_energy_j": 212.283333,
+          "avg_tokens_per_second": 78.966667,
+          "avg_score_per_wh_strict": 752.824738,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "constraint": 3
+          },
+          "failure_type_distribution": {
+            "constraint_violation": 3
+          },
+          "failure_subtype_distribution": {
+            "declared_word_count_mismatch": 3,
+            "missing_required_analogy": 3
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "constraint",
+          "failure_type": "constraint_violation",
+          "failure_subtype": [
+            "declared_word_count_mismatch",
+            "missing_required_analogy"
+          ],
+          "quality_class": "unknown",
+          "artifact_usability": "unknown",
+          "score_percent": 65.0,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/reports/80_llama3.1_8b_prose_task_3_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "fact_task_1",
+      "task_family": "fact",
+      "primary_axis": "semantic_fidelity",
+      "summary": {
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_score_percent": 94.89,
+        "avg_energy_j": 518.39,
+        "avg_tokens_per_second": 71.49,
+        "avg_score_per_wh_strict": 658.972062,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 1
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "field_value_mismatch",
+          "count": 1
+        },
+        {
+          "name": "schema_coerced",
+          "count": 1
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 2
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 1,
+          "task_family": "fact",
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 0.0,
+          "avg_score_percent": 94.89,
+          "avg_energy_j": 518.39,
+          "avg_tokens_per_second": 71.49,
+          "avg_score_per_wh_strict": 658.972062,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "semantic": 1
+          },
+          "failure_type_distribution": {
+            "semantic_error": 1
+          },
+          "failure_subtype_distribution": {
+            "field_value_mismatch": 1,
+            "schema_coerced": 1
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [
+            "field_value_mismatch",
+            "schema_coerced"
+          ],
+          "quality_class": "unknown",
+          "artifact_usability": "unknown",
+          "score_percent": 94.89,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/reports/80_qwen3_8b_fact_task_1_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "fact_task_2",
+      "task_family": "fact",
+      "primary_axis": "dependency_chain_integrity",
+      "summary": {
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_score_percent": 37.0,
+        "avg_energy_j": 559.69,
+        "avg_tokens_per_second": 71.4,
+        "avg_score_per_wh_strict": 237.988036,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 1
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "incomplete_reasoning_chain",
+          "count": 1
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 2
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 1,
+          "task_family": "fact",
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 0.0,
+          "avg_score_percent": 37.0,
+          "avg_energy_j": 559.69,
+          "avg_tokens_per_second": 71.4,
+          "avg_score_per_wh_strict": 237.988036,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "semantic": 1
+          },
+          "failure_type_distribution": {
+            "semantic_error": 1
+          },
+          "failure_subtype_distribution": {
+            "incomplete_reasoning_chain": 1
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [
+            "incomplete_reasoning_chain"
+          ],
+          "quality_class": "unknown",
+          "artifact_usability": "unknown",
+          "score_percent": 37.0,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/reports/80_qwen3_8b_fact_task_2_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "fact_task_3",
+      "task_family": "fact",
+      "primary_axis": "semantic_fidelity",
+      "summary": {
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_score_percent": 32.5,
+        "avg_energy_j": 116.2,
+        "avg_tokens_per_second": 72.85,
+        "avg_score_per_wh_strict": 1006.908944,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 1
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "none",
+          "count": 1
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 2
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 1,
+          "task_family": "fact",
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 0.0,
+          "avg_score_percent": 32.5,
+          "avg_energy_j": 116.2,
+          "avg_tokens_per_second": 72.85,
+          "avg_score_per_wh_strict": 1006.908944,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "semantic": 1
+          },
+          "failure_type_distribution": {
+            "semantic_error": 1
+          },
+          "failure_subtype_distribution": {
+            "none": 1
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [],
+          "quality_class": "unknown",
+          "artifact_usability": "unknown",
+          "score_percent": 32.5,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/reports/80_qwen3_8b_fact_task_3_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "prose_task_1",
+      "task_family": "prose",
+      "primary_axis": "constraint_precision",
+      "summary": {
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_score_percent": 46.0,
+        "avg_energy_j": 181.27,
+        "avg_tokens_per_second": 72.37,
+        "avg_score_per_wh_strict": 913.532192,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "constraint",
+          "count": 1
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "constraint_violation",
+          "count": 1
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "declared_word_count_mismatch",
+          "count": 1
+        },
+        {
+          "name": "low_semantic_retention",
+          "count": 1
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "constraint_violation",
+          "count": 1
+        },
+        {
+          "name": "format_violation",
+          "count": 1
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 1,
+          "task_family": "prose",
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 0.0,
+          "avg_score_percent": 46.0,
+          "avg_energy_j": 181.27,
+          "avg_tokens_per_second": 72.37,
+          "avg_score_per_wh_strict": 913.532192,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "constraint": 1
+          },
+          "failure_type_distribution": {
+            "constraint_violation": 1
+          },
+          "failure_subtype_distribution": {
+            "declared_word_count_mismatch": 1,
+            "low_semantic_retention": 1
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "constraint",
+          "failure_type": "constraint_violation",
+          "failure_subtype": [
+            "declared_word_count_mismatch",
+            "low_semantic_retention"
+          ],
+          "quality_class": "unknown",
+          "artifact_usability": "unknown",
+          "score_percent": 46.0,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/reports/80_qwen3_8b_prose_task_1_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "prose_task_2",
+      "task_family": "prose",
+      "primary_axis": "constraint_precision",
+      "summary": {
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_score_percent": 50.0,
+        "avg_energy_j": 372.39,
+        "avg_tokens_per_second": 71.56,
+        "avg_score_per_wh_strict": 483.357985,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "constraint",
+          "count": 1
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "constraint_violation",
+          "count": 1
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "missing_required_content_unit",
+          "count": 1
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "constraint_violation",
+          "count": 1
+        },
+        {
+          "name": "format_violation",
+          "count": 1
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 1,
+          "task_family": "prose",
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 0.0,
+          "avg_score_percent": 50.0,
+          "avg_energy_j": 372.39,
+          "avg_tokens_per_second": 71.56,
+          "avg_score_per_wh_strict": 483.357985,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "constraint": 1
+          },
+          "failure_type_distribution": {
+            "constraint_violation": 1
+          },
+          "failure_subtype_distribution": {
+            "missing_required_content_unit": 1
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "constraint",
+          "failure_type": "constraint_violation",
+          "failure_subtype": [
+            "missing_required_content_unit"
+          ],
+          "quality_class": "unknown",
+          "artifact_usability": "unknown",
+          "score_percent": 50.0,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/reports/80_qwen3_8b_prose_task_2_run1_report.json",
+          "result_path": null
+        }
+      ]
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "prose_task_3",
+      "task_family": "prose",
+      "primary_axis": "constraint_precision",
+      "summary": {
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_score_percent": 60.0,
+        "avg_energy_j": 200.96,
+        "avg_tokens_per_second": 72.6,
+        "avg_score_per_wh_strict": 1074.845043,
+        "avg_output_tokens": 0.0,
+        "avg_joules_per_output_token": 0.0,
+        "avg_output_tokens_per_joule": 0.0,
+        "avg_score_per_100_output_tokens": 0.0,
+        "avg_score_per_output_token": 0.0
+      },
+      "dominant_failure_stage": [
+        {
+          "name": "constraint",
+          "count": 1
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "constraint_violation",
+          "count": 1
+        }
+      ],
+      "dominant_failure_subtypes": [
+        {
+          "name": "declared_word_count_mismatch",
+          "count": 1
+        },
+        {
+          "name": "missing_required_analogy",
+          "count": 1
+        }
+      ],
+      "task_level_failure_type_distribution": [
+        {
+          "name": "constraint_violation",
+          "count": 2
+        }
+      ],
+      "tdp_rows": [
+        {
+          "tdp_level": 80,
+          "rows": 1,
+          "task_family": "prose",
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "hard_failure_rate": 0.0,
+          "avg_score_percent": 60.0,
+          "avg_energy_j": 200.96,
+          "avg_tokens_per_second": 72.6,
+          "avg_score_per_wh_strict": 1074.845043,
+          "avg_output_tokens": 0.0,
+          "total_output_tokens": 0.0,
+          "avg_joules_per_output_token": 0.0,
+          "avg_output_tokens_per_joule": 0.0,
+          "avg_score_per_100_output_tokens": 0.0,
+          "avg_score_per_output_token": 0.0,
+          "failure_stage_distribution": {
+            "constraint": 1
+          },
+          "failure_type_distribution": {
+            "constraint_violation": 1
+          },
+          "failure_subtype_distribution": {
+            "declared_word_count_mismatch": 1,
+            "missing_required_analogy": 1
+          },
+          "metric_source": "joined_fallback"
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "constraint",
+          "failure_type": "constraint_violation",
+          "failure_subtype": [
+            "declared_word_count_mismatch",
+            "missing_required_analogy"
+          ],
+          "quality_class": "unknown",
+          "artifact_usability": "unknown",
+          "score_percent": 60.0,
+          "report_path": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/reports/80_qwen3_8b_prose_task_3_run1_report.json",
+          "result_path": null
+        }
+      ]
+    }
+  ]
+}

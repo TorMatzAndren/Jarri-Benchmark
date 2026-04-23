@@ -1,0 +1,46 @@
+[
+  {
+    "entity": "Speed of light in vacuum",
+    "category": "physical_constant",
+    "fields": {
+      "value_m_per_s": 299792458,
+      "unit": "m/s",
+      "symbol": "c"
+    }
+  },
+  {
+    "entity": "Water freezing point at 1 atm",
+    "category": "thermodynamic_reference",
+    "fields": {
+      "value_celsius": 0,
+      "value_kelvin": 273.15,
+      "unit": "°C"
+    }
+  },
+  {
+    "entity": "Battle of Hastings",
+    "category": "historical_event",
+    "fields": {
+      "year": 1066,
+      "location_country_modern": "United Kingdom",
+      "winner": "Normans"
+    }
+  },
+  {
+    "entity": "Avogadro constant",
+    "category": "physical_constant",
+    "fields": {
+      "value": 6.02214076e23,
+      "unit": "mol⁻¹",
+      "symbol": "Nₐ"
+    }
+  },
+  {
+    "entity": "DNA",
+    "category": "biology",
+    "fields": {
+      "expanded_form": "Deoxyribonucleic acid",
+      "primary_role": "Stores genetic information"
+    }
+  }
+]

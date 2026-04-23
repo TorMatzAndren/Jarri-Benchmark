@@ -1,0 +1,18 @@
+Return ONLY valid JSON.
+
+Summarize the source text below in no more than 70 words.
+
+Rules:
+- Preserve the most important facts.
+- No repetition.
+- No extra commentary.
+- Output must follow the exact schema.
+
+Schema:
+{
+  "summary": "...",
+  "word_count": 0
+}
+
+Source text:
+The Peregrine project began in 2018 as a small university robotics collaboration focused on low-cost autonomous navigation. By 2020, the team had produced three prototype vehicles, but repeated sensor failures delayed field deployment. In 2021, they switched from a stereo-camera-heavy design to a lidar-assisted hybrid approach, which reduced navigation errors by 37 percent in controlled tests. The project then received municipal funding to adapt the platform for snow-clearing route analysis in northern towns. Although the system was never commercialized, its datasets became widely used in academic research on winter navigation and terrain uncertainty.

@@ -1,0 +1,211 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:23.752877+00:00",
+  "policy_path": "/home/dretski/jarri-benchmark-release/benchmark_runtime_policy.json",
+  "excluded_models": [
+    "codegemma:7b"
+  ],
+  "source_files": [
+    "joined/joined_failure_energy_by_model.json",
+    "joined/joined_failure_energy_by_task.json",
+    "/home/dretski/jarri-benchmark-release/benchmarks/_db/benchmark.duckdb"
+  ],
+  "models": [
+    {
+      "name": "llama3.1:8b",
+      "summary": {
+        "usable_output_rate": 0.5,
+        "pipeline_usable_rate": 0.545455,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.363636,
+        "avg_energy_j": 441.752727,
+        "avg_score_percent": 27.618182,
+        "score_per_wh_strict": 1141.336568,
+        "avg_tokens_per_second": 78.268636,
+        "avg_output_tokens": 313.3333333,
+        "avg_score_per_100_output_tokens": 32.800895,
+        "avg_joules_per_output_token": 1.5811043000000002,
+        "avg_output_tokens_per_joule": 0.8169411,
+        "avg_score_per_output_token": 0.32800900000000005
+      },
+      "axes": {
+        "arithmetic_exactness": {
+          "usable_output_rate": 0.0,
+          "pipeline_usable_rate": 0.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 1332.4,
+          "capability_per_joule": 0.0,
+          "pipeline_capability_per_joule": 0.0,
+          "dominant_failure": "format_violation"
+        },
+        "constraint_precision": {
+          "usable_output_rate": 0.5384615384615384,
+          "pipeline_usable_rate": 0.46153846153846156,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 220.9092307692308,
+          "capability_per_joule": 0.0,
+          "pipeline_capability_per_joule": 0.002089267433195674,
+          "dominant_failure": "format_violation"
+        },
+        "dependency_chain_integrity": {
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 484.095,
+          "capability_per_joule": 0.0,
+          "pipeline_capability_per_joule": 0.002065710242824239,
+          "dominant_failure": "semantic_error"
+        },
+        "execution_reliability": {
+          "usable_output_rate": 0.0,
+          "pipeline_usable_rate": 0.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 1885.06,
+          "capability_per_joule": 0.0,
+          "pipeline_capability_per_joule": 0.0,
+          "dominant_failure": "runtime_error"
+        },
+        "formal_reasoning_consistency": {
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 0.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 12.8,
+          "capability_per_joule": 0.0,
+          "pipeline_capability_per_joule": 0.0,
+          "dominant_failure": "logic_error"
+        },
+        "semantic_fidelity": {
+          "usable_output_rate": 0.625,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 453.625,
+          "capability_per_joule": 0.0,
+          "pipeline_capability_per_joule": 0.002204464039680353,
+          "dominant_failure": "semantic_error"
+        }
+      },
+      "top_failures": [
+        {
+          "task": "fact_task_1",
+          "failure_type": "semantic_error",
+          "count": 4
+        },
+        {
+          "task": "fact_task_2",
+          "failure_type": "semantic_error",
+          "count": 4
+        },
+        {
+          "task": "fact_task_3",
+          "failure_type": "semantic_error",
+          "count": 4
+        },
+        {
+          "task": "prose_task_3",
+          "failure_type": "constraint_violation",
+          "count": 4
+        },
+        {
+          "task": "prose_task_1",
+          "failure_type": "format_violation",
+          "count": 3
+        },
+        {
+          "task": "prose_task_2",
+          "failure_type": "format_violation",
+          "count": 3
+        },
+        {
+          "task": "coding_fs_strict_v3",
+          "failure_type": "runtime_error",
+          "count": 1
+        },
+        {
+          "task": "constrained_rewrite_v2",
+          "failure_type": "semantic_error",
+          "count": 1
+        }
+      ],
+      "token_efficiency_source": "model_token_efficiency"
+    },
+    {
+      "name": "qwen3:8b",
+      "summary": {
+        "usable_output_rate": 1.0,
+        "pipeline_usable_rate": 1.0,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.0,
+        "avg_energy_j": 324.816667,
+        "avg_score_percent": 53.398333,
+        "score_per_wh_strict": 729.267377,
+        "avg_tokens_per_second": 72.045,
+        "avg_output_tokens": 169.33333333333334,
+        "avg_score_per_100_output_tokens": 40.76223916666667,
+        "avg_joules_per_output_token": 1.9882163333333331,
+        "avg_output_tokens_per_joule": 0.505867,
+        "avg_score_per_output_token": 0.4076225
+      },
+      "axes": {
+        "constraint_precision": {
+          "usable_output_rate": 0.5,
+          "pipeline_usable_rate": 0.5,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 233.33666666666667,
+          "capability_per_joule": 0.0,
+          "pipeline_capability_per_joule": 0.0021428265310495563,
+          "dominant_failure": "format_violation"
+        },
+        "dependency_chain_integrity": {
+          "usable_output_rate": 1.0,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 484.095,
+          "capability_per_joule": 0.0,
+          "pipeline_capability_per_joule": 0.002065710242824239,
+          "dominant_failure": "semantic_error"
+        },
+        "semantic_fidelity": {
+          "usable_output_rate": 0.625,
+          "pipeline_usable_rate": 1.0,
+          "fully_correct_rate": 0.0,
+          "avg_energy_j": 453.625,
+          "capability_per_joule": 0.0,
+          "pipeline_capability_per_joule": 0.002204464039680353,
+          "dominant_failure": "semantic_error"
+        }
+      },
+      "top_failures": [
+        {
+          "task": "fact_task_1",
+          "failure_type": "semantic_error",
+          "count": 4
+        },
+        {
+          "task": "fact_task_2",
+          "failure_type": "semantic_error",
+          "count": 4
+        },
+        {
+          "task": "fact_task_3",
+          "failure_type": "semantic_error",
+          "count": 4
+        },
+        {
+          "task": "prose_task_3",
+          "failure_type": "constraint_violation",
+          "count": 4
+        },
+        {
+          "task": "prose_task_1",
+          "failure_type": "format_violation",
+          "count": 3
+        },
+        {
+          "task": "prose_task_2",
+          "failure_type": "format_violation",
+          "count": 3
+        }
+      ],
+      "token_efficiency_source": "model_token_efficiency"
+    }
+  ]
+}

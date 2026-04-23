@@ -1,0 +1,24 @@
+Return ONLY valid JSON.
+
+Rewrite the instructions below so they are clear and structured.
+
+Rules:
+- Use exactly these sections in this order:
+  1. "Goal"
+  2. "Inputs"
+  3. "Steps"
+  4. "Output"
+- "Steps" must contain a numbered list in plain text form, one action per item in the array.
+- Do not add commentary outside the schema.
+- Preserve all actionable requirements from the source.
+
+Schema:
+{
+  "Goal": "...",
+  "Inputs": ["..."],
+  "Steps": ["...", "..."],
+  "Output": "..."
+}
+
+Source instructions:
+Take the log files from the last run and compare them with the current run, but not the archived broken one from before unless there is missing data, and make sure the summary is short enough for email, but also include the reasons if something failed, and check whether the parser used the new config because that changed recently. If timing changed a lot then mention it. Also don't forget invalid rows and malformed JSON because those matter. Basically I need something I can send to ops without them asking what happened.

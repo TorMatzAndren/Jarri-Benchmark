@@ -1,0 +1,9 @@
+{
+  "items": [
+    {
+      "id": "S1",
+      "classification": "false",
+      "correction_or_note": "The Great Wall of China is not visible from the Moon with the naked eye."
+    }
+  ]
+}

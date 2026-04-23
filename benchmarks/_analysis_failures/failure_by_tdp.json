@@ -1,0 +1,134 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:23.216158+00:00",
+  "exporter_version": "jarri_benchmark_failure_aggregate_v2",
+  "groups": {
+    "80": {
+      "total_runs": 16,
+      "models": [
+        "llama3.1:8b",
+        "qwen3:8b"
+      ],
+      "experiments": [
+        "coding_measurement_v3",
+        "fact_prose_v2",
+        "knowledge_measurement_v2",
+        "language_measurement_v2",
+        "math_measurement_v1"
+      ],
+      "task_ids": [
+        "coding_fs_strict_v3",
+        "constrained_rewrite_v2",
+        "fact_task_1",
+        "fact_task_2",
+        "fact_task_3",
+        "logic_consistency_v2",
+        "math_dependency_v1",
+        "prose_task_1",
+        "prose_task_2",
+        "prose_task_3"
+      ],
+      "task_families": [
+        "coding",
+        "fact",
+        "knowledge",
+        "language",
+        "math",
+        "prose"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "constraint": 4,
+        "execute": 1,
+        "format": 3,
+        "semantic": 8
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 4,
+        "format_violation": 3,
+        "logic_error": 1,
+        "runtime_error": 1,
+        "semantic_error": 7
+      },
+      "failure_subtype_distribution": {
+        "accepted_false_premise": 1,
+        "classification_mismatch": 1,
+        "declared_word_count_mismatch": 3,
+        "exact_pair_set_mismatch": 1,
+        "extra_pair_detected": 1,
+        "field_value_mismatch": 2,
+        "final_answer_mismatch": 1,
+        "hard_failure_result": 2,
+        "incomplete_reasoning_chain": 2,
+        "invalid_json": 2,
+        "low_semantic_retention": 1,
+        "missing_filtered_section": 1,
+        "missing_final_section": 1,
+        "missing_initial_section": 1,
+        "missing_required_analogy": 2,
+        "missing_required_content_unit": 1,
+        "missing_required_pair": 1,
+        "missing_required_phrase": 1,
+        "missing_required_token": 1,
+        "none": 1,
+        "parse_recovered": 1,
+        "partial_semantic_match": 1,
+        "runtime_error": 1,
+        "schema_coerced": 2,
+        "structure_invalid": 1,
+        "weak_or_invented_note": 1,
+        "word_count_violation": 1
+      },
+      "quality_class_distribution": {
+        "failed": 2,
+        "partial": 2,
+        "unknown": 12
+      },
+      "artifact_usability_distribution": {
+        "partial": 2,
+        "unknown": 12,
+        "unusable": 2
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 8,
+        "partial": 4,
+        "unknown": 4
+      },
+      "task_failure_key_distribution": {
+        "exact_pair_set_mismatch": 1,
+        "extra_pair_detected": 1,
+        "missing_filtered_section": 1,
+        "missing_final_section": 1,
+        "missing_initial_section": 1,
+        "missing_required_pair": 1,
+        "missing_required_phrase": 1,
+        "missing_required_token": 1,
+        "none": 12,
+        "partial_semantic_match": 1,
+        "runtime_error": 1,
+        "word_count_violation": 1
+      },
+      "success_ladder": {
+        "total_runs": 16,
+        "returned_output": 16,
+        "parse_valid": 16,
+        "runtime_valid": 14,
+        "usable_output": 11,
+        "pipeline_usable": 10,
+        "fully_correct": 0,
+        "hard_failures": 4
+      },
+      "rates": {
+        "parse_failure_rate": 0.0,
+        "runtime_failure_rate": 0.0,
+        "constraint_failure_rate": 0.25,
+        "semantic_failure_rate": 0.5,
+        "usable_output_rate": 0.6875,
+        "pipeline_usable_rate": 0.625,
+        "fully_correct_rate": 0.0,
+        "hard_failure_rate": 0.25
+      }
+    }
+  }
+}

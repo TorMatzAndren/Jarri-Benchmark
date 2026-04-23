@@ -1,0 +1,17 @@
+{
+  "required_sections": ["Goal", "Inputs", "Steps", "Output"],
+  "required_content_units": [
+    "compare log files from last run and current run",
+    "exclude archived broken run unless missing data requires it",
+    "summary short enough for email",
+    "include failure reasons",
+    "check whether parser used new config",
+    "mention major timing changes",
+    "include invalid rows",
+    "include malformed json",
+    "output suitable for ops"
+  ],
+  "required_step_properties": {
+    "min_steps": 4
+  }
+}

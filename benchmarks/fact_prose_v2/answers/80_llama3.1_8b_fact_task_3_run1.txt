@@ -1,0 +1,32 @@
+{
+  "items": [
+    {
+      "id": "S1",
+      "classification": "false",
+      "correction_or_note": "The Great Wall of China is not visible from the Moon with the naked eye. It can be seen from low Earth orbit, but not from the surface of the Moon."
+    },
+    {
+      "id": "S2",
+      "classification": "ambiguous",
+      "correction_or_note": "This statement requires clarification on what 'use' means. Does it refer to daily functioning or exceptional abilities like genius-level mental calculations?"
+    },
+    {
+      "id": "S3",
+      "classification": "true"
+    },
+    {
+      "id": "S4",
+      "classification": "false",
+      "correction_or_note": "Pluto was reclassified as a dwarf planet in 2006. It is no longer considered the ninth planet."
+    },
+    {
+      "id": "S5",
+      "classification": "false",
+      "correction_or_note": "The U.S. Civil War ended in 1865, not 1864. The Emancipation Proclamation was issued in 1863, but it did not end the war."
+    },
+    {
+      "id": "S6",
+      "classification": "true"
+    }
+  ]
+}

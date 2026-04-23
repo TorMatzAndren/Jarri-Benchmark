@@ -1,0 +1,33 @@
+{
+  "steps": [
+    {
+      "id": 1,
+      "claim": "The U.S. entered World War I in 1917.",
+      "supported_by_fact_ids": ["F5"]
+    },
+    {
+      "id": 2,
+      "claim": "The Russian Revolution occurred in 1917.",
+      "supported_by_fact_ids": ["F4"]
+    },
+    {
+      "id": 3,
+      "claim": "The Treaty of Versailles was signed in 1919.",
+      "supported_by_fact_ids": ["F3"]
+    },
+    {
+      "id": 4,
+      "claim": "The U.S. entered World War I in the same year as the Russian Revolution.",
+      "supported_by_fact_ids": [1, 2]
+    },
+    {
+      "id": 5,
+      "claim": "The Treaty of Versailles was signed after the U.S. entered World War I and after the Russian Revolution.",
+      "supported_by_fact_ids": [1, 2, 3]
+    }
+  ],
+  "final_answer": {
+    "answer": "The U.S. entered World War I in the same year as the Russian Revolution, and that was before the Treaty of Versailles.",
+    "justification_step_ids": [4, 5]
+  }
+}

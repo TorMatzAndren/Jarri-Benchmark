@@ -1,0 +1,118 @@
+{
+  "success": false,
+  "evaluator_version": "math_dependency_eval_v3",
+  "task_id": "math_dependency_v1",
+  "task_family": "math",
+  "execution_status": "format_violation",
+  "failure_type": "format_violation",
+  "failure_stage": "format",
+  "failure_subtype": [
+    "missing_filtered_section",
+    "missing_final_section",
+    "missing_initial_section"
+  ],
+  "quality_class": "failed",
+  "artifact_usability": "unusable",
+  "usable_output": false,
+  "pipeline_usable": false,
+  "hard_failure": true,
+  "score": {
+    "checks": {
+      "has_initial_section": false,
+      "has_filtered_section": false,
+      "has_final_section": false,
+      "valid_section_order": false,
+      "initial_total_present": false,
+      "filtered_total_present": false,
+      "final_score_present": false,
+      "initial_total_exact": false,
+      "removed_smallest_value": true,
+      "filtered_total_exact": false,
+      "final_score_exact": false,
+      "initial_A_approx": false,
+      "initial_B_approx": false,
+      "initial_C_approx": false,
+      "initial_D_approx": false,
+      "filtered_A_approx": false,
+      "filtered_B_approx": false,
+      "filtered_C_approx": false
+    },
+    "passed_checks": 1,
+    "total_checks": 18,
+    "score_percent": 5.56,
+    "hard_failure": true
+  },
+  "expected": {
+    "initial_total": 400,
+    "initial_percents": {
+      "A": 30.0,
+      "B": 20.0,
+      "C": 37.5,
+      "D": 12.5
+    },
+    "smallest_label": "D",
+    "filtered_total": 350,
+    "filtered_percents": {
+      "A": 34.29,
+      "B": 22.86,
+      "C": 42.86
+    },
+    "final_score": 80
+  },
+  "task_metrics": {
+    "expected": {
+      "initial_total": 400,
+      "initial_percents": {
+        "A": 30.0,
+        "B": 20.0,
+        "C": 37.5,
+        "D": 12.5
+      },
+      "smallest_label": "D",
+      "filtered_total": 350,
+      "filtered_percents": {
+        "A": 34.29,
+        "B": 22.86,
+        "C": 42.86
+      },
+      "final_score": 80
+    },
+    "parsed_initial_total": null,
+    "parsed_filtered_total": null,
+    "parsed_final_score": null,
+    "parsed_initial_percents": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    },
+    "parsed_filtered_percents": {
+      "A": null,
+      "B": null,
+      "C": null,
+      "D": null
+    },
+    "missing_initial_percent_labels": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ],
+    "missing_filtered_percent_labels": [
+      "A",
+      "B",
+      "C"
+    ]
+  },
+  "task_failures": {
+    "missing_initial_section": {
+      "detected": true
+    },
+    "missing_filtered_section": {
+      "detected": true
+    },
+    "missing_final_section": {
+      "detected": true
+    }
+  }
+}

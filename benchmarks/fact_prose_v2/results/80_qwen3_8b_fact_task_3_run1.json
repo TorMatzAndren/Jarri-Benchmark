@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "model": "qwen3:8b",
+  "started_utc": "2026-04-23T23:16:47.696724+00:00",
+  "completed_utc": "2026-04-23T23:16:48.624450+00:00",
+  "duration_seconds": 0.914,
+  "final_answer": "{\n  \"items\": [\n    {\n      \"id\": \"S1\",\n      \"classification\": \"false\",\n      \"correction_or_note\": \"The Great Wall of China is not visible from the Moon with the naked eye.\"\n    }\n  ]\n}",
+  "thinking_trace": "",
+  "metrics": {
+    "prompt_tokens": 220,
+    "response_tokens": 53,
+    "tokens_per_second": 72.85,
+    "cold_start": false,
+    "prompt_eval_seconds": 0.082,
+    "eval_seconds": 0.728,
+    "load_seconds": 0.083,
+    "total_duration_ns": 905320041,
+    "load_duration_ns": 83112828,
+    "prompt_eval_duration_ns": 81658149,
+    "eval_duration_ns": 727522203
+  },
+  "probes": {
+    "ollama_ps_before": {
+      "returncode": 0,
+      "stdout": "NAME        ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nqwen3:8b    500a1f067a9f    6.0 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    },
+    "ollama_ps_after": {
+      "returncode": 0,
+      "stdout": "NAME        ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nqwen3:8b    500a1f067a9f    6.0 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    }
+  },
+  "debug_artifact_path": null,
+  "error": ""
+}

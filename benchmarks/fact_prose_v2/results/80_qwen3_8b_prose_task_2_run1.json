@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "model": "qwen3:8b",
+  "started_utc": "2026-04-23T23:16:50.264083+00:00",
+  "completed_utc": "2026-04-23T23:16:53.125557+00:00",
+  "duration_seconds": 2.849,
+  "final_answer": "{\n  \"Goal\": \"Compare log files from the last run with the current run, ensuring the summary is concise for email, includes failure reasons, checks if the new config was used, notes significant timing changes, and mentions invalid rows and malformed JSON.\",\n  \"Inputs\": [\"Log files from the last run\", \"Current run log files\", \"Archived broken logs (if missing data is suspected)\"],\n  \"Steps\": [\"Compare the log files from the last run with the current run.\", \"Check for any failures and include the reasons in the summary.\", \"Verify if the parser used the new configuration.\", \"Note any significant changes in timing.\", \"Include details about invalid rows and malformed JSON.\", \"Ensure the summary is short enough for an email.\"],\n  \"Output\": \"A concise summary of the log comparison, including failure reasons, config usage, timing changes, and issues with invalid rows and malformed JSON.\"\n}",
+  "thinking_trace": "",
+  "metrics": {
+    "prompt_tokens": 250,
+    "response_tokens": 187,
+    "tokens_per_second": 71.56,
+    "cold_start": false,
+    "prompt_eval_seconds": 0.095,
+    "eval_seconds": 2.613,
+    "load_seconds": 0.088,
+    "total_duration_ns": 2840593487,
+    "load_duration_ns": 88080790,
+    "prompt_eval_duration_ns": 94660395,
+    "eval_duration_ns": 2613208850
+  },
+  "probes": {
+    "ollama_ps_before": {
+      "returncode": 0,
+      "stdout": "NAME        ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nqwen3:8b    500a1f067a9f    6.0 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    },
+    "ollama_ps_after": {
+      "returncode": 0,
+      "stdout": "NAME        ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nqwen3:8b    500a1f067a9f    6.0 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    }
+  },
+  "debug_artifact_path": null,
+  "error": ""
+}

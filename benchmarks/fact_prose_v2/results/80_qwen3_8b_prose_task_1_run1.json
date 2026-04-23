@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "model": "qwen3:8b",
+  "started_utc": "2026-04-23T23:16:48.731288+00:00",
+  "completed_utc": "2026-04-23T23:16:50.159146+00:00",
+  "duration_seconds": 1.414,
+  "final_answer": "{\n  \"summary\": \"The Peregrine project, started in 2018 as a university robotics initiative, developed autonomous navigation prototypes. Sensor issues delayed deployment, but a lidar-assisted design improved accuracy. It later received funding for snow-clearing analysis, though it wasn't commercialized. Its datasets are now used in academic research on winter navigation and terrain uncertainty.\",\n  \"word_count\": 70\n}",
+  "thinking_trace": "",
+  "metrics": {
+    "prompt_tokens": 213,
+    "response_tokens": 88,
+    "tokens_per_second": 72.37,
+    "cold_start": false,
+    "prompt_eval_seconds": 0.083,
+    "eval_seconds": 1.216,
+    "load_seconds": 0.083,
+    "total_duration_ns": 1405187315,
+    "load_duration_ns": 83219481,
+    "prompt_eval_duration_ns": 82594355,
+    "eval_duration_ns": 1216003289
+  },
+  "probes": {
+    "ollama_ps_before": {
+      "returncode": 0,
+      "stdout": "NAME        ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nqwen3:8b    500a1f067a9f    6.0 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    },
+    "ollama_ps_after": {
+      "returncode": 0,
+      "stdout": "NAME        ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nqwen3:8b    500a1f067a9f    6.0 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    }
+  },
+  "debug_artifact_path": null,
+  "error": ""
+}

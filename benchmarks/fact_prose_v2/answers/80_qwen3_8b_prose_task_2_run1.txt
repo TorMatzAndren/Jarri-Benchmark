@@ -1,0 +1,6 @@
+{
+  "Goal": "Compare log files from the last run with the current run, ensuring the summary is concise for email, includes failure reasons, checks if the new config was used, notes significant timing changes, and mentions invalid rows and malformed JSON.",
+  "Inputs": ["Log files from the last run", "Current run log files", "Archived broken logs (if missing data is suspected)"],
+  "Steps": ["Compare the log files from the last run with the current run.", "Check for any failures and include the reasons in the summary.", "Verify if the parser used the new configuration.", "Note any significant changes in timing.", "Include details about invalid rows and malformed JSON.", "Ensure the summary is short enough for an email."],
+  "Output": "A concise summary of the log comparison, including failure reasons, config usage, timing changes, and issues with invalid rows and malformed JSON."
+}

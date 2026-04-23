@@ -1,0 +1,125 @@
+{
+  "success": false,
+  "evaluator_version": "logic_consistency_eval_v3",
+  "task_id": "logic_consistency_v2",
+  "task_family": "knowledge",
+  "execution_status": "ok",
+  "failure_type": "logic_error",
+  "failure_stage": "semantic",
+  "failure_subtype": [
+    "exact_pair_set_mismatch",
+    "extra_pair_detected",
+    "missing_required_pair"
+  ],
+  "quality_class": "partial",
+  "artifact_usability": "partial",
+  "usable_output": true,
+  "pipeline_usable": false,
+  "hard_failure": false,
+  "score": {
+    "checks": {
+      "has_analysis_section": true,
+      "has_contradictions_section": true,
+      "consistent_flag_present": true,
+      "consistent_flag_exact": true,
+      "required_pair_found": false,
+      "no_extra_pairs": false,
+      "exact_pair_set": false,
+      "no_duplicate_pair_mentions": true
+    },
+    "passed_checks": 5,
+    "total_checks": 8,
+    "score_percent": 62.5,
+    "hard_failure": false
+  },
+  "expected": {
+    "consistent": "NO",
+    "contradiction_pairs": [
+      [
+        "3",
+        "4"
+      ]
+    ]
+  },
+  "task_metrics": {
+    "expected_consistent_flag": "NO",
+    "actual_consistent_flag": "NO",
+    "expected_pairs": [
+      [
+        "3",
+        "4"
+      ]
+    ],
+    "actual_pairs": [
+      [
+        "2",
+        "4"
+      ],
+      [
+        "3",
+        "5"
+      ]
+    ],
+    "actual_pair_mentions": [
+      [
+        "2",
+        "4"
+      ],
+      [
+        "3",
+        "5"
+      ]
+    ],
+    "missing_required_pair_count": 1,
+    "extra_pair_count": 2,
+    "duplicate_pair_mentions": 0,
+    "analysis_section_present": true,
+    "contradictions_section_present": true
+  },
+  "task_failures": {
+    "missing_required_pair": {
+      "expected_pairs": [
+        [
+          "3",
+          "4"
+        ]
+      ],
+      "missing_pairs": [
+        [
+          "3",
+          "4"
+        ]
+      ]
+    },
+    "extra_pair_detected": {
+      "extra_pairs": [
+        [
+          "2",
+          "4"
+        ],
+        [
+          "3",
+          "5"
+        ]
+      ]
+    },
+    "exact_pair_set_mismatch": {
+      "expected_pairs": [
+        [
+          "3",
+          "4"
+        ]
+      ],
+      "actual_pairs": [
+        [
+          "2",
+          "4"
+        ],
+        [
+          "3",
+          "5"
+        ]
+      ]
+    }
+  }
+}

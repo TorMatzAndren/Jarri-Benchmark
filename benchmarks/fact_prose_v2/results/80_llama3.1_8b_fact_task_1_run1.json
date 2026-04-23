@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "model": "llama3.1:8b",
+  "started_utc": "2026-04-23T23:01:45.345103+00:00",
+  "completed_utc": "2026-04-23T23:01:49.434973+00:00",
+  "duration_seconds": 4.076,
+  "final_answer": "```json\n{\n  \"items\": [\n    {\n      \"entity\": \"Speed of light in vacuum\",\n      \"category\": \"physical_constant\",\n      \"fields\": {\n        \"value_m_per_s\": 299792458,\n        \"unit\": \"m/s\",\n        \"symbol\": null\n      }\n    },\n    {\n      \"entity\": \"Water freezing point at 1 atm\",\n      \"category\": \"thermodynamic_reference\",\n      \"fields\": {\n        \"value_celsius\": 0,\n        \"value_kelvin\": 273.15,\n        \"unit\": \"°C\"\n      }\n    },\n    {\n      \"entity\": \"Battle of Hastings\",\n      \"category\": \"historical_event\",\n      \"fields\": {\n        \"year\": null,\n        \"location_country_modern\": null,\n        \"winner\": \"House of Normandy\"\n      }\n    },\n    {\n      \"entity\": \"Avogadro constant\",\n      \"category\": \"physical_constant\",\n      \"fields\": {\n        \"value\": 6.02214076e+23,\n        \"unit\": \"mol⁻¹\",\n        \"symbol\": null\n      }\n    },\n    {\n      \"entity\": \"DNA\",\n      \"category\": \"biology\",\n      \"fields\": {\n        \"expanded_form\": \"deoxyribonucleic acid\",\n        \"primary_role\": null\n      }\n    }\n  ]\n}\n```",
+  "thinking_trace": "",
+  "metrics": {
+    "prompt_tokens": 257,
+    "response_tokens": 291,
+    "tokens_per_second": 77.91,
+    "cold_start": false,
+    "prompt_eval_seconds": 0.093,
+    "eval_seconds": 3.735,
+    "load_seconds": 0.115,
+    "total_duration_ns": 4067431542,
+    "load_duration_ns": 115091876,
+    "prompt_eval_duration_ns": 92754009,
+    "eval_duration_ns": 3735072877
+  },
+  "probes": {
+    "ollama_ps_before": {
+      "returncode": 0,
+      "stdout": "NAME           ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nllama3.1:8b    46e0c10c039e    5.5 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    },
+    "ollama_ps_after": {
+      "returncode": 0,
+      "stdout": "NAME           ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nllama3.1:8b    46e0c10c039e    5.5 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    }
+  },
+  "debug_artifact_path": null,
+  "error": ""
+}

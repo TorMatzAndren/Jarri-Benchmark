@@ -1,0 +1,12 @@
+{
+  "experiment_id": "math_measurement_v1",
+  "revision": 1,
+  "tasks": [
+    {
+      "task_id": "math_dependency_v1",
+      "task_family": "math",
+      "task_name": "math_dependency_v1",
+      "prompt_file": "prompt_math_dependency_v1.txt"
+    }
+  ]
+}

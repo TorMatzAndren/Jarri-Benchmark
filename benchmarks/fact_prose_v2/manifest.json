@@ -1,0 +1,48 @@
+{
+  "experiment_id": "fact_prose_v2",
+  "revision": 2,
+  "tasks": [
+    {
+      "task_id": "fact_task_1",
+      "task_family": "fact",
+      "task_name": "structured_knowledge_retrieval",
+      "prompt_file": "prompt_fact_task_1.txt",
+      "ground_truth_file": "ground_truth_fact_task_1.json"
+    },
+    {
+      "task_id": "fact_task_2",
+      "task_family": "fact",
+      "task_name": "multi_step_reasoning_fact_check",
+      "prompt_file": "prompt_fact_task_2.txt",
+      "ground_truth_file": "ground_truth_fact_task_2.json"
+    },
+    {
+      "task_id": "fact_task_3",
+      "task_family": "fact",
+      "task_name": "adversarial_trap_facts",
+      "prompt_file": "prompt_fact_task_3.txt",
+      "ground_truth_file": "ground_truth_fact_task_3.json"
+    },
+    {
+      "task_id": "prose_task_1",
+      "task_family": "prose",
+      "task_name": "compression_efficiency",
+      "prompt_file": "prompt_prose_task_1.txt",
+      "ground_truth_file": "ground_truth_prose_task_1.json"
+    },
+    {
+      "task_id": "prose_task_2",
+      "task_family": "prose",
+      "task_name": "clarity_instruction_rewrite",
+      "prompt_file": "prompt_prose_task_2.txt",
+      "ground_truth_file": "ground_truth_prose_task_2.json"
+    },
+    {
+      "task_id": "prose_task_3",
+      "task_family": "prose",
+      "task_name": "controlled_creativity_constraints",
+      "prompt_file": "prompt_prose_task_3.txt",
+      "ground_truth_file": "ground_truth_prose_task_3.json"
+    }
+  ]
+}

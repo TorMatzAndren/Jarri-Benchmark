@@ -1,0 +1,1226 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:24.176977+00:00",
+  "source_failure_records": "/home/dretski/jarri-benchmark-release/benchmark_ui/data/failures/failure_records.json",
+  "source_task_rankings": "/home/dretski/jarri-benchmark-release/benchmark_ui/data/duckdb_task_rankings.json",
+  "rows": [
+    {
+      "model": "llama3.1:8b",
+      "task_id": "coding_fs_strict_v3",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "execute",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "runtime_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "runtime_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "execute",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "runtime_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "runtime_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "execute",
+          "failure_type": "runtime_error",
+          "failure_subtype": [
+            "runtime_error"
+          ],
+          "score_percent": 0.0,
+          "quality_class": "failed",
+          "artifact_usability": "unusable",
+          "pipeline_usable": false,
+          "hard_failure": true
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "constrained_rewrite_v2",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "missing_required_phrase",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "missing_required_token",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "partial_semantic_match",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "word_count_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "missing_required_phrase",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "missing_required_token",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "partial_semantic_match",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "word_count_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [
+            "missing_required_phrase",
+            "missing_required_token",
+            "partial_semantic_match",
+            "word_count_violation"
+          ],
+          "score_percent": 50.0,
+          "quality_class": "partial",
+          "artifact_usability": "partial",
+          "pipeline_usable": false,
+          "hard_failure": false
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "fact_task_1",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "field_value_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "parse_recovered",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "schema_coerced",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "field_value_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "parse_recovered",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "schema_coerced",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [
+            "field_value_mismatch",
+            "parse_recovered",
+            "schema_coerced"
+          ],
+          "score_percent": 72.6,
+          "quality_class": "",
+          "artifact_usability": "",
+          "pipeline_usable": true,
+          "hard_failure": false
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "fact_task_2",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "final_answer_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "incomplete_reasoning_chain",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "final_answer_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "incomplete_reasoning_chain",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [
+            "final_answer_mismatch",
+            "incomplete_reasoning_chain"
+          ],
+          "score_percent": 19.0,
+          "quality_class": "",
+          "artifact_usability": "",
+          "pipeline_usable": true,
+          "hard_failure": false
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "fact_task_3",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "accepted_false_premise",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "classification_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "weak_or_invented_note",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "accepted_false_premise",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "classification_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "weak_or_invented_note",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [
+            "accepted_false_premise",
+            "classification_mismatch",
+            "weak_or_invented_note"
+          ],
+          "score_percent": 22.5,
+          "quality_class": "",
+          "artifact_usability": "",
+          "pipeline_usable": true,
+          "hard_failure": false
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "logic_consistency_v2",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "logic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "exact_pair_set_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "extra_pair_detected",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "missing_required_pair",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "logic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "exact_pair_set_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "extra_pair_detected",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "missing_required_pair",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "logic_error",
+          "failure_subtype": [
+            "exact_pair_set_mismatch",
+            "extra_pair_detected",
+            "missing_required_pair"
+          ],
+          "score_percent": 62.5,
+          "quality_class": "partial",
+          "artifact_usability": "partial",
+          "pipeline_usable": false,
+          "hard_failure": false
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "math_dependency_v1",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "format",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "format_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "missing_filtered_section",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "missing_final_section",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "missing_initial_section",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "format",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "format_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "missing_filtered_section",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "missing_final_section",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "missing_initial_section",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "format",
+          "failure_type": "format_violation",
+          "failure_subtype": [
+            "missing_filtered_section",
+            "missing_final_section",
+            "missing_initial_section"
+          ],
+          "score_percent": 5.56,
+          "quality_class": "failed",
+          "artifact_usability": "unusable",
+          "pipeline_usable": false,
+          "hard_failure": true
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "prose_task_1",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "format",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "format_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "hard_failure_result",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "invalid_json",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "format",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "format_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "hard_failure_result",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "invalid_json",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "format",
+          "failure_type": "format_violation",
+          "failure_subtype": [
+            "hard_failure_result",
+            "invalid_json"
+          ],
+          "score_percent": 0.0,
+          "quality_class": "",
+          "artifact_usability": "",
+          "pipeline_usable": false,
+          "hard_failure": true
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "prose_task_2",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "format",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "format_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "hard_failure_result",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "invalid_json",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "structure_invalid",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "format",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "format_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "hard_failure_result",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "invalid_json",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "structure_invalid",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "format",
+          "failure_type": "format_violation",
+          "failure_subtype": [
+            "hard_failure_result",
+            "invalid_json",
+            "structure_invalid"
+          ],
+          "score_percent": 0.0,
+          "quality_class": "",
+          "artifact_usability": "",
+          "pipeline_usable": false,
+          "hard_failure": true
+        }
+      ]
+    },
+    {
+      "model": "llama3.1:8b",
+      "task_id": "prose_task_3",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "constraint",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "constraint_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "declared_word_count_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "missing_required_analogy",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "constraint",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "constraint_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "declared_word_count_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "missing_required_analogy",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "constraint",
+          "failure_type": "constraint_violation",
+          "failure_subtype": [
+            "declared_word_count_mismatch",
+            "missing_required_analogy"
+          ],
+          "score_percent": 65.0,
+          "quality_class": "",
+          "artifact_usability": "",
+          "pipeline_usable": true,
+          "hard_failure": false
+        }
+      ]
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "fact_task_1",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "field_value_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "schema_coerced",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "field_value_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "schema_coerced",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [
+            "field_value_mismatch",
+            "schema_coerced"
+          ],
+          "score_percent": 94.89,
+          "quality_class": "",
+          "artifact_usability": "",
+          "pipeline_usable": true,
+          "hard_failure": false
+        }
+      ]
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "fact_task_2",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "incomplete_reasoning_chain",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "incomplete_reasoning_chain",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [
+            "incomplete_reasoning_chain"
+          ],
+          "score_percent": 37.0,
+          "quality_class": "",
+          "artifact_usability": "",
+          "pipeline_usable": true,
+          "hard_failure": false
+        }
+      ]
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "fact_task_3",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [],
+      "failure_stage_distribution": [
+        {
+          "name": "semantic",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "semantic_error",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [],
+      "representative_failures": [
+        {
+          "failure_stage": "semantic",
+          "failure_type": "semantic_error",
+          "failure_subtype": [],
+          "score_percent": 32.5,
+          "quality_class": "",
+          "artifact_usability": "",
+          "pipeline_usable": true,
+          "hard_failure": false
+        }
+      ]
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "prose_task_1",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "constraint",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "constraint_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "declared_word_count_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "low_semantic_retention",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "constraint",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "constraint_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "declared_word_count_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "low_semantic_retention",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "constraint",
+          "failure_type": "constraint_violation",
+          "failure_subtype": [
+            "declared_word_count_mismatch",
+            "low_semantic_retention"
+          ],
+          "score_percent": 46.0,
+          "quality_class": "",
+          "artifact_usability": "",
+          "pipeline_usable": true,
+          "hard_failure": false
+        }
+      ]
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "prose_task_2",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "constraint",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "constraint_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "missing_required_content_unit",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "constraint",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "constraint_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "missing_required_content_unit",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "constraint",
+          "failure_type": "constraint_violation",
+          "failure_subtype": [
+            "missing_required_content_unit"
+          ],
+          "score_percent": 50.0,
+          "quality_class": "",
+          "artifact_usability": "",
+          "pipeline_usable": true,
+          "hard_failure": false
+        }
+      ]
+    },
+    {
+      "model": "qwen3:8b",
+      "task_id": "prose_task_3",
+      "task_family": null,
+      "benchmark_count": 0,
+      "failure_record_count": 1,
+      "failure_record_rate_vs_benchmarks": null,
+      "dominant_failure_stage": [
+        {
+          "name": "constraint",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_type": [
+        {
+          "name": "constraint_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "dominant_failure_subtype": [
+        {
+          "name": "declared_word_count_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "missing_required_analogy",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_stage_distribution": [
+        {
+          "name": "constraint",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_type_distribution": [
+        {
+          "name": "constraint_violation",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "failure_subtype_distribution": [
+        {
+          "name": "declared_word_count_mismatch",
+          "count": 1,
+          "rate": 1.0
+        },
+        {
+          "name": "missing_required_analogy",
+          "count": 1,
+          "rate": 1.0
+        }
+      ],
+      "representative_failures": [
+        {
+          "failure_stage": "constraint",
+          "failure_type": "constraint_violation",
+          "failure_subtype": [
+            "declared_word_count_mismatch",
+            "missing_required_analogy"
+          ],
+          "score_percent": 60.0,
+          "quality_class": "",
+          "artifact_usability": "",
+          "pipeline_usable": true,
+          "hard_failure": false
+        }
+      ]
+    }
+  ]
+}

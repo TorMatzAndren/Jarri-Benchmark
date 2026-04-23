@@ -1,0 +1,12 @@
+{
+  "experiment_id": "coding_measurement_v3",
+  "revision": 1,
+  "tasks": [
+    {
+      "task_id": "coding_fs_strict_v3",
+      "task_family": "coding",
+      "task_name": "coding_fs_strict_v3",
+      "prompt_file": "prompt_coding_fs_strict_v3.txt"
+    }
+  ]
+}

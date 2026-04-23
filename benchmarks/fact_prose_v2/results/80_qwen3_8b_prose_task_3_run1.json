@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "model": "qwen3:8b",
+  "started_utc": "2026-04-23T23:16:53.229077+00:00",
+  "completed_utc": "2026-04-23T23:16:54.806035+00:00",
+  "duration_seconds": 1.563,
+  "final_answer": "{\n  \"intro\": \"A database index helps find data faster, like a book's table of contents. It lets the database skip pages instead of reading every one.\",\n  \"bullets\": [\n    \"It speeds up searches by pointing directly to where data is stored.\",\n    \"It keeps data organized so the database can locate items without scanning all records.\",\n    \"It improves performance for common queries but uses extra storage space.\"\n  ],\n  \"word_count\": 120\n}",
+  "thinking_trace": "",
+  "metrics": {
+    "prompt_tokens": 139,
+    "response_tokens": 100,
+    "tokens_per_second": 72.6,
+    "cold_start": false,
+    "prompt_eval_seconds": 0.07,
+    "eval_seconds": 1.377,
+    "load_seconds": 0.083,
+    "total_duration_ns": 1554181893,
+    "load_duration_ns": 82600586,
+    "prompt_eval_duration_ns": 70361504,
+    "eval_duration_ns": 1377419782
+  },
+  "probes": {
+    "ollama_ps_before": {
+      "returncode": 0,
+      "stdout": "NAME        ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nqwen3:8b    500a1f067a9f    6.0 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    },
+    "ollama_ps_after": {
+      "returncode": 0,
+      "stdout": "NAME        ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nqwen3:8b    500a1f067a9f    6.0 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    }
+  },
+  "debug_artifact_path": null,
+  "error": ""
+}

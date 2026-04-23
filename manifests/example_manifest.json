@@ -1,0 +1,15 @@
+{
+  "models": ["qwen3:4b", "qwen3:8b"],
+  "tasks": [
+    {
+      "id": "coding_task_1",
+      "family": "coding",
+      "prompt": "prompt_coding_folder_scan_v2.txt"
+    },
+    {
+      "id": "fact_task_1",
+      "family": "fact",
+      "prompt": "prompt_fact_task_1.txt"
+    }
+  ]
+}

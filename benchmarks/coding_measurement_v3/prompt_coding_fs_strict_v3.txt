@@ -1,0 +1,56 @@
+Write a Python script that:
+
+1. Recursively scans a given directory path (provided as argv[1]).
+2. Computes:
+   - total number of files
+   - total number of directories (including root)
+   - total size in bytes
+
+3. Builds an extension distribution:
+   - Include file extensions WITH a leading dot (e.g. ".txt")
+   - Files with no extension should be labeled "[no_ext]"
+   - Output must be sorted:
+     - first by count descending
+     - then by extension name ascending
+
+4. Computes the 3 largest files:
+   - Output relative paths only
+   - Sort by size descending
+   - If tied, sort by relative path ascending
+
+5. Computes the 3 directories with the highest direct file count:
+   - Count only files directly inside each directory, not recursive descendants
+   - Output relative paths only
+   - Sort by file count descending
+   - If tied, sort by relative path ascending
+
+6. Compute a checksum:
+   - checksum = (total_size_bytes % 1000000)
+
+Output EXACTLY in this format:
+
+=== SUMMARY ===
+Total files: <int>
+Total directories: <int>
+Total size: <int> bytes
+
+=== EXTENSION DISTRIBUTION ===
+.ext: count
+...
+
+=== LARGEST FILES ===
+relative/path.ext - <int> bytes
+...
+
+=== TOP DIRECTORIES BY DIRECT FILE COUNT ===
+relative/path - <int> files
+...
+
+=== FINAL CHECKSUM ===
+Checksum: <int>
+
+Constraints:
+- Use only Python standard library
+- Must not crash on empty directories
+- Must not print anything extra
+- Return only one single Python script in one fenced code block

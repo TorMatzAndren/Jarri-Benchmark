@@ -1,0 +1,47 @@
+{
+  "required_atomic_claims": [
+    {
+      "claim_key": "us_entered_ww1_in_1917",
+      "accepted_claim_texts": [
+        "The U.S. entered World War I in 1917"
+      ],
+      "supported_by_fact_ids": ["F5"]
+    },
+    {
+      "claim_key": "russian_revolution_in_1917",
+      "accepted_claim_texts": [
+        "The Russian Revolution occurred in 1917"
+      ],
+      "supported_by_fact_ids": ["F4"]
+    },
+    {
+      "claim_key": "treaty_signed_in_1919",
+      "accepted_claim_texts": [
+        "The Treaty of Versailles was signed in 1919"
+      ],
+      "supported_by_fact_ids": ["F3"]
+    },
+    {
+      "claim_key": "us_and_revolution_same_year",
+      "accepted_claim_texts": [
+        "The U.S. entered World War I in the same year as the Russian Revolution",
+        "Both events occurred in 1917"
+      ],
+      "supported_by_fact_ids": ["F4", "F5"]
+    },
+    {
+      "claim_key": "1917_before_1919",
+      "accepted_claim_texts": [
+        "1917 is before 1919",
+        "Both 1917 events happened before the Treaty of Versailles"
+      ],
+      "supported_by_fact_ids": ["F3", "F4", "F5"]
+    }
+  ],
+  "final_answer_rules": {
+    "must_convey": [
+      "The U.S. entered World War I in the same year as the Russian Revolution",
+      "This was before the Treaty of Versailles"
+    ]
+  }
+}

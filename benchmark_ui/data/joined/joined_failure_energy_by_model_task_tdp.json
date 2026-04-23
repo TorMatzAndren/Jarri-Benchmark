@@ -1,0 +1,777 @@
+{
+  "generated_at_utc": "2026-04-23T23:36:23.243561+00:00",
+  "exporter_version": "jarri_benchmark_failure_join_v1",
+  "groups": {
+    "llama3.1:8b | coding_fs_strict_v3 | 80": {
+      "rows": 1,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "task_ids": [
+        "coding_fs_strict_v3"
+      ],
+      "task_families": [
+        "coding"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "execute": 1
+      },
+      "failure_type_distribution": {
+        "runtime_error": 1
+      },
+      "failure_subtype_distribution": {
+        "runtime_error": 1
+      },
+      "quality_class_distribution": {
+        "failed": 1
+      },
+      "artifact_usability_distribution": {
+        "unusable": 1
+      },
+      "confidence_classification_distribution": {
+        "unknown": 1
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": 0.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 1.0,
+      "avg_score_percent": 0.0,
+      "min_score_percent": 0.0,
+      "max_score_percent": 0.0,
+      "avg_energy_j": 1885.06,
+      "min_energy_j": 1885.06,
+      "max_energy_j": 1885.06,
+      "avg_score_per_wh_strict": 0.0,
+      "avg_tokens_per_second": 76.42
+    },
+    "llama3.1:8b | constrained_rewrite_v2 | 80": {
+      "rows": 1,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "task_ids": [
+        "constrained_rewrite_v2"
+      ],
+      "task_families": [
+        "language"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 1
+      },
+      "failure_type_distribution": {
+        "semantic_error": 1
+      },
+      "failure_subtype_distribution": {
+        "missing_required_phrase": 1,
+        "missing_required_token": 1,
+        "partial_semantic_match": 1,
+        "word_count_violation": 1
+      },
+      "quality_class_distribution": {
+        "partial": 1
+      },
+      "artifact_usability_distribution": {
+        "partial": 1
+      },
+      "confidence_classification_distribution": {
+        "unknown": 1
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 1.0,
+      "pipeline_usable_rate": 0.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 50.0,
+      "min_score_percent": 50.0,
+      "max_score_percent": 50.0,
+      "avg_energy_j": 71.78,
+      "min_energy_j": 71.78,
+      "max_energy_j": 71.78,
+      "avg_score_per_wh_strict": 2507.7741,
+      "avg_tokens_per_second": 79.21
+    },
+    "llama3.1:8b | fact_task_1 | 80": {
+      "rows": 3,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "task_ids": [
+        "fact_task_1"
+      ],
+      "task_families": [
+        "fact"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 3
+      },
+      "failure_type_distribution": {
+        "semantic_error": 3
+      },
+      "failure_subtype_distribution": {
+        "field_value_mismatch": 3,
+        "parse_recovered": 3,
+        "schema_coerced": 3
+      },
+      "quality_class_distribution": {
+        "unknown": 3
+      },
+      "artifact_usability_distribution": {
+        "unknown": 3
+      },
+      "confidence_classification_distribution": {
+        "partial": 3
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 1.0,
+      "pipeline_usable_rate": 1.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 77.18,
+      "min_score_percent": 72.6,
+      "max_score_percent": 86.34,
+      "avg_energy_j": 468.21,
+      "min_energy_j": 456.34,
+      "max_energy_j": 490.75,
+      "avg_score_per_wh_strict": 592.440095,
+      "avg_tokens_per_second": 77.883333
+    },
+    "llama3.1:8b | fact_task_2 | 80": {
+      "rows": 3,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "task_ids": [
+        "fact_task_2"
+      ],
+      "task_families": [
+        "fact"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 3
+      },
+      "failure_type_distribution": {
+        "semantic_error": 3
+      },
+      "failure_subtype_distribution": {
+        "final_answer_mismatch": 3,
+        "incomplete_reasoning_chain": 3
+      },
+      "quality_class_distribution": {
+        "unknown": 3
+      },
+      "artifact_usability_distribution": {
+        "unknown": 3
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 3
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 1.0,
+      "pipeline_usable_rate": 1.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 18.666667,
+      "min_score_percent": 18.0,
+      "max_score_percent": 19.0,
+      "avg_energy_j": 458.896667,
+      "min_energy_j": 449.7,
+      "max_energy_j": 472.64,
+      "avg_score_per_wh_strict": 146.582757,
+      "avg_tokens_per_second": 77.923333
+    },
+    "llama3.1:8b | fact_task_3 | 80": {
+      "rows": 3,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "task_ids": [
+        "fact_task_3"
+      ],
+      "task_families": [
+        "fact"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 3
+      },
+      "failure_type_distribution": {
+        "semantic_error": 3
+      },
+      "failure_subtype_distribution": {
+        "accepted_false_premise": 3,
+        "classification_mismatch": 3,
+        "weak_or_invented_note": 3
+      },
+      "quality_class_distribution": {
+        "unknown": 3
+      },
+      "artifact_usability_distribution": {
+        "unknown": 3
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 3
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": 1.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 25.666667,
+      "min_score_percent": 22.5,
+      "max_score_percent": 30.5,
+      "avg_energy_j": 529.926667,
+      "min_energy_j": 449.78,
+      "max_energy_j": 631.18,
+      "avg_score_per_wh_strict": 175.082088,
+      "avg_tokens_per_second": 77.876667
+    },
+    "llama3.1:8b | logic_consistency_v2 | 80": {
+      "rows": 1,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "task_ids": [
+        "logic_consistency_v2"
+      ],
+      "task_families": [
+        "knowledge"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 1
+      },
+      "failure_type_distribution": {
+        "logic_error": 1
+      },
+      "failure_subtype_distribution": {
+        "exact_pair_set_mismatch": 1,
+        "extra_pair_detected": 1,
+        "missing_required_pair": 1
+      },
+      "quality_class_distribution": {
+        "partial": 1
+      },
+      "artifact_usability_distribution": {
+        "partial": 1
+      },
+      "confidence_classification_distribution": {
+        "unknown": 1
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 1.0,
+      "pipeline_usable_rate": 0.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 62.5,
+      "min_score_percent": 62.5,
+      "max_score_percent": 62.5,
+      "avg_energy_j": 12.8,
+      "min_energy_j": 12.8,
+      "max_energy_j": 12.8,
+      "avg_score_per_wh_strict": 17585.818796,
+      "avg_tokens_per_second": 80.3
+    },
+    "llama3.1:8b | math_dependency_v1 | 80": {
+      "rows": 1,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "task_ids": [
+        "math_dependency_v1"
+      ],
+      "task_families": [
+        "math"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "format": 1
+      },
+      "failure_type_distribution": {
+        "format_violation": 1
+      },
+      "failure_subtype_distribution": {
+        "missing_filtered_section": 1,
+        "missing_final_section": 1,
+        "missing_initial_section": 1
+      },
+      "quality_class_distribution": {
+        "failed": 1
+      },
+      "artifact_usability_distribution": {
+        "unusable": 1
+      },
+      "confidence_classification_distribution": {
+        "unknown": 1
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": 0.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 1.0,
+      "avg_score_percent": 5.56,
+      "min_score_percent": 5.56,
+      "max_score_percent": 5.56,
+      "avg_energy_j": 1332.4,
+      "min_energy_j": 1332.4,
+      "max_energy_j": 1332.4,
+      "avg_score_per_wh_strict": 15.022561,
+      "avg_tokens_per_second": 77.14
+    },
+    "llama3.1:8b | prose_task_1 | 80": {
+      "rows": 3,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "task_ids": [
+        "prose_task_1"
+      ],
+      "task_families": [
+        "prose"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "format": 3
+      },
+      "failure_type_distribution": {
+        "format_violation": 3
+      },
+      "failure_subtype_distribution": {
+        "hard_failure_result": 3,
+        "invalid_json": 3
+      },
+      "quality_class_distribution": {
+        "unknown": 3
+      },
+      "artifact_usability_distribution": {
+        "unknown": 3
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 3
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": 0.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 1.0,
+      "avg_score_percent": 0.0,
+      "min_score_percent": 0.0,
+      "max_score_percent": 0.0,
+      "avg_energy_j": 137.346667,
+      "min_energy_j": 122.85,
+      "max_energy_j": 155.06,
+      "avg_score_per_wh_strict": 0.0,
+      "avg_tokens_per_second": 79.046667
+    },
+    "llama3.1:8b | prose_task_2 | 80": {
+      "rows": 3,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "task_ids": [
+        "prose_task_2"
+      ],
+      "task_families": [
+        "prose"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "format": 3
+      },
+      "failure_type_distribution": {
+        "format_violation": 3
+      },
+      "failure_subtype_distribution": {
+        "hard_failure_result": 3,
+        "invalid_json": 3,
+        "structure_invalid": 3
+      },
+      "quality_class_distribution": {
+        "unknown": 3
+      },
+      "artifact_usability_distribution": {
+        "unknown": 3
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 3
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 0.0,
+      "pipeline_usable_rate": 0.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 1.0,
+      "avg_score_percent": 0.0,
+      "min_score_percent": 0.0,
+      "max_score_percent": 0.0,
+      "avg_energy_j": 332.176667,
+      "min_energy_j": 290.75,
+      "max_energy_j": 373.4,
+      "avg_score_per_wh_strict": 0.0,
+      "avg_tokens_per_second": 77.916667
+    },
+    "llama3.1:8b | prose_task_3 | 80": {
+      "rows": 3,
+      "models": [
+        "llama3.1:8b"
+      ],
+      "task_ids": [
+        "prose_task_3"
+      ],
+      "task_families": [
+        "prose"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "constraint": 3
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 3
+      },
+      "failure_subtype_distribution": {
+        "declared_word_count_mismatch": 3,
+        "missing_required_analogy": 3
+      },
+      "quality_class_distribution": {
+        "unknown": 3
+      },
+      "artifact_usability_distribution": {
+        "unknown": 3
+      },
+      "confidence_classification_distribution": {
+        "partial": 3
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 1.0,
+      "pipeline_usable_rate": 1.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 41.666667,
+      "min_score_percent": 0.0,
+      "max_score_percent": 65.0,
+      "avg_energy_j": 212.283333,
+      "min_energy_j": 195.37,
+      "max_energy_j": 238.51,
+      "avg_score_per_wh_strict": 752.824738,
+      "avg_tokens_per_second": 78.966667
+    },
+    "qwen3:8b | fact_task_1 | 80": {
+      "rows": 1,
+      "models": [
+        "qwen3:8b"
+      ],
+      "task_ids": [
+        "fact_task_1"
+      ],
+      "task_families": [
+        "fact"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 1
+      },
+      "failure_type_distribution": {
+        "semantic_error": 1
+      },
+      "failure_subtype_distribution": {
+        "field_value_mismatch": 1,
+        "schema_coerced": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 1
+      },
+      "artifact_usability_distribution": {
+        "unknown": 1
+      },
+      "confidence_classification_distribution": {
+        "partial": 1
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 1.0,
+      "pipeline_usable_rate": 1.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 94.89,
+      "min_score_percent": 94.89,
+      "max_score_percent": 94.89,
+      "avg_energy_j": 518.39,
+      "min_energy_j": 518.39,
+      "max_energy_j": 518.39,
+      "avg_score_per_wh_strict": 658.972062,
+      "avg_tokens_per_second": 71.49
+    },
+    "qwen3:8b | fact_task_2 | 80": {
+      "rows": 1,
+      "models": [
+        "qwen3:8b"
+      ],
+      "task_ids": [
+        "fact_task_2"
+      ],
+      "task_families": [
+        "fact"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 1
+      },
+      "failure_type_distribution": {
+        "semantic_error": 1
+      },
+      "failure_subtype_distribution": {
+        "incomplete_reasoning_chain": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 1
+      },
+      "artifact_usability_distribution": {
+        "unknown": 1
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 1
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 1.0,
+      "pipeline_usable_rate": 1.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 37.0,
+      "min_score_percent": 37.0,
+      "max_score_percent": 37.0,
+      "avg_energy_j": 559.69,
+      "min_energy_j": 559.69,
+      "max_energy_j": 559.69,
+      "avg_score_per_wh_strict": 237.988036,
+      "avg_tokens_per_second": 71.4
+    },
+    "qwen3:8b | fact_task_3 | 80": {
+      "rows": 1,
+      "models": [
+        "qwen3:8b"
+      ],
+      "task_ids": [
+        "fact_task_3"
+      ],
+      "task_families": [
+        "fact"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "semantic": 1
+      },
+      "failure_type_distribution": {
+        "semantic_error": 1
+      },
+      "failure_subtype_distribution": {
+        "none": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 1
+      },
+      "artifact_usability_distribution": {
+        "unknown": 1
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 1
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 1.0,
+      "pipeline_usable_rate": 1.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 32.5,
+      "min_score_percent": 32.5,
+      "max_score_percent": 32.5,
+      "avg_energy_j": 116.2,
+      "min_energy_j": 116.2,
+      "max_energy_j": 116.2,
+      "avg_score_per_wh_strict": 1006.908944,
+      "avg_tokens_per_second": 72.85
+    },
+    "qwen3:8b | prose_task_1 | 80": {
+      "rows": 1,
+      "models": [
+        "qwen3:8b"
+      ],
+      "task_ids": [
+        "prose_task_1"
+      ],
+      "task_families": [
+        "prose"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "constraint": 1
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 1
+      },
+      "failure_subtype_distribution": {
+        "declared_word_count_mismatch": 1,
+        "low_semantic_retention": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 1
+      },
+      "artifact_usability_distribution": {
+        "unknown": 1
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 1
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 1.0,
+      "pipeline_usable_rate": 1.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 46.0,
+      "min_score_percent": 46.0,
+      "max_score_percent": 46.0,
+      "avg_energy_j": 181.27,
+      "min_energy_j": 181.27,
+      "max_energy_j": 181.27,
+      "avg_score_per_wh_strict": 913.532192,
+      "avg_tokens_per_second": 72.37
+    },
+    "qwen3:8b | prose_task_2 | 80": {
+      "rows": 1,
+      "models": [
+        "qwen3:8b"
+      ],
+      "task_ids": [
+        "prose_task_2"
+      ],
+      "task_families": [
+        "prose"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "constraint": 1
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 1
+      },
+      "failure_subtype_distribution": {
+        "missing_required_content_unit": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 1
+      },
+      "artifact_usability_distribution": {
+        "unknown": 1
+      },
+      "confidence_classification_distribution": {
+        "incorrect": 1
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 1.0,
+      "pipeline_usable_rate": 1.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 50.0,
+      "min_score_percent": 50.0,
+      "max_score_percent": 50.0,
+      "avg_energy_j": 372.39,
+      "min_energy_j": 372.39,
+      "max_energy_j": 372.39,
+      "avg_score_per_wh_strict": 483.357985,
+      "avg_tokens_per_second": 71.56
+    },
+    "qwen3:8b | prose_task_3 | 80": {
+      "rows": 1,
+      "models": [
+        "qwen3:8b"
+      ],
+      "task_ids": [
+        "prose_task_3"
+      ],
+      "task_families": [
+        "prose"
+      ],
+      "tdp_levels": [
+        80
+      ],
+      "failure_stage_distribution": {
+        "constraint": 1
+      },
+      "failure_type_distribution": {
+        "constraint_violation": 1
+      },
+      "failure_subtype_distribution": {
+        "declared_word_count_mismatch": 1,
+        "missing_required_analogy": 1
+      },
+      "quality_class_distribution": {
+        "unknown": 1
+      },
+      "artifact_usability_distribution": {
+        "unknown": 1
+      },
+      "confidence_classification_distribution": {
+        "partial": 1
+      },
+      "success_rate": 1.0,
+      "energy_valid_rate": 1.0,
+      "usable_output_rate": 1.0,
+      "pipeline_usable_rate": 1.0,
+      "fully_correct_rate": 0.0,
+      "hard_failure_rate": 0.0,
+      "avg_score_percent": 60.0,
+      "min_score_percent": 60.0,
+      "max_score_percent": 60.0,
+      "avg_energy_j": 200.96,
+      "min_energy_j": 200.96,
+      "max_energy_j": 200.96,
+      "avg_score_per_wh_strict": 1074.845043,
+      "avg_tokens_per_second": 72.6
+    }
+  }
+}

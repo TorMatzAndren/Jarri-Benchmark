@@ -1,0 +1,110 @@
+{
+  "success": false,
+  "evaluator_version": "coding_fs_strict_eval_v3",
+  "task_id": "coding_fs_strict_v3",
+  "task_family": "coding",
+  "extraction_mode": "markdown_fence",
+  "syntax_valid": true,
+  "syntax_error": "",
+  "runtime": {
+    "command": [
+      "/home/dretski/jarri-benchmark-release/venv/bin/python3",
+      "/tmp/jarri_eval_coding_fs_strict_v3_jcprx96g/candidate.py",
+      "/tmp/jarri_eval_coding_fs_strict_v3_jcprx96g/tree"
+    ],
+    "returncode": 1,
+    "stdout": "=== SUMMARY ===\nTotal files: 8\nTotal directories: 7\nTotal size: 2150 bytes\n\n=== EXTENSION DISTRIBUTION ===\n",
+    "stderr": "Traceback (most recent call last):\n  File \"/tmp/jarri_eval_coding_fs_strict_v3_jcprx96g/candidate.py\", line 133, in <module>\n    main()\n    ~~~~^^\n  File \"/tmp/jarri_eval_coding_fs_strict_v3_jcprx96g/candidate.py\", line 113, in main\n    for ext, count in sorted_extension_count.items():\n                      ^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'sorted_extension_count' is not defined. Did you mean: 'sorted_extensions'?\n",
+    "timed_out": false
+  },
+  "execution_status": "runtime_error",
+  "failure_type": "runtime_error",
+  "failure_stage": "execute",
+  "failure_subtype": [
+    "runtime_error"
+  ],
+  "quality_class": "failed",
+  "artifact_usability": "unusable",
+  "usable_output": false,
+  "pipeline_usable": false,
+  "hard_failure": true,
+  "score": {
+    "checks": {},
+    "passed_checks": 0,
+    "total_checks": 0,
+    "score_percent": 0.0,
+    "hard_failure": true
+  },
+  "expected_fixture": {
+    "path": "/tmp/jarri_eval_coding_fs_strict_v3_jcprx96g/tree",
+    "total_files": 8,
+    "total_directories_including_root": 7,
+    "total_size_bytes": 2150,
+    "checksum": 2150,
+    "extension_distribution": [
+      [
+        ".log",
+        2
+      ],
+      [
+        ".bin",
+        1
+      ],
+      [
+        ".csv",
+        1
+      ],
+      [
+        ".jpg",
+        1
+      ],
+      [
+        ".md",
+        1
+      ],
+      [
+        ".txt",
+        1
+      ],
+      [
+        "[no_ext]",
+        1
+      ]
+    ],
+    "largest_files": [
+      [
+        "nested/deep/data.csv",
+        500
+      ],
+      [
+        "bin/blob.bin",
+        400
+      ],
+      [
+        "nested/deep/image.jpg",
+        350
+      ]
+    ],
+    "top_directories_by_direct_file_count": [
+      [
+        "docs",
+        2
+      ],
+      [
+        "logs",
+        2
+      ],
+      [
+        "nested/deep",
+        2
+      ]
+    ]
+  },
+  "task_metrics": {},
+  "task_failures": {
+    "runtime_error": {
+      "returncode": 1,
+      "stderr": "Traceback (most recent call last):\n  File \"/tmp/jarri_eval_coding_fs_strict_v3_jcprx96g/candidate.py\", line 133, in <module>\n    main()\n    ~~~~^^\n  File \"/tmp/jarri_eval_coding_fs_strict_v3_jcprx96g/candidate.py\", line 113, in main\n    for ext, count in sorted_extension_count.items():\n                      ^^^^^^^^^^^^^^^^^^^^^^\nNameError: name 'sorted_extension_count' is not defined. Did you mean: 'sorted_extensions'?\n"
+    }
+  }
+}

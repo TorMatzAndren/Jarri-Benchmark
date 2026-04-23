@@ -1,0 +1,40 @@
+{
+  "evaluator_version": "fact_prose_eval_v7",
+  "format_valid": true,
+  "usable_output": true,
+  "pipeline_usable": true,
+  "schema_coerced": false,
+  "hard_failure": false,
+  "hard_failure_reason": null,
+  "confidence_classification": "incorrect",
+  "hallucination_flags": [],
+  "score": {
+    "score_percent": 37.0,
+    "score_per_process": 37.0,
+    "factual_accuracy_score": 20.0,
+    "hallucination_penalty": -0.0,
+    "reasoning_consistency_score": 10.0,
+    "compression_efficiency_score": 0.0,
+    "constraint_adherence_score": 0.0,
+    "schema_adherence_score": 100.0,
+    "semantic_shadow_score": 30.0
+  },
+  "derived_metrics": {
+    "parse_recovered": false,
+    "matched_claims": 0,
+    "expected_claims": 5,
+    "exact_support_matches": 0,
+    "expected_support_matches": 5,
+    "final_answer_score": 20.0,
+    "contradiction_count": 0
+  },
+  "task_id": "fact_task_2",
+  "answer_file": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/answers/80_qwen3_8b_fact_task_2_run1.txt",
+  "ground_truth_file": "/home/dretski/jarri-benchmark-release/benchmarks/fact_prose_v2/ground_truth_fact_task_2.json",
+  "success": false,
+  "failure_stage": "semantic",
+  "failure_type": "semantic_error",
+  "failure_subtype": [
+    "incomplete_reasoning_chain"
+  ]
+}

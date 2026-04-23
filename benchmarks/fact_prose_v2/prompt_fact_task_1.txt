@@ -1,0 +1,32 @@
+Return ONLY valid JSON.
+
+Task:
+Fill in the requested fields for each item below.
+
+Rules:
+- Do not add extra fields.
+- If unknown, use null.
+- Numeric values must be numbers, not strings.
+- Preserve the exact schema.
+
+Schema:
+{
+  "items": [
+    {
+      "entity": "...",
+      "category": "...",
+      "fields": {
+        "...": "..."
+      }
+    }
+  ]
+}
+
+Items to complete:
+1. entity = "Speed of light in vacuum", category = "physical_constant", required fields = ["value_m_per_s", "unit", "symbol"]
+2. entity = "Water freezing point at 1 atm", category = "thermodynamic_reference", required fields = ["value_celsius", "value_kelvin", "unit"]
+3. entity = "Battle of Hastings", category = "historical_event", required fields = ["year", "location_country_modern", "winner"]
+4. entity = "Avogadro constant", category = "physical_constant", required fields = ["value", "unit", "symbol"]
+5. entity = "DNA", category = "biology", required fields = ["expanded_form", "primary_role"]
+
+Return JSON only.

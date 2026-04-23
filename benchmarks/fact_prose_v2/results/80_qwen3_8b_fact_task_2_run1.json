@@ -1,0 +1,38 @@
+{
+  "success": true,
+  "model": "qwen3:8b",
+  "started_utc": "2026-04-23T23:16:43.330225+00:00",
+  "completed_utc": "2026-04-23T23:16:47.593055+00:00",
+  "duration_seconds": 4.249,
+  "final_answer": "{\n  \"steps\": [\n    {\n      \"id\": 1,\n      \"claim\": \"The U.S. entered World War I in 1917.\",\n      \"supported_by_fact_ids\": [\"F5\"]\n    },\n    {\n      \"id\": 2,\n      \"claim\": \"The Russian Revolution occurred in 1917.\",\n      \"supported_by_fact_ids\": [\"F4\"]\n    },\n    {\n      \"id\": 3,\n      \"claim\": \"The Treaty of Versailles was signed in 1919.\",\n      \"supported_by_fact_ids\": [\"F3\"]\n    },\n    {\n      \"id\": 4,\n      \"claim\": \"The U.S. entered World War I in the same year as the Russian Revolution.\",\n      \"supported_by_fact_ids\": [1, 2]\n    },\n    {\n      \"id\": 5,\n      \"claim\": \"The Treaty of Versailles was signed after the U.S. entered World War I and after the Russian Revolution.\",\n      \"supported_by_fact_ids\": [1, 2, 3]\n    }\n  ],\n  \"final_answer\": {\n    \"answer\": \"The U.S. entered World War I in the same year as the Russian Revolution, and that was before the Treaty of Versailles.\",\n    \"justification_step_ids\": [4, 5]\n  }\n}",
+  "thinking_trace": "",
+  "metrics": {
+    "prompt_tokens": 269,
+    "response_tokens": 284,
+    "tokens_per_second": 71.4,
+    "cold_start": false,
+    "prompt_eval_seconds": 0.109,
+    "eval_seconds": 3.978,
+    "load_seconds": 0.086,
+    "total_duration_ns": 4239406723,
+    "load_duration_ns": 86480674,
+    "prompt_eval_duration_ns": 108860323,
+    "eval_duration_ns": 3977583214
+  },
+  "probes": {
+    "ollama_ps_before": {
+      "returncode": 0,
+      "stdout": "NAME        ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nqwen3:8b    500a1f067a9f    6.0 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    },
+    "ollama_ps_after": {
+      "returncode": 0,
+      "stdout": "NAME        ID              SIZE      PROCESSOR    CONTEXT    UNTIL              \nqwen3:8b    500a1f067a9f    6.0 GB    100% GPU     4096       4 minutes from now    \n",
+      "stderr": "",
+      "processor_split": "100% GPU"
+    }
+  },
+  "debug_artifact_path": null,
+  "error": ""
+}
