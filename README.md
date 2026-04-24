@@ -3,7 +3,7 @@
 
 
   <img src="benchmark_ui/logo.png" width="200"/>
-
+  <img src="benchmark_ui/main_panel.png"/>
 
 </p>
 
