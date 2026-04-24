@@ -1,6 +1,15 @@
 <p align="center">
+
+
+
   <img src="benchmark_ui/logo.png" width="200"/>
+
+
 </p>
+
+
+
+
 
 <h1 align="center">Jarri Benchmark</h1>
 
